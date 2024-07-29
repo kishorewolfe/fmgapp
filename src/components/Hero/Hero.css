@@ -1,0 +1,113 @@
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem;
+  
+}
+
+/* .contents h1 {
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1.5rem;
+  font-weight: 600;
+  padding: 2rem 0;
+
+} */
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* @media only screen and (max-width: 600px) {
+  .herovid {   display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60%;;
+    margin-top: 68px;
+    padding: 6rem;}
+
+    .toggleDarkmode{
+    margin-bottom: 35px;
+    margin-right:10px;
+    }
+} */
+
+.buttons button {
+  padding: 1.5rem 2rem;
+  margin: 0 1rem;
+  background-color: transparent;
+  border: solid white 2px;
+  font-size: 15px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  transition: 0.25s background-color;
+}
+
+.buttons button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.25s background-color;
+  cursor: pointer;
+}
+
+.video {
+  position: absolute;
+  z-index: -1;
+  /* height: 100%;
+  width: 100%; */
+  object-fit: cover;
+}
+@media only screen and (max-width: 910px) {
+  .herovid {   display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 6rem;}
+
+    .navfont{
+        font-size: 1.25rem /* 20px */;
+        line-height: 1.75rem /* 28px */;
+    }
+
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .logoimg {display:none;
+
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .logoimg {display:none; 
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .logoimg {display:block;
+    width: 200px;
+    
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+  .logoimg {display:block}
+}  */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .logoimg {display:block}
+}

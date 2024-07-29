@@ -1,0 +1,68 @@
+const HolidayData: any[] = [
+  {
+    id: 1,
+    name: "Good Friday-half day",
+    blockDate:"29th",
+    blockMonth:"March, 2024",
+    date: "03/29/2024 ",
+    day: "Friday",
+  },
+  {
+    id: 2,
+    name: "Memorial Day",
+    blockDate:"27th",
+    blockMonth:"May, 2024",
+    date: " 5/27/2024 ",
+    day: "Monday",
+  },
+  {
+    id: 3,
+    name: "Independence Day",
+    blockDate:"4th",
+    blockMonth:"July, 2024",
+    date: "7/4/2024 ",
+    day: "Thursday",
+  },
+  {
+    id: 4,
+    name: "Labor Day",
+    blockDate:"2nd",
+    blockMonth:"September, 2024",
+    date: "9/2/2024 ",
+    day: "Friday",
+  },
+  {
+    id: 5,
+    name: "Thanksgiving ",
+    date: "11/28/2024 & 11/29/2024  ",
+    blockDate:"28th",
+    blockMonth:"November, 2024",
+    day: "Thursday & Friday",
+  },
+  {
+    id: 5,
+    name: "Christmas ",
+    date: "12/24/2023 &  12/25/2023 ",
+    blockDate:"25th",
+    blockMonth:"December, 2024",
+    day: "Tuesday & Wednesday",
+  },
+  {
+    id: 6,
+    name: "New Years Eve- Tuesday (Half day)   ",
+    blockDate:"31st",
+    blockMonth:"December, 2024",
+    date: "12/31/2024 ",
+    day: "Tuesday",
+  },
+  {
+    id: 7,
+    name: "New Years Day",
+    blockDate:"1st",
+    blockMonth:"January, 2025",
+    date: " 01/01/2025 ",
+    day: "Wednesday",
+  },
+];
+
+export default HolidayData;

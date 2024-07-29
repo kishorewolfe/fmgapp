@@ -1,0 +1,66 @@
+@media only screen and (max-width: 600px) {
+  .holidaybtn {   
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0.8rem; 
+!padding-right: 1rem; 
+border-radius: 0.5rem; 
+width: 6rem; 
+text-align: center;
+background-color: rgb(8 145 178); 
+  }
+
+   
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .holidaybtn {   
+    padding: 0.5rem; 
+!padding-right: 1rem; 
+border-radius: 0.5rem; 
+width: 9rem; 
+background-color: rgb(8 145 178);
+text-align: center; 
+  }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .holidaybtn {   
+    padding: 0.5rem; 
+padding-right: 1rem; 
+border-radius: 0.5rem; 
+width: 9rem; 
+background-color: rgb(8 145 178);
+text-align: center; 
+  }
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .holidaybtn {   
+    padding: 0.5rem; 
+padding-right: 1rem; 
+border-radius: 0.5rem; 
+width: 9rem; 
+background-color: rgb(8 145 178);
+text-align: center; 
+  }
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .holidaybtn {   
+    padding: 0.5rem; 
+padding-right: 1rem; 
+border-radius: 0.5rem; 
+width: 9rem; 
+background-color: rgb(8 145 178);
+text-align: center; 
+  }
+
+}
