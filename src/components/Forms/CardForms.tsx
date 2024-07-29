@@ -86,7 +86,8 @@ const CardForms = (props: Props) => {
                 </div>
                 <a
                   className="border-shadesOfBlue text-shadesOfBlue group-hover:bg-shadesOfBlue bottom-0 mt-4 flex transform rounded-md border-2 p-2 px-6 font-semibold capitalize opacity-85 delay-75 ease-in-out hover:opacity-100 group-hover:text-cyan-600 dark:border-slate-800 dark:text-slate-800 dark:group-hover:bg-slate-800"
-                  href="#"
+                  href={card.link}
+                  type={card.type}
                 >
                   Download
                 </a>
