@@ -51,7 +51,7 @@ const Contactus = (props: Props) => {
                 x="0px"
                 y="0px"
                 viewBox="0 0 300.988 300.988"
-                style="enable-background:new 0 0 300.988 300.988;"
+                style="enableBackground:new 0 0 300.988 300.988;"
                 xml:space="preserve"
               >
                 <g>

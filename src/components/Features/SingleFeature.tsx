@@ -3,7 +3,7 @@ import { Feature } from "@/types/feature";
 const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { icon, title, iconDark } = feature;
   return (
-    <div className="w-full p-4 sm:w-1/2 md:w-1/4">
+    <div className="w-full p-4 sm:w-1/2 md:w-1/3">
       <div className="transform rounded-lg border-2 border-gray-600 px-4 py-6 transition duration-500 hover:scale-110 ">
         <span className="block dark:hidden"> {icon}</span>
 

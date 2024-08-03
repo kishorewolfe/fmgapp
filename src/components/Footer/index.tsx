@@ -13,8 +13,6 @@ import Link from "next/link";
 
 // Friday: 8 AM-5 PM
 
-
-
 const Footer = () => {
   return (
     <>
@@ -40,7 +38,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                5475 Walnut Ave Chino, CA 91710 (909) 591-6446
+                  5475 Walnut Ave Chino, CA 91710 (909) 591-6446
                 </p>
                 <div className="flex items-center">
                   <a
@@ -48,7 +46,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-primary"
+                    className="mr-6 text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-cyan-600"
                   >
                     <svg
                       width="18"
@@ -68,7 +66,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-lime-500 dark:text-body-color-dark dark:hover:text-primary"
+                    className="mr-6 text-body-color duration-300 hover:text-lime-500 dark:text-body-color-dark dark:hover:text-cyan-600"
                   >
                     <svg
                       width="18"
@@ -90,7 +88,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-primary"
+                    className="mr-6 text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-cyan-600"
                   >
                     <svg
                       width="18"
@@ -106,7 +104,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-primary"
+                    className="text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-cyan-600"
                   >
                     <svg
                       width="17"
@@ -124,35 +122,25 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                Urgent Care
-{/* 
+                Walk-in Clinic
+                  {/* 
                
  */}
                 </h2>
                 <ul>
                   <li>
-                    <p
-                  
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                       Walk-ins Only
-                    </p>
+                    <Link className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-cyan-600" href={"/urgentcare"}>
+                    See our Contracted Urgent Care tab for additional info
+                    </Link>
                   </li>
                   <li>
-                    <p
-                     
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Monday-Thursday from 8:15am-4:15pm. 
+                    <p className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-cyan-600">
+                      Monday-Thursday from 8:15am-4:15pm.
                     </p>
-                    <p
-                     
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-primary"
-                    >
+                    <p className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-cyan-600">
                       Fridays from 8:15am-12:15pm.
                     </p>
                   </li>
-                 
                 </ul>
               </div>
             </div>
@@ -160,42 +148,31 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                Primary Care
+                  Primary Care
                 </h2>
                 <ul>
                   <li>
-                    <p
-                     
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-primary"
-                    >
+                    <p className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-cyan-600">
                       Monday: 8 AM-5 PM
                     </p>
                   </li>
                   <li>
-                    <p
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-primary"
-                    >
+                    <p className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-cyan-600">
                       Tuesday: 8 AM-5 PM
                     </p>
                   </li>
                   <li>
-                    <p
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-primary"
-                    >
+                    <p className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-cyan-600">
                       Wednesday: 8 AM-5 PM
                     </p>
                   </li>
                   <li>
-                    <p
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-primary"
-                    >
+                    <p className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-cyan-600">
                       Thursday: 8 AM-5 PM
                     </p>
                   </li>
                   <li>
-                    <p
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-primary"
-                    >
+                    <p className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-cyan-600">
                       Friday: 8 AM-5 PM
                     </p>
                   </li>
@@ -206,18 +183,24 @@ const Footer = () => {
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Support & Help
+                Additional Info
                 </h2>
                 <ul>
                   <li>
                     <Link
                       href="/holidayhours"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-body-color duration-300 dark:hover:text-cyan-600 dark:text-body-color-dark hover:text-lime-600"
                     >
                       Holiday Hours
                     </Link>
+                    <br/>
+                    <Link
+                      href="/fmgprivacypolicy"
+                      className="mb-4 inline-block text-base text-body-color duration-300 dark:hover:text-cyan-600 dark:text-body-color-dark hover:text-lime-600"
+                    >
+                      Privacy Policy
+                    </Link>
                   </li>
-                  
                 </ul>
               </div>
             </div>
@@ -226,18 +209,14 @@ const Footer = () => {
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
             <p className="text-center text-base text-body-color dark:text-white">
-            © My Family Medical Group. All rights reserved. | 5475 Walnut Ave., Chino, CA 91710 | (909) 591-6446
-
-Or TTY / TTD users may call: 711
+              © My Family Medical Group. All rights reserved. | 5475 Walnut
+              Ave., Chino, CA 91710| <span> <Link href={"/fmgprivacypolicy"} >Privacy Policy</Link></span>  | (909) 591-6446 Or TTY / TTD users may
+              call: 711 
             </p>
           </div>
         </div>
-        <div className="absolute right-0 top-14 z-[-1]">
-
-        </div>
-        <div className="absolute bottom-24 left-0 z-[-1]">
-    
-        </div>
+        <div className="absolute right-0 top-14 z-[-1]"></div>
+        <div className="absolute bottom-24 left-0 z-[-1]"></div>
       </footer>
     </>
   );

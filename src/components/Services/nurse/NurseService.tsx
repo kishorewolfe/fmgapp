@@ -5,7 +5,7 @@ import NurseData from "./NurseData";
 const NurseService = (props: Props) => {
   return (
     <div >
-      <header className=" container  h-full items-center px-1 lg:mt-0 lg:flex">
+      <header className=" container  h-full items-center px-1 lg:mt-0  bg-slate-100 lg:flex dark:bg-slate-900">
         <div className="w-full">
           <h1 className="text-4xl font-bold lg:text-6xl">
             <span className="text-lime-600">Nurse</span>{" "}
@@ -21,10 +21,10 @@ const NurseService = (props: Props) => {
         </div>
       </header>
 
-      <div className=" grid w-full max-w-4xl gap-2 md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 ">
+      <div className=" grid w-full max-w-4xl gap-2 md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 bg-slate-100 dark:bg-slate-900 ">
         {NurseData.map((nurse , i) => {
           return (
-            <div className="flex items-center rounded bg-white p-2 m-4 shadow-lg" key={i}>
+            <div className="flex items-center rounded bg-white p-2 m-4 shadow-lg dark:bg-slate-800" key={i} >
               <div className="flex h-14 w-12 flex-shrink-0 items-center justify-center rounded border-black">
                 <Image src={nurse?.image} alt="IMAGE" width={250} height={250}></Image>
               </div>
@@ -42,7 +42,7 @@ const NurseService = (props: Props) => {
             <div className="flex flex-shrink-0 items-center justify-center bg-red-200 h-16 w-16 rounded">
                 <svg className="w-6 h-6 fill-current text-red-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                     fill="currentColor">
-                    <path fill-rule="evenodd"
+                    <path fillRule="evenodd"
                         d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z"
                         clipRule="evenodd" />
                 </svg>
@@ -60,7 +60,7 @@ const NurseService = (props: Props) => {
             <div className="flex flex-shrink-0 items-center justify-center bg-green-200 h-16 w-16 rounded">
                 <svg className="w-6 h-6 fill-current text-green-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                     fill="currentColor">
-                    <path fill-rule="evenodd"
+                    <path fillRule="evenodd"
                         d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z"
                         clipRule="evenodd" />
                 </svg>

@@ -47,8 +47,8 @@ const Header = () => {
     },
     {
       id: 2,
-      title: "Our Services",
-      path: "/ourservices",
+      title: "Contact us",
+      path: "/contactus",
       newTab: false,
     },
     ,
@@ -91,6 +91,12 @@ const Header = () => {
       id: 6,
       title: "Providers Login",
       path: "https://ezcap.myfamilymg.com/EZ-NET60/Login.aspx",
+      newTab: false,
+    },
+    {
+      id: 7,
+      title: "Urgent Cares",
+      path: "/urgentcare",
       newTab: false,
     },
   ];
@@ -175,13 +181,13 @@ const Header = () => {
                             <Link
                               href={menuItem.path}
                               onClick={navbarToggleHandler}
-                              className={`flex py-2 text-base md:text-sm lg:mr-0 lg:inline-flex lg:px-0  lg:py-6 lg:text-xl ${
+                              className={`flex py-2 text-base md:text-sm lg:mr-0 lg:inline-flex lg:px-0  lg:py-6 lg:text-md ${
                                 usePathName === menuItem.path
                                   ? "text-lime-400 dark:text-white"
                                   : "text-dark hover:text-cyan-600 dark:text-white/70 dark:hover:text-white"
                               }`}
                             >
-                              <h4 className="text-dark hover:text-cyan-600 dark:text-white xs:mb-[10px] sm:text-sm md:text-sm lg:mb-[-20px]   lg:text-xl">
+                              <h4 className="text-dark hover:text-cyan-600 dark:text-white xs:mb-[10px] sm:text-sm md:text-sm lg:mb-[-20px]   lg:text-[1.1rem]">
                                 {menuItem.title}{" "}
                               </h4>
                             </Link>

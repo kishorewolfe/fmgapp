@@ -6,8 +6,8 @@ type Props = {}
 const NurseServiceLayout = (props: Props) => {
   return (
     <> 
-    <div style={{background:"#F8F9FC"}}>
-    <div className="flex flex-wrap">
+    <div style={{background:"#F8F9FC"}} className=''>
+    <div className="flex flex-wrap bg-slate-100 lg:flex dark:bg-slate-900">
       <div className="w-full sm:w-7/12">
         <div className=" mx-auto h-full">
           <div style={{marginTop:"220px",marginLeft:"15px"}}>

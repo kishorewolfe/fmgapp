@@ -43,13 +43,13 @@ const Testimonials = () => {
         />
       </div>
 
-      <div className="mx-auto max-w-7xl ">
-        <div className="group relative">
-          <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-cyan-600 to-lime-600 opacity-25 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-          <div className="items-top relative flex justify-start space-x-6 rounded-lg bg-white px-7 py-6 leading-none ring-1 ring-gray-900/5 dark:bg-dark">
+      <div className="mx-auto max-w-md  flex justify-items-center items-center text-center  ">
+        <div className="group relative ">
+          <div className="absolute  -inset-1 rounded-lg bg-gradient-to-r from-cyan-600 to-lime-600 opacity-25 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
+          <div className="items-top   relative flex justify-start space-x-6 rounded-lg bg-white px-7 py-6 leading-none ring-1 ring-gray-900/5 dark:bg-dark">
             <a
               href="https://mycw84.ecwcloud.com/portal11229/jsp/100mp/login_otp.jsp"
-              className="block justify-center text-center text-3xl transition duration-200 group-hover:text-lime-400"
+              className=" items-center  block justify-center  text-3xl transition duration-200 group-hover:text-cyan-600"
               target="_blank"
             >
               <h1>Secure Patient Portal → </h1>
