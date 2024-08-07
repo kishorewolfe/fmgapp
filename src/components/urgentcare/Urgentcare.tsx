@@ -11,10 +11,10 @@ const Urgentcare = (props: Props) => {
           <h2 className="font-display text-center text-3xl font-bold tracking-tight text-slate-900   dark:text-white md:text-4xl">
             Urgent Care
           </h2>{" "}
-          <p className="text-primary-500 text-center text-base font-semibold leading-7">
-            Locations
+          <p className=" mt-4 text-primary-500 text-center lg:text-xl sm:text-sm  leading-7">
+          During regular office hours, contact your primary care physician's office to see if you can get a same day appointment. We are also contracted with the following Urgent Cares for your convenience
           </p>
-          <ul className="mt-16 grid grid-cols-1 gap-2  text-slate-700 md:grid-cols-3">
+          <ul className="mt-10 grid grid-cols-1 gap-2  text-slate-700 md:grid-cols-3">
             {UrgentcareData.map((care , i )=>{
               return(
                 <li className="rounded-xl  px-6 py-8 shadow  bg-slate-50 dark:bg-slate-800" key={i}>
@@ -32,6 +32,7 @@ const Urgentcare = (props: Props) => {
                   <p className="text-secondary-500 mt-1.5 text-sm leading-6  lg:text-xl dark:text-white">
                   {care.address} <br />
                   {care.phone}<br />
+                  {care.fax}<br />
                   </p>
                 </div>
               

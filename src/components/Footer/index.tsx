@@ -119,13 +119,11 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
+            {/* <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                Walk-in Clinic
-                  {/* 
-               
- */}
+               Walk-in Clinic 
+
                 </h2>
                 <ul>
                   <li>
@@ -133,17 +131,10 @@ const Footer = () => {
                     See our Contracted Urgent Care tab for additional info
                     </Link>
                   </li>
-                  <li>
-                    <p className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-cyan-600">
-                      Monday-Thursday from 8:15am-4:15pm.
-                    </p>
-                    <p className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-cyan-600">
-                      Fridays from 8:15am-12:15pm.
-                    </p>
-                  </li>
+                  
                 </ul>
               </div>
-            </div>
+            </div>  */}
 
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">

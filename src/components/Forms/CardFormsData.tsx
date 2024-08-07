@@ -1,16 +1,16 @@
 const cardFormsData: any[] = [
-  {
-    id: 1,
-    question: "Patient Welcome Letter",
-    description:"HIPAA stands for Health Insurance Portability and Accountability Act of 1996. The Act was developed by Congress to protect the confidentiality of a person's medical information. It sets boundaries on the use and release of health records and establishes safeguards to protect the privacy of health information.",
-    image: "/images/blog/blog-01.jpg",
-    link:"/files/Welcome_Letter.pdf",
-    type:"pdf",
-    fname:"Welcome_Letter"
+  // {
+  //   id: 1,
+  //   question: "Patient Welcome Letter",
+  //   description:"HIPAA stands for Health Insurance Portability and Accountability Act of 1996. The Act was developed by Congress to protect the confidentiality of a person's medical information. It sets boundaries on the use and release of health records and establishes safeguards to protect the privacy of health information.",
+  //   image: "/images/blog/blog-01.jpg",
+  //   link:"/files/Welcome_Letter.pdf",
+  //   type:"pdf",
+  //   fname:"Welcome_Letter"
     
    
    
-  },
+  // },
   {
     id: 2,
     question: "Patient Registration Form",

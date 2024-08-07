@@ -215,7 +215,7 @@ const BlogDetailsPage = () => {
                     </ul>
                   </div>
 
-                  <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
+                  <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-cyan-600 bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                     <h6 className="text-center text-base font-bold italic text-body-color">
                       Our Health Information
                     </h6>
