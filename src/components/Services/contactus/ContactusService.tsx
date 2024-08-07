@@ -174,6 +174,47 @@ const ContactusService = (props: Props) => {
             </div>
           </div>
         </section>
+        <section>
+          <div className="container mt-10 ">
+            <div className=" mx-auto  my-10 flex flex-col items-center justify-center gap-x-10 gap-y-10 py-10 dark:bg-gray-800 lg:flex-row lg:px-2 lg:py-14">
+              <div className="hero-image relative isolate z-10 w-full rounded-3xl md:px-5 md:pt-2 lg:w-1/2 lg:px-0 lg:pt-0">
+                <Image
+                  className="w-full rounded-3xl"
+                  src="/images/contactus/compliance.jpg"
+                  alt="Urgent Care"
+                  width={400}
+                  height={100}
+                />
+              </div>
+              <div className="flex flex-col lg:w-[650px] lg:px-5 ">
+                <header className="container mt-10 h-full items-center px-1 lg:mt-0 lg:flex">
+                  <div className="w-full">
+                    <h1 className="text-4xl font-bold lg:text-6xl">
+                      <span className="text-lime-600">Compliance </span>{" "}
+                    </h1>
+                    <div className="my-4 h-2 w-20 bg-green-700"></div>
+                   
+                    <div className="mx-auto flex  max-w-xl   ">
+                      <div className="group relative ">
+                        <div className="items-top   relative flex justify-start space-x-6 rounded-lg bg-white px-7 py-6 leading-none ring-1 ring-gray-900/5 dark:bg-dark">
+                        <div className=" text-xl">
+                     <p className="my-3 font-semibold text-black dark:text-white sm:text-sm lg:text-xl">Email: compliance@myfamilymg.com </p> <br/>
+                     <p className="my-2 font-semibold text-black dark:text-white sm:text-sm lg:text-xl">Phone number: (909)591-6446 x 137 </p> 
+                      
+                    </div> 
+                    <br/>
+                    <p className="mb-10 text-xl">
+                   
+                    </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
