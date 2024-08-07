@@ -35,10 +35,10 @@ xl:px-40 2xl:px-64"
                 here:
               </p>
               <a
-                href="/files/MFMG Master Roster - 7-1-24.xlsx"
+                href="#"
                 className="mt-8 inline-block rounded bg-teal-500 px-8 py-4 font-semibold text-white picbutton"
-                download={"MFMG_Master"}
-                                   type="xlsx"
+                
+                                  
               >
                 Download Master Data
               </a>
