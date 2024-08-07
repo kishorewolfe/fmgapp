@@ -12,7 +12,7 @@ const Urgentcare = (props: Props) => {
             Urgent Care
           </h2>{" "}
           <p className=" mt-4 text-primary-500 text-center lg:text-xl sm:text-sm  leading-7">
-          During regular office hours, contact your primary care physician's office to see if you can get a same day appointment. We are also contracted with the following Urgent Cares for your convenience
+          During regular office hours, contact your primary care physician&apos;s office to see if you can get a same day appointment. We are also contracted with the following Urgent Cares for your convenience
           </p>
           <ul className="mt-10 grid grid-cols-1 gap-2  text-slate-700 md:grid-cols-3">
             {UrgentcareData.map((care , i )=>{
