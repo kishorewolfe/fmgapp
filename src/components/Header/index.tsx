@@ -53,9 +53,9 @@ const Header = () => {
     },
     ,
     {
-      id: 21,
-      title: "Specialists",
-      path: "/specialists",
+      id: 5,
+      title: "Our Providers",
+      path: "/providers",
       newTab: false,
     },
 
@@ -81,12 +81,7 @@ const Header = () => {
       path: "/forms",
       newTab: false,
     },
-    {
-      id: 5,
-      title: "Our Providers",
-      path: "/providers",
-      newTab: false,
-    },
+   
     {
       id: 6,
       title: "Providers Login",
