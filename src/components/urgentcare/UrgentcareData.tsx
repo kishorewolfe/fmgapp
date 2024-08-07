@@ -2,12 +2,12 @@ const UrgentcareData: any[] = [
   {
     id: 1,
     clinic: "TotalCare Walk-in Clinic",
-    address: "Roswell Avenue, Suite 118 Chino, CA 91710",
+    address: "13768 Roswell Avenue, Suite 118 Chino, CA 91710",
 
     phone: "Phone: (909)-591-8200",
     fax: "Fax (866) 701-9305",
     hours1: "Monday To Fri : 8:00 am – 8:00pm",
-    hours2: "Saturday: 9:00 am – 7:00pm",
+    hours2: "Saturday: 9:00 am – 5:00pm",
     hours3: "Sunday: 9:00 am – 5:00pm",
     iconSvg: (
       <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none">
@@ -195,7 +195,7 @@ const UrgentcareData: any[] = [
   {
     id: 2,
     clinic: "TotalCare Walk-in Clinic",
-    address: "Roswell Avenue, Suite 118 Chino, CA 91710",
+    address: "13334 limonite Avenue suite ,130 Eastvale, CA 92280",
 
     phone: "Phone: (951) 407-1460",
     fax: "Fax (866) 701-9305",
@@ -238,7 +238,7 @@ const UrgentcareData: any[] = [
   {
     id: 3,
     clinic: "TotalCare Walk-in Clinic",
-    address: "Roswell Avenue, Suite 118 Chino, CA 91710",
+    address: "1973 Foothill parkway, Suite 104 Corona CA 92881",
 
     phone: "Phone (951) 460-2300",
     fax: "Fax (866) 701-9305",
@@ -275,7 +275,7 @@ const UrgentcareData: any[] = [
       </svg>
     ),
     hours1: "Monday To Fri : 8:00 am – 8:00pm",
-    hours2: "Saturday: 9:00 am – 7:00pm",
+    hours2: "Saturday: 9:00 am – 5:00pm",
     hours3: "Sunday: 9:00 am – 5:00pm",
   },
 ];
