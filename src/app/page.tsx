@@ -6,6 +6,7 @@ import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
+import LabCorpCard from "@/components/LabCorpCard/LabCorpCard";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
@@ -26,6 +27,7 @@ export default function Home() {
       <Video />
       <AboutSectionOne />
       <AboutSectionTwo />
+      <LabCorpCard/>
       <Features />
       <Testimonials />
       {/* <Pricing />

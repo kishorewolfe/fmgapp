@@ -64,7 +64,7 @@ const ContactusService = (props: Props) => {
                     Monday - Friday 8AM to 5PM
                   </p>
                   <p className="my-3 font-bold text-black dark:text-white sm:text-sm lg:text-xl">
-                    Saturday - Sunday 8AM to 8PM
+                    Saturday - Sunday Closed
                   </p>
                   <br />
                   <br />
