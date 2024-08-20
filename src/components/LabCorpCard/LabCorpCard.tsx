@@ -1,47 +1,104 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const LabCorpCard = (props: Props) => {
   return (
-    <main className="pt-16 bg-gray-100 dark:bg-slate-900">
-    <section className="container mx-auto px-4 py-12 md:py-24">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="w-full md:w-1/2 mb-8 md:mb-0">
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 dark:text-white">Find a Lab Near You</h1>
-                <p className="text-xl text-gray-600 mb-6 dark:text-white">Locate a patient center lab in your area, check its hours, and schedule an appointment.</p>
-                <Link href="https://www.labcorp.com/" className="inline-block bg-lime-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-lime-700 transition duration-300">Learn More</Link>
-            </div>
+    <main className="bg-gray-100 pt-16 dark:bg-slate-900">
+      <section className="container mx-auto px-4 py-12 md:py-24">
+        <div className="flex flex-col items-center justify-between md:flex-row">
+          <div className="mb-8 w-full md:mb-0 md:w-1/2">
+            <h1 className="mb-4 text-4xl font-bold text-gray-800 dark:text-white md:text-5xl">
+              Find a Lab Near You
+            </h1>
+            <p className="mb-6 text-xl text-gray-600 dark:text-white">
+              Locate a patient center lab in your area, check its hours, and
+              schedule an appointment.
+            </p>
+            <Link
+              href="https://www.labcorp.com/"
+              className="inline-block rounded-lg bg-lime-600 px-6 py-3 font-semibold text-white transition duration-300 hover:bg-lime-700"
+            >
+              Learn More
+            </Link>
+          </div>
 
-            <div className="w-full md:w-1/2">
-                <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6">
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 dark:text-white">Why Choose Us?</h2>
-                    <ul className="space-y-2 mb-6">
-                        <li className="flex items-center dark:text-white">
-                            <svg className="w-5 h-5 text-lime-600 mr-2 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            We Do In-house blood draw for our patients
-                        </li>
-                        <li className="flex items-center dark:text-white">
-                            <svg className="w-5 h-5 text-lime-600 mr-2 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Be sure to bring the Labcorp test request form from your healthcare
-                        </li>
-                        <li className="flex items-center dark:text-white">
-                            <svg className="w-5 h-5 text-lime-600 mr-2 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Customizable solutions on Lab appointment
-                        </li>
-                    </ul>
-                    <div className="space-y-4">
-                        <Link href="https://www.labcorp.com/labs-and-appointments" className="block text-center border border-lime-600 text-lime-600 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition duration-300">Book Now</Link>
-                    </div>
-                </div>
+          <div className="w-full md:w-1/2">
+            <div className="rounded-lg bg-white p-6 shadow-lg dark:bg-slate-800">
+              <h2 className="mb-4 text-2xl font-semibold text-gray-800 dark:text-white">
+                Why Choose Us?
+              </h2>
+              <ul className="mb-6 space-y-2">
+                <li className="flex items-center dark:text-white">
+                  <svg
+                    className="mr-2 h-5 w-5 text-lime-600 "
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  We perform in-house blood draws for our patients on a walk-in
+                  basis M-F from 8:00am-5:00pm
+                </li>
+                <li className="flex items-center dark:text-white">
+                  <svg
+                    className="mr-2 h-5 w-5 text-lime-600 "
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  Be sure to bring the Labcorp order form from your healthcare
+                  provider
+                </li>
+                <li className="flex items-center dark:text-white">
+                  <svg
+                    className="mr-2 h-5 w-5 text-lime-600 "
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    ></path>
+                  </svg>
+                  For your convienence, you can also use the link below to
+                  schedule an appointment at a Labcorp location
+                </li>
+              </ul>
+              <div className="space-y-4">
+                <Link
+                  href="https://www.labcorp.com/labs-and-appointments"
+                  className="block rounded-lg border border-lime-600 px-6 py-3 text-center font-semibold text-lime-600 transition duration-300 hover:bg-blue-50"
+                >
+                  Book Now
+                </Link>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
+  );
+};
 
-</main>
-
-  )
-}
-
-export default LabCorpCard
+export default LabCorpCard;
