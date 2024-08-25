@@ -29,7 +29,7 @@ const EachDoctorProfile = (props) => {
   return (
     <div className="lg:mt-[120px] sm:mt-[120px]" style={{ marginTop: "140px" }}>
       <div className="bg-gray-100 dark:bg-slate-900 dark:text-white">
-        <div className="lg:mx-[12.5rem] sm:mx-[7rem] md:mx-[8rem] flex items-start justify-start gap-2">
+        <div className="lg:mx-[12.5rem] sm:mx-[7rem] md:mx-[8rem] flex items-start justify-start gap-2" style={{marginLeft:"200px"}}>
           <a
             href="/providers"
             className="mt-8 inline-flex items-center rounded-md border border-lime-600 px-3 py-1.5 text-lime-600 hover:bg-slate-50"
