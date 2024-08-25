@@ -8,7 +8,7 @@ type Props = {};
 
 const FindDoctor = (props: Props) => {
   return (
-    <div className="md:mt-15 sm:mt-15 lg:mt-10" style={{ marginTop: "100px" }}>
+    <div className="lg:mt-[120px] sm:mt-[180px]" style={{ marginTop: "140px" }}>
       <div className="dark:bg-gray-800">
         <div className="dark:bg-transparent">
           <div className="mx-auto flex flex-col items-center  sm:py-8">
