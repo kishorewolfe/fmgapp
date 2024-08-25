@@ -1,12 +1,3 @@
-// Anthem Blue Cross: (800) 224-0336
-
-// Blue Shield of California: (877) 304-0504
-
-// Cigna: (800) 244-6224
-
-// Health Net: (800) 440-5724
-
-// United Health Care: (877) 365-7949
 
 const NurseData: any[] = [
   {

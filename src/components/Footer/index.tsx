@@ -1,18 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-
-// Appointments & Walk-ins
-// Monday: 8 AM-5 PM
-
-// Tuesday: 8 AM-5 PM
-
-// Wednesday: 8 AM-5 PM
-
-// Thursday: 8 AM-5 PM
-
-// Friday: 8 AM-5 PM
-
 const Footer = () => {
   return (
     <>

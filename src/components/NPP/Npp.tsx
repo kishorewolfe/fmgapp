@@ -9,7 +9,6 @@ import NppList from "./NppList";
 export const metadata: Metadata = {
   title: "Family MG",
   description: "Family MG",
-  // other metadata
 };
 
 const Npp = () => {

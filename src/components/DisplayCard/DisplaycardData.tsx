@@ -1,8 +1,3 @@
-// Patient Services
-// Urgent Care
-// Nurse Advice Lines
-// Contact us
-//
 
 const DisplaycardData: any[] = [
   {

@@ -2,15 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 type Props = {};
-// Hours of Operation:
-// Monday - Friday 12PM to 11PM
-// Saturday - Sunday 8AM to 8PM
 
-// Phone Lines
-// Main Line: 909-591-6446
-// Appointments: 909-287-7555
-// Patient Billing: 909-287-7520
-// Urgent Care: 909-287-7501
 const ContactusService = (props: Props) => {
   return (
     <div

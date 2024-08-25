@@ -1,5 +1,6 @@
 import React from 'react'
 import SectionTitle from '../Common/SectionTitle'
+import Image from 'next/image'
 
 type Props = {}
 
@@ -20,7 +21,7 @@ const InsurancePage = (props: Props) => {
       <div >
         <a style={{height:"600px"}} className="p-8 max-w-lg border border-lime-600 rounded-2xl hover:shadow-xl hover:shadow-indigo-50 flex flex-col items-center"
     href="#">
-    <img src="/images/insurance/health.jpg" className="shadow rounded-lg overflow-hidden border" />
+    <Image src="/images/insurance/health.jpg" className="shadow rounded-lg overflow-hidden border"  alt='Doctor' width={100} height={100}/>
     <div className="mt-8">
         <h4 className="font-bold text-xl">HMO</h4>
         <p className="mt-2 text-gray-600"> Blue Shield Commercial & Blue Shield 65, HealthNet Commercial and HealthNet Senior/ Wellcare, and United Healthcare Commercial and United Healthcare Senior
@@ -34,7 +35,7 @@ const InsurancePage = (props: Props) => {
 <div >
   <a style={{height:"600px"}} className="p-8 max-w-lg border border-lime-600 rounded-2xl hover:shadow-xl hover:shadow-indigo-50 flex flex-col items-center"
     href="#">
-    <img src="/images/insurance/insform.jpg" className="shadow rounded-lg overflow-hidden border" />
+    <Image src="/images/insurance/insform.jpg" className="shadow rounded-lg overflow-hidden border" alt='Doctor' width={100} height={100} />
     <div className="mt-8">
         <h4 className="font-bold text-xl">PPO/POS</h4>
         <p className="mt-2 text-gray-600">Since we accept a variety of PPO plans, we can put: We accept majority of PPO, POS, and other types of insurance plans. Please contact your physician office with your specific insurance information, so we can verify that we are in network with your plan.

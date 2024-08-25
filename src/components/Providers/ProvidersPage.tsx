@@ -40,12 +40,7 @@ const ProvidersPage = (props: Props) => {
                   <span className=" bg-yellow-50 text-yellow-800 ring-yellow-600/20 inline- mx-1  items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset">
                     English
                   </span>
-                  {/* <span className=" mx-1inline-  items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
-                    Spanish
-                  </span>
-                  <span className=" mx-1 inline-  items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10">
-                    Gujarati
-                  </span> */}
+  
                 </div>
                 <div className="mt-5">
                   <div className="mt-1">
@@ -116,13 +111,7 @@ const ProvidersPage = (props: Props) => {
                               Enjoys camping, Fishing, and Snow/Water skiing.
                             </p>
                           </div>
-                          {/* <div className="  items-center">
-      <img className="w-10 h-10 rounded-full mr-4" src="/img/jonathan.jpg" alt="Avatar of Jonathan Reinink"/>
-      <div className="text-sm">
-        <p className="text-gray-900 leading-none">Jonathan Reinink</p>
-        <p className="text-gray-600">Aug 18</p>
-      </div>
-    </div> */}
+
                         </div>
                       </div>
                     </div>
@@ -227,13 +216,7 @@ const ProvidersPage = (props: Props) => {
                               <br /> growing their own fruits and vegetables.
                             </p>
                           </div>
-                          {/* <div className="  items-center">
-      <img className="w-10 h-10 rounded-full mr-4" src="/img/jonathan.jpg" alt="Avatar of Jonathan Reinink"/>
-      <div className="text-sm">
-        <p className="text-gray-900 leading-none">Jonathan Reinink</p>
-        <p className="text-gray-600">Aug 18</p>
-      </div>
-    </div> */}
+
                         </div>
                       </div>
                     </div>
@@ -430,13 +413,6 @@ California Physician Assistant License
                              I also enjoy camping, skiing, and beach days. 
                             </p>
                           </div>
-                          {/* <div className="  items-center">
-      <img className="w-10 h-10 rounded-full mr-4" src="/img/jonathan.jpg" alt="Avatar of Jonathan Reinink"/>
-      <div className="text-sm">
-        <p className="text-gray-900 leading-none">Jonathan Reinink</p>
-        <p className="text-gray-600">Aug 18</p>
-      </div>
-    </div> */}
                         </div>
                       </div>
                     </div>

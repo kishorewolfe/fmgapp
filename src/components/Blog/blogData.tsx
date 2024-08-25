@@ -1,22 +1,4 @@
 import { Blog } from "@/types/blog";
-
-
-// Cardiology
-// Treadmill Stress Test
-// Diabetes Management
-// Family Practice
-// Geriatrics
-// Internal Medicine
-// Lab Draw Station
-// Occupational Medicine
-// Weight Management
-// Women's Health
-// X-Ray
-// Ultrasound
-// Echo Doppler
-
-
-
 const blogData: Blog[] = [
 
   {
