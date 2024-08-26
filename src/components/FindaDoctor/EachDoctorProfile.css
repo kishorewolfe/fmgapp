@@ -1,0 +1,19 @@
+.verticalLine {
+    border-left: thick solid #d1d1d1;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .backbtn {
+        margin-left: -20px;
+     
+    }
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .backbtn {
+      
+        margin-left: -20px;
+      
+    }
+  } 

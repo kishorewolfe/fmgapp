@@ -78,7 +78,7 @@ const Header = () => {
       path: "/forms",
       newTab: false,
     },
-   
+
     {
       id: 6,
       title: "Providers Login",
@@ -173,15 +173,15 @@ const Header = () => {
                             <Link
                               href={menuItem.path}
                               onClick={navbarToggleHandler}
-                              className={`flex py-2 text-base md:text-sm lg:mr-0 lg:inline-flex lg:px-0  lg:py-6 lg:text-md ${
+                              className={`lg:text-md flex py-2 text-base md:text-sm lg:mr-0 lg:inline-flex  lg:px-0 ${
                                 usePathName === menuItem.path
                                   ? "text-lime-400 dark:text-white"
                                   : "text-dark hover:text-cyan-600 dark:text-white/70 dark:hover:text-white"
                               }`}
                             >
-                              <h4 className="text-dark hover:text-cyan-600 dark:text-white xs:mb-[10px] sm:text-sm md:text-sm lg:mb-[-20px]   lg:text-[1.1rem]">
+                              <h3 className="text-dark hover:text-cyan-600 dark:text-white xs:mb-[10px] sm:text-sm md:text-sm lg:mb-[-20px] xl:text-lg lg:text-md ">
                                 {menuItem.title}{" "}
-                              </h4>
+                              </h3>
                             </Link>
                           )
                         ) : (

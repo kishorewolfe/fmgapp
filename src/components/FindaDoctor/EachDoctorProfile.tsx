@@ -2,7 +2,7 @@ import React from "react";
 import LanguagesSpoken from "./LanguagesSpoken";
 import { doctorData } from "./DoctorData";
 import Image from "next/image";
-
+import "./EachDoctorProfile.css";
 type Props = {};
 
 const EachDoctorProfile = (props) => {
@@ -29,10 +29,11 @@ const EachDoctorProfile = (props) => {
   return (
     <div className="lg:mt-[120px] sm:mt-[120px]" style={{ marginTop: "140px" }}>
       <div className="bg-gray-100 dark:bg-slate-900 dark:text-white">
-        <div className="lg:mx-[12.5rem] sm:mx-[7rem] md:mx-[8rem] flex items-start justify-start gap-2" style={{marginLeft:"200px"}}>
+        <div className=" md:ml-[12.5rem]  flex items-start justify-start gap-2" >
           <a
             href="/providers"
-            className="mt-8 inline-flex items-center rounded-md border border-lime-600 px-3 py-1.5 text-lime-600 hover:bg-slate-50"
+            className="mt-8  inline-flex items-center rounded-md border border-lime-600 px-3 py-1.5 text-lime-600 hover:bg-slate-50"
+            style={{marginLeft:"80px"}}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -52,8 +53,8 @@ const EachDoctorProfile = (props) => {
           </a>{" "}
         </div>
         <div className="container mx-auto py-8">
-          <div className="grid grid-cols-4 gap-6 px-4 sm:grid-cols-12">
-            <div className="col-span-4 sm:col-span-3">
+          <div className="grid grid-cols-4 gap-4 px-4 sm:grid-cols-12">
+            <div className="col-span-4 sm:col-span-4">
               <div
                 className="rounded-lg bg-white p-6 shadow dark:bg-slate-800 dark:text-white"
                 style={{ height: "560px" }}
@@ -94,16 +95,16 @@ const EachDoctorProfile = (props) => {
                 </div>
               </div>
             </div>
-            <div className="col-span-4 sm:col-span-9">
+            <div className="col-span-4 sm:col-span-8 md:text-lg sm:text-sm lg:text-lg">
               <div
                 className="rounded-lg bg-white p-6 shadow dark:bg-slate-800 dark:text-white"
                 style={{ height: "560px" }}
               >
-                <div className="my-auto flex w-full flex-col justify-center gap-2 py-6">
-                  <div className="flex w-full justify-center gap-2 xs:flex-col sm:flex-row">
+                <div className="my-auto flex w-full flex-col justify-center gap-2 py-6 md:text-lg sm:text-sm lg:text-lg">
+                  <div className="flex w-full justify-center gap-2 xs:flex-col sm:flex-row ">
                     <div className="w-full">
-                      <dl className="divide-y  text-gray-900 dark:divide-gray-700 dark:text-white">
-                        <div className="flex flex-col pb-3">
+                      <dl className="  text-gray-900  dark:text-white">
+                        <div className="flex flex-col pb-3 md:text-md sm:text-sm lg:text-lg">
                           <dt className="mb-1 text-gray-500 dark:text-gray-400 md:text-lg lg:text-lg">
                             First Name
                           </dt>
@@ -143,11 +144,13 @@ const EachDoctorProfile = (props) => {
                             {doctor[0]?.Address?.State}
                           </dd>
                         </div>
+                        
                       </dl>
+                     
                     </div>
-                    <div className="w-full dark:bg-slate-800 dark:text-white">
-                      <dl className="divide-y divide-gray-200 text-gray-900 dark:divide-gray-700 dark:text-white">
-                        <div className="flex flex-col pb-3">
+                    <div className="w-full  dark:bg-slate-800 dark:text-white md:text-lg sm:text-sm lg:text-lg">
+                      <dl className=" text-gray-900  dark:text-white md:text-lg sm:text-sm lg:text-lg">
+                        <div className="flex flex-col pb-3 md:text-lg sm:text-sm lg:text-lg">
                           <dt className="mb-1 text-gray-500 dark:text-white md:text-lg sm:text-sm lg:text-lg">
                             Specialty
                           </dt>

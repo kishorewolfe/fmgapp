@@ -18,7 +18,7 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .  .herovid {   display: flex;
+    .herovid {   display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -27,6 +27,7 @@
     padding: 6rem;}
 
 }
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 920px) {
@@ -52,6 +53,11 @@
         font-size: 1.25rem /* 20px */;
         line-height: 1.75rem /* 28px */;
     }
+    .toggleDarkmode{
+    margin-top: -44px;
+    }
+
+    
 
 }
 

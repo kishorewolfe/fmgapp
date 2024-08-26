@@ -22,7 +22,7 @@ const Urgentcare = (props: Props) => {
                 <span className="block dark:hidden"> {care.iconSvg}</span>
                 <span className="hidden dark:block "> {care.iconDark}</span>
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex ">
                   <h3 className=" my-3 font-bold lg:text-xl text-lime-600  dark:text-cyan-600  ">
                     {care.clinic}
                   </h3>

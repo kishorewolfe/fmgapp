@@ -3,13 +3,13 @@ import { useTheme } from "next-themes";
 const ThemeToggler = () => {
   const { theme, setTheme } = useTheme();
   return (
-    <button aria-label='theme toggler'
+    <button aria-label='theme toggler btnloop'
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="flex mt-4 items-end justify-center text-black rounded-full cursor-pointer bg-gray-2 dark:bg-dark-bg h-9 w-9 dark:text-white md:h-14 md:w-14"
+      className="flex mt-4 items-end justify-center text-black rounded-full cursor-pointer bg-gray-2 dark:bg-dark-bg h-9 w-9 dark:text-white md:h-14 md:w-14 "
     >
       <svg
         viewBox="0 0 23 23"
-        className="w-5 h-5 stroke-current dark:hidden md:h-6 md:w-6"
+        className="w-5 h-5 stroke-current dark:hidden md:h-6 md:w-6 md:mt-20"
         fill="none"
       >
         <path
