@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.same-fntsty {
+  @apply italic;
+  font-family: arial;
+}
 @layer base {
   body {
     font-family: "Inter", sans-serif;

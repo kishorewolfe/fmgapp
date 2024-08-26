@@ -28,6 +28,7 @@ const Footer = () => {
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
                   5475 Walnut Ave Chino, CA 91710 (909) 591-6446
                 </p>
+                
                 <div className="flex items-center">
                   <a
                     href="/"
@@ -104,25 +105,11 @@ const Footer = () => {
                     </svg>
                   </a>
                 </div>
+   
               </div>
             </div>
 
-            {/* <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-              <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-               Walk-in Clinic 
-
-                </h2>
-                <ul>
-                  <li>
-                    <Link className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-cyan-600" href={"/urgentcare"}>
-                    See our Contracted Urgent Care tab for additional info
-                    </Link>
-                  </li>
-                  
-                </ul>
-              </div>
-            </div>  */}
+    
 
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
@@ -179,11 +166,23 @@ const Footer = () => {
                     >
                       Privacy Policy
                     </Link>
+                    <br/>
+                    <div className=" mt-1 mb-2 flex items-center">
+                      <Link href={"https://ecw.myfamilymg.com/mobiledoc/jsp/webemr/login/newLogin.jsp"} className="same-fntsty text-[35px] text-[#183f57] mb-10 text-xl font-bold dark:text-white">
+                       eClincalWorks
+
+                        </Link>
+                </div>
                   </li>
                 </ul>
+                
               </div>
+              
             </div>
+        
+            
           </div>
+         
 
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
