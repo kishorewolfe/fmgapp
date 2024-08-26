@@ -18,8 +18,8 @@ const Profiles = ({ doctorData }) => {
               <div className="md:shrink-0">
                 <Image
                   alt="Doctor"
-                  className="h-48 w-full object-cover sm:w-24 md:h-full md:w-48"
-                  src="/images/doctortool/docvector.jpg"
+                  className=" rounded-xl h-48 sm:h-72 w-full object-cover sm:w-24 md:h-full md:w-48"
+                  src={doctor?.img}
                   height={"200"}
                   width={"200"}
                 />
@@ -39,7 +39,7 @@ const Profiles = ({ doctorData }) => {
                 <div className="pb-8 pt-6">
                   <Link
                     className="rounded-full bg-cyan-700 px-4 py-2 font-bold text-white hover:bg-lime-600"
-                    href={`/providers/${doctor?.id}`}
+                    href={`/find_doctor/${doctor?.id}`}
                   >
                     View Profile
                   </Link>

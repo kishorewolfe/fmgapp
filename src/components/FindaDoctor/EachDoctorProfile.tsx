@@ -26,14 +26,18 @@ const EachDoctorProfile = (props) => {
     "," +
     location?.Zip;
   let phNum = "tel:" + doctor[0]?.Phone;
+  let address2;
+  if(doctor[0].id ===1){
+    address2 = "10837 Laurel Street, Suite 104, Rancho Cucamonga, CA, 91730"
+  }
   return (
     <div className="lg:mt-[120px] sm:mt-[120px]" style={{ marginTop: "140px" }}>
       <div className="bg-gray-100 dark:bg-slate-900 dark:text-white">
         <div className=" md:ml-[12.5rem]  flex items-start justify-start gap-2" >
           <a
-            href="/providers"
+            href="/find_doctor"
             className="mt-8  inline-flex items-center rounded-md border border-lime-600 px-3 py-1.5 text-lime-600 hover:bg-slate-50"
-            style={{marginLeft:"80px"}}
+            
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +65,7 @@ const EachDoctorProfile = (props) => {
               >
                 <div className="flex flex-col items-center">
                   <Image
-                    src="/images/doctortool/docvector.jpg"
+                    src= {doctor[0]?.img}
                     className="mb-4 h-32 w-32 shrink-0 rounded-full bg-gray-300"
                     alt="Doctor"
                     width={100}
@@ -84,6 +88,7 @@ const EachDoctorProfile = (props) => {
                     Address
                   </span>
                   <h6>{address}</h6>
+                  {address2}
                 </div>
 
                 <hr className="my-6 border-t border-gray-300" />

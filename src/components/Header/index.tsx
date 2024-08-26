@@ -51,8 +51,8 @@ const Header = () => {
     ,
     {
       id: 5,
-      title: "Our Providers",
-      path: "/providers",
+      title: "Find a Doctor",
+      path: "/find_doctor",
       newTab: false,
     },
 

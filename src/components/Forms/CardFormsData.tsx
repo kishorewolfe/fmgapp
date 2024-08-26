@@ -29,16 +29,16 @@ const cardFormsData: any[] = [
     type: "pdf",
     fname: "MedRecsRelease",
   },
-  {
-    id: 5,
-    question: "DOT PHYSICAL FORM",
-    description:
-      "It ensures that appropriate safeguards are taken when oral communication to third parties and in open-access areas occurs.",
-    image: "/images/blog/blog-01.jpg",
-    link: "/files/Packet.pdf",
-    type: "pdf",
-    fname: "Packet",
-  },
+  // {
+  //   id: 5,
+  //   question: "DOT PHYSICAL FORM",
+  //   description:
+  //     "It ensures that appropriate safeguards are taken when oral communication to third parties and in open-access areas occurs.",
+  //   image: "/images/blog/blog-01.jpg",
+  //   link: "/files/Packet.pdf",
+  //   type: "pdf",
+  //   fname: "Packet",
+  // },
   {
     id: 6,
     question: "Please bring the completed packet to your next visit.",

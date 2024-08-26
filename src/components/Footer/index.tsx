@@ -169,7 +169,7 @@ const Footer = () => {
                     <br/>
                     <div className=" mt-1 mb-2 flex items-center">
                       <Link href={"https://ecw.myfamilymg.com/mobiledoc/jsp/webemr/login/newLogin.jsp"} className="same-fntsty text-[35px] text-[#183f57] mb-10 text-xl font-bold dark:text-white">
-                       eClincalWorks
+                      eClinicalWorks
 
                         </Link>
                 </div>
