@@ -14,18 +14,18 @@ const Profiles = ({ doctorData }) => {
             key={doctor?.id}
             className=" mx-auto mb-4  mt-2 overflow-hidden rounded-xl bg-white shadow-md dark:bg-slate-900 dark:text-white sm:md:max-w-sm md:max-w-4xl lg:w-[855px]"
           >
-            <div className="p-2 pl-10 md:flex">
+            <div className="p-2 pl-4 md:flex">
               <div className="md:shrink-0">
                 <Image
                   alt="Doctor"
                   className=" rounded-xl  sm:h-72 w-full object-cover sm:w-24 md:h-full md:w-48"
                   src={doctor?.img}
-                  height={"200"}
-                  width={"200"}
+                  height={"150"}
+                  width={"180"}
                 />
               </div>
               <div className="p-8">
-                <div className="text-sm font-semibold uppercase tracking-wide text-cyan-600">
+                <div className="text-md font-semibold uppercase tracking-wide text-cyan-600">
                   {docName}
                 </div>
                 <a
