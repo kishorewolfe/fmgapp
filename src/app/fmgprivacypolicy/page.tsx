@@ -6,8 +6,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Family MG",
-  description: "Family MG",
+  title: "My Family Medical Group",
+  description: "My Family Medical Group",
   // other metadata
 };
 

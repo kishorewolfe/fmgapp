@@ -7,8 +7,8 @@ import { Metadata } from "next";
 import NppList from "./NppList";
 
 export const metadata: Metadata = {
-  title: "Family MG",
-  description: "Family MG",
+  title: "My Family Medical Group",
+  description: "My Family Medical Group",
 };
 
 const Npp = () => {
