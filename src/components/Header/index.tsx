@@ -55,6 +55,13 @@ const Header = () => {
       path: "/find_doctor",
       newTab: false,
     },
+    ,
+    {
+      id: 8,
+      title: "UM Cares",
+      path: "/umcares",
+      newTab: false,
+    },
 
     {
       id: 3,
@@ -76,6 +83,12 @@ const Header = () => {
       id: 4,
       title: "Forms",
       path: "/forms",
+      newTab: false,
+    },
+    {
+      id: 8,
+      title: "Health Edu",
+      path: "/healthedu",
       newTab: false,
     },
 
@@ -179,7 +192,7 @@ const Header = () => {
                                   : "text-dark hover:text-cyan-600 dark:text-white/70 dark:hover:text-white"
                               }`}
                             >
-                              <h3 className="text-dark hover:text-cyan-600 dark:text-white xs:mb-[10px] sm:text-sm md:text-sm lg:mb-[-20px] xl:text-lg lg:text-md ">
+                              <h3 className="text-dark hover:text-cyan-600 dark:text-white xs:mb-[10px] sm:text-sm md:text-sm lg:mb-[-20px] font-semibold xl:text-md lg:text-md ">
                                 {menuItem.title}{" "}
                               </h3>
                             </Link>
