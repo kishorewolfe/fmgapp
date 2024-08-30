@@ -11,7 +11,7 @@ const UMCaresHeroTwo = (props: Props) => {
           <Image
             className="ml-8 mt-2 rounded-3xl"
             src="/images/umcares/apollo.png"
-            alt="UM CARES"
+            alt="UM Criteria "
             height={300}
             width={300}
           />

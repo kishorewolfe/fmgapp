@@ -58,8 +58,8 @@ const Header = () => {
     ,
     {
       id: 8,
-      title: "UM Cares",
-      path: "/umcares",
+      title: "UM Criteria",
+      path: "/umcriteria",
       newTab: false,
     },
 

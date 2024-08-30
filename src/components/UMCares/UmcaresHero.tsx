@@ -9,7 +9,7 @@ const UmcaresHero = (props: Props) => {
       <div className=" mx-auto mt-24 flex max-w-6xl flex-col items-center justify-center gap-x-10 gap-y-10 px-7 py-10 dark:bg-gray-800 lg:flex-row lg:px-10 lg:py-14">
         <div className="flex flex-col gap-y-5 lg:w-[650px] lg:px-5">
           <h1 className=" text-4xl font-semibold leading-[1.2] text-lime-600 dark:text-white md:mx-auto md:max-w-xl md:text-center md:text-5xl lg:mx-0 lg:max-w-full lg:text-left xl:text-[50px]">
-            UM Cares
+            UM Criteria
           </h1>
           <div className="text-sm dark:text-gray-300 md:mx-auto md:max-w-xl md:text-center lg:mx-0 lg:max-w-full lg:text-left">
             <ul>
@@ -91,7 +91,7 @@ const UmcaresHero = (props: Props) => {
           <Image
             className=" mt-2 w-full rounded-3xl"
             src="/images/umcares/umcares.jpg"
-            alt="UM CARES"
+            alt="UM Criteria"
             height={1080}
             width={1080}
           />
