@@ -192,7 +192,7 @@ const Header = () => {
                                   : "text-dark hover:text-cyan-600 dark:text-white/70 dark:hover:text-white"
                               }`}
                             >
-                              <h3 className="text-dark hover:text-cyan-600 dark:text-white xs:mb-[10px] sm:text-sm md:text-sm lg:mb-[-20px] font-semibold xl:text-md lg:text-md ">
+                              <h3 className="text-dark hover:text-cyan-600 dark:text-white xs:mb-[10px] sm:text-[0.900rem] md:text-md lg:mb-[-20px] font-medium xl:text-md lg:text-md ">
                                 {menuItem.title}{" "}
                               </h3>
                             </Link>
