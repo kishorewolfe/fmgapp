@@ -1,5 +1,3 @@
-import SharePost from "@/components/Blog/SharePost";
-import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
 
 import { Metadata } from "next";
@@ -73,9 +71,12 @@ const BlogDetailsPage = () => {
 
                             <div className="flex-grow truncate">
                               <div className="mb-3 w-full items-center justify-between sm:flex">
-                              <Link href={"/npp"}> <h2 className="mb-1 truncate text-2xl font-extrabold  leading-snug  text-black dark:text-white sm:mb-0">
-                                  Notice of Privacy Practices
-                                </h2></Link>
+                                <Link href={"/npp"}>
+                                  {" "}
+                                  <h2 className="mb-1 truncate text-2xl font-extrabold  leading-snug  text-black dark:text-white sm:mb-0">
+                                    Notice of Privacy Practices
+                                  </h2>
+                                </Link>
                               </div>
 
                               <div className="flex items-end justify-between whitespace-normal">
@@ -102,12 +103,11 @@ const BlogDetailsPage = () => {
                       </div>
                     </div>
                   </section>
-            
-                 <section className="mt-2 mb-8 justify-center bg-gray-50 text-gray-600  antialiased dark:bg-gray-800">
+
+                  <section className="mb-8 mt-2 justify-center bg-gray-50 text-gray-600  antialiased dark:bg-gray-800">
                     <div className="h-full">
                       <div className="max-w mx-aut rounded-lg shadow-lg hover:bg-lime-200 ">
                         <div className="px-6 py-5">
-                       
                           <div className="flex items-start">
                             <svg
                               className="mr-5 flex-shrink-0 fill-current"
@@ -131,10 +131,11 @@ const BlogDetailsPage = () => {
 
                             <div className="flex-grow truncate">
                               <div className="mb-3 w-full items-center justify-between sm:flex">
-                              <Link href={"/hipaafaq"}>
-                                <h2 className="mb-1 truncate text-2xl font-extrabold  leading-snug  text-black dark:text-white sm:mb-0">
-                                  HIPAA Frequently Asked Questions
-                                </h2></Link>
+                                <Link href={"/hipaafaq"}>
+                                  <h2 className="mb-1 truncate text-2xl font-extrabold  leading-snug  text-black dark:text-white sm:mb-0">
+                                    HIPAA Frequently Asked Questions
+                                  </h2>
+                                </Link>
                               </div>
 
                               <div className="flex items-end justify-between whitespace-normal">
@@ -157,12 +158,10 @@ const BlogDetailsPage = () => {
                               </div>
                             </div>
                           </div>
-                        
                         </div>
                       </div>
                     </div>
                   </section>
-               
 
                   <div className="mt-4">
                     <h3 className="font-xl mb-5 font-bold leading-tight text-black dark:text-white sm:text-sm sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">

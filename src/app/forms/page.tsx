@@ -1,8 +1,13 @@
 import CardForms from "@/components/Forms/CardForms";
 import React from "react";
 import Image from "next/image";
+import { Metadata } from "next";
 type Props = {};
-
+export const metadata: Metadata = {
+  title: "My Family Medical Group",
+  description: "My Family Medical Group",
+  // other metadata
+};
 const page = (props: Props) => {
   return (
     <div>

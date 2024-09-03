@@ -1,15 +1,20 @@
-import ContactusService from '@/components/Services/contactus/ContactusService'
-import Contactus from '@/components/contactus'
-import React from 'react'
+import ContactusService from "@/components/Services/contactus/ContactusService";
+import { Metadata } from "next";
+import React from "react";
 
-type Props = {}
+type Props = {};
+export const metadata: Metadata = {
+  title: "My Family Medical Group",
+  description: "My Family Medical Group",
+  // other metadata
+};
 
 const ContactUsPage = (props: Props) => {
   return (
     <div>
-      <ContactusService/>
+      <ContactusService />
     </div>
-  )
-}
+  );
+};
 
-export default ContactUsPage
+export default ContactUsPage;

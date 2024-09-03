@@ -6,7 +6,6 @@ const Contactus = (props: Props) => {
   return (
     <div>
     
-
       <div>
         <div className="flex flex-wrap">
           <div className="mb-10 w-full sm:w-8/12">
@@ -41,30 +40,7 @@ const Contactus = (props: Props) => {
               <span className="text-sm">+93 749 99 65 50</span>
             </div>
             <div className="mt-5 flex items-center">
-              {/* <svg
-                className="mr-2 h-6 text-indigo-600"
-                fill="currentColor"
-                version="1.1"
-                id="Capa_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 300.988 300.988"
-                style="enableBackground:new 0 0 300.988 300.988;"
-                xml:space="preserve"
-              >
-                <g>
-                  <g>
-                    <path
-                      d="M150.494,0.001C67.511,0.001,0,67.512,0,150.495s67.511,150.493,150.494,150.493s150.494-67.511,150.494-150.493
-                S233.476,0.001,150.494,0.001z M150.494,285.987C75.782,285.987,15,225.206,15,150.495S75.782,15.001,150.494,15.001
-                s135.494,60.782,135.494,135.493S225.205,285.987,150.494,285.987z"
-                    ></path>
-                    <polygon points="142.994,142.995 83.148,142.995 83.148,157.995 157.994,157.995 157.994,43.883 142.994,43.883 		"></polygon>
-                  </g>
-                </g>
-              </svg> */}
+    
               <span className="text-sm">24/7</span>
             </div>
           </div>

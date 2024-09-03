@@ -1,3 +1,12 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "My Family Medical Group",
+  description: "My Family Medical Group",
+  // other metadata
+};
+
+
 export default function Custom404() {
     return <>
     <div className="bg-gradient-to-r from-slate-200 to-gray-200 dark:from-gray-800 dark:to-gray-900 text-black dark:text-white">

@@ -117,7 +117,7 @@ const Header = () => {
       >
         <div className="container">
           <div className="relative -mx-4 flex items-end justify-between">
-            <div className="w-[106rem] max-w-full px-4 xs:block  md:hidden lg:hidden xl:mr-12">
+            <div className="w-[106rem] max-w-full px-4 xs:block  lg:hidden xl:mr-12">
               <Link
                 href="/"
                 className={`header-logo ms:text-sm block w-full lg:text-xl ${
@@ -129,7 +129,7 @@ const Header = () => {
                   alt="logo"
                   width={200}
                   height={80}
-                  className="w-full  xs:block md:hidden lg:hidden"
+                  className="w-full  xs:block  md:block lg:hidden logomobile"
                 />
               </Link>
             </div>
@@ -179,7 +179,7 @@ const Header = () => {
                                 alt="logo"
                                 width={240}
                                 height={60}
-                                className="logoimg"
+                                
                               />
                             </div>
                           ) : (
