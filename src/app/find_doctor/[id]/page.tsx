@@ -5,11 +5,7 @@ import EachDoctorProfile from "@/components/FindaDoctor/EachDoctorProfile";
 import ProfileNotFound from "@/components/FindaDoctor/ProfileNotFound";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "My Family Medical Group",
-  description: "My Family Medical Group",
-  // other metadata
-};
+
 const ProvidersPage = ({ params }) => {
   let isProfileAvailable = null;
   let i = params?.id;

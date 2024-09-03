@@ -61,7 +61,7 @@ const EachDoctorProfile = (props) => {
             <div className="col-span-4 sm:col-span-4">
               <div
                 className="rounded-lg bg-white p-6 shadow dark:bg-slate-800 dark:text-white"
-                style={{ height: "560px" }}
+                style={{ height: "580px" }}
               >
                 <div className="flex flex-col items-center">
                   <Image
@@ -103,7 +103,7 @@ const EachDoctorProfile = (props) => {
             <div className="col-span-4 sm:col-span-8 md:text-lg sm:text-sm lg:text-lg">
               <div
                 className="rounded-lg bg-white p-6 shadow dark:bg-slate-800 dark:text-white"
-                style={{ height: "560px" }}
+                style={{ height: "580px" }}
               >
                 <div className="my-auto flex w-full flex-col justify-center gap-2 py-6 md:text-lg sm:text-sm lg:text-lg">
                   <div className="flex w-full justify-center gap-2 xs:flex-col sm:flex-row ">
