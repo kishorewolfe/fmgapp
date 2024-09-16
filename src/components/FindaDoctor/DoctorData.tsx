@@ -22,28 +22,7 @@ export const doctorData = [
     img:"/images/providersphoto/Taha_Ahmed.jpg"
    
   },
- 
-  {
-    id: 3,
-    First_Name: "Sabah",
-    Last_Name: "Ahmed",
-    Degree: "M.D.",
-    Gender: "F",
-    Languages: ["English"],
-    Specialty: "Family Medicine",
-    Organization:
-      "Desert Valley Medical Group, Inc., dba Chino Valley Primary Care",
-    Address: {
-      Street: "5450 Jefferson Avenue",
-      Suite: "Suite 3",
-      City: "Chino",
-      State: "CA",
-      Zip: "91710",
-    },
-    Phone: "(909) 464-8722",
-    Fax: "(909) 464-8737",
-    img:"/images/providersphoto/Sabah_Ahmed_MD.jpg"
-  },
+
   {
     id: 4,
     First_Name: "Sachin",
