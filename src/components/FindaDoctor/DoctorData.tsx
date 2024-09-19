@@ -199,7 +199,7 @@ export const doctorData = [
     },
     Phone: "(909) 591-6446",
     Fax: "(909) 591-1309",
-    img:"/images/providersphoto/patel.jpg"
+    img:"/images/providersphoto/Avani_Patel_Shah_MD.jpg"
   },
   {
     id: 13,
@@ -238,7 +238,7 @@ export const doctorData = [
     },
     Phone: "(909) 591-6446",
     Fax: "(909) 591-1309",
-    img:"/images/providersphoto/sampledoc1.jpg"
+    img:"/images/providersphoto/Nayan_Shah_MD.jpg"
   },
   {
     id: 15,

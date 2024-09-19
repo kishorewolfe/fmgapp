@@ -66,7 +66,7 @@ const EachDoctorProfile = (props) => {
                 <div className="flex flex-col items-center">
                   <Image
                     src= {doctor[0]?.img}
-                    className="mb-4 h-32 w-32 shrink-0 rounded-full bg-gray-300"
+                    className="mb-4 h-32 w-32 shrink-0 rounded-full bg-gray-300 object-contain"
                     alt="Doctor"
                     width={100}
                     height={100}
