@@ -1,6 +1,7 @@
 import React from 'react'
 import UMCaresUIPages from '@/components/UMCares/Index'
 import { Metadata } from 'next';
+
 type Props = {}
 export const metadata: Metadata = {
   title: "My Family Medical Group",
@@ -9,9 +10,10 @@ export const metadata: Metadata = {
 };
 const UMcaresPage = (props: Props) => {
   return (
-    <div>
+    <>
+
         <UMCaresUIPages/>
-    </div>
+    </>
   )
 }
 
