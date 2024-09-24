@@ -238,7 +238,7 @@ export const doctorData = [
     },
     Phone: "(909) 591-6446",
     Fax: "(909) 591-1309",
-    img:"/images/providersphoto/Nayan_Shah_MD.jpg"
+    img:"/images/providersphoto/Nayan.jpg"
   },
   {
     id: 15,
