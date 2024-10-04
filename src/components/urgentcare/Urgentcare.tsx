@@ -64,6 +64,24 @@ const Urgentcare = (props: Props) => {
                       {care.hours3}
                     </p>
                   </div>
+
+                  {care.HolidayHours && <>
+                  
+                  <p className="mb-2  mt-2  font-bold text-lime-600 dark:text-cyan-600 lg:text-xl  ">
+                    Holiday Hours:
+                  </p>
+                  <div className="items-left align-left flex ">
+                    <p className="text-secondary-500 mt-1.5 text-sm leading-6 dark:text-white lg:text-xl">
+                      {care.HolidayHours}
+                      <br/>
+                      {care.All_Other_Holidays}
+                    </p>
+                  </div>
+                  
+                  </>}
+                  
+
+
                 </li>
               );
             })}
