@@ -87,8 +87,8 @@ const Header = () => {
     },
     {
       id: 8,
-      title: "Health Edu",
-      path: "/healthedu",
+      title: "Health Plans",
+      path: "/insuranceplans",
       newTab: false,
     },
 
@@ -159,7 +159,7 @@ const Header = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar absolute right-0 z-30 mx-20   w-[250px] rounded border-[.5px] border-body-color/50 bg-white p-5 px-6 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+                  className={`navbar absolute right-0 z-30 mx-10   w-[250px] rounded border-[.5px] border-body-color/50 bg-white p-5 px-6 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
