@@ -15,12 +15,10 @@ export const doctorData = [
       City: "Montclair",
       State: "CA",
       Zip: "91763",
-  
     },
     Phone: "(909) 399-5944",
     Fax: "(909) 399-5669",
-    img:"/images/providersphoto/Taha_Ahmed.jpg"
-   
+    img: "/images/providersphoto/Taha_Ahmed.jpg",
   },
 
   {
@@ -41,7 +39,7 @@ export const doctorData = [
     },
     Phone: "(909) 735-2446",
     Fax: "(909) 206-1553",
-    img:"/images/providersphoto/sampledoc1.jpg"
+    img: "/images/providersphoto/sampledoc1.jpg",
   },
   {
     id: 5,
@@ -61,7 +59,7 @@ export const doctorData = [
     },
     Phone: "(909) 735-2446",
     Fax: "(909) 206-1553",
-   img:"/images/providersphoto/Balu_Gadhe_MD.jpg"
+    img: "/images/providersphoto/Balu_Gadhe_MD.jpg",
   },
   {
     id: 6,
@@ -81,7 +79,7 @@ export const doctorData = [
     },
     Phone: "(909) 735-2446",
     Fax: "(909) 206-1553",
-   img:"/images/providersphoto/sampledoc1.jpg"
+    img: "/images/providersphoto/sampledoc1.jpg",
   },
   {
     id: 7,
@@ -101,7 +99,7 @@ export const doctorData = [
     },
     Phone: "(909) 735-2446",
     Fax: "(909) 206-1553",
-     img:"/images/providersphoto/sampledoc1.jpg"
+    img: "/images/providersphoto/sampledoc1.jpg",
   },
   {
     id: 8,
@@ -120,7 +118,7 @@ export const doctorData = [
     },
     Phone: "(909) 591-6446",
     Fax: "(909) 591-1309",
-    img:"/images/providersphoto/Lira.jpg"
+    img: "/images/providersphoto/Lira.jpg",
   },
   {
     id: 9,
@@ -140,7 +138,7 @@ export const doctorData = [
     },
     Phone: "(909) 482-4462",
     Fax: "(909) 482-4485",
-   img:"/images/providersphoto/Hedy_Loa_MD.jpg"
+    img: "/images/providersphoto/Hedy_Loa_MD.jpg",
   },
   {
     id: 10,
@@ -160,7 +158,7 @@ export const doctorData = [
     },
     Phone: "(909) 981-0989",
     Fax: "(909) 949-6214",
-  img:"/images/providersphoto/Hetalben_Makwana.jpg"
+    img: "/images/providersphoto/Hetalben_Makwana.jpg",
   },
   {
     id: 11,
@@ -180,7 +178,7 @@ export const doctorData = [
     },
     Phone: "(909) 482-4462",
     Fax: "(909) 482-4485",
-   img:"/images/providersphoto/Usha_Mantha_MD.jpg"
+    img: "/images/providersphoto/Usha_Mantha_MD.jpg",
   },
   {
     id: 12,
@@ -199,7 +197,7 @@ export const doctorData = [
     },
     Phone: "(909) 591-6446",
     Fax: "(909) 591-1309",
-    img:"/images/providersphoto/Avani_Patel_Shah_MD.jpg"
+    img: "/images/providersphoto/Avani_Patel_Shah_MD.jpg",
   },
   {
     id: 13,
@@ -219,7 +217,7 @@ export const doctorData = [
     },
     Phone: "(909) 296-7800",
     Fax: "(909) 509-5511",
-    img:"/images/providersphoto/Venkat_Pulakanti_MD.jpg"
+    img: "/images/providersphoto/Venkat_Pulakanti_MD.jpg",
   },
   {
     id: 14,
@@ -238,7 +236,7 @@ export const doctorData = [
     },
     Phone: "(909) 591-6446",
     Fax: "(909) 591-1309",
-    img:"/images/providersphoto/Nayan.jpg"
+    img: "/images/providersphoto/Nayan.jpg",
   },
   {
     id: 15,
@@ -248,19 +246,21 @@ export const doctorData = [
     Gender: "M",
     Languages: ["English"],
     Specialty: "Family Medicine",
-    Organization: "Desert Valley Medical Group, Inc., dba Chino Valley Primary Care",
+    Organization:
+      "Desert Valley Medical Group, Inc., dba Chino Valley Primary Care",
     Address: {
-        Street: "5450 Jefferson Avenue",
-        Suite: "Suite 3",
-        City: "Chino",
-        State: "CA",
-        Zip: "91710"
+      Street: "5450 Jefferson Avenue",
+      Suite: "Suite 3",
+      City: "Chino",
+      State: "CA",
+      Zip: "91710",
     },
     Phone: "(909) 464-8722",
     Fax: "(909) 464-8737",
-    img:"/images/providersphoto/Hamed_Shalikar_MD.jpg"
-},
-{id: 16,
+    img: "/images/providersphoto/Hamed_Shalikar_MD.jpg",
+  },
+  {
+    id: 16,
     First_Name: "Tejinder",
     Last_Name: "Singh",
     Degree: "M.D.",
@@ -269,18 +269,18 @@ export const doctorData = [
     Specialty: "Internal Medicine",
     Organization: "MY FAMILY MEDICAL GROUP",
     Address: {
-        Street: "914 W. Foothill Blvd.",
-        Suite: "Suite B",
-        City: "Upland",
-        State: "CA",
-        Zip: "91786"
+      Street: "914 W. Foothill Blvd.",
+      Suite: "Suite B",
+      City: "Upland",
+      State: "CA",
+      Zip: "91786",
     },
     Phone: "(909) 982-8944",
     Fax: "(909) 985-0932",
-     img:"/images/providersphoto/sampledoc1.jpg"
-},
-{
-  id: 17,
+    img: "/images/providersphoto/sampledoc1.jpg",
+  },
+  {
+    id: 17,
     First_Name: "Mehul",
     Last_Name: "Sonawala",
     Degree: "M.D.",
@@ -289,17 +289,18 @@ export const doctorData = [
     Specialty: "Internal Medicine",
     Organization: "Cajon Medical Group PC",
     Address: {
-        Stree: "12555 Central Avenue",
-        Suite: "Suite A",
-        City: "Chino",
-        State: "CA",
-        Zip: "91710"
+      Stree: "12555 Central Avenue",
+      Suite: "Suite A",
+      City: "Chino",
+      State: "CA",
+      Zip: "91710",
     },
     Phone: "(909) 735-2446",
     Fax: "(909) 206-1553",
-     img:"/images/providersphoto/sampledoc1.jpg"
-},
-{id: 18,
+    img: "/images/providersphoto/sampledoc1.jpg",
+  },
+  {
+    id: 18,
     First_Name: "Thillaiampalam",
     Last_Name: "Sri Jaerajah",
     Degree: "M.D.",
@@ -308,15 +309,200 @@ export const doctorData = [
     Specialty: "Internal Medicine",
     Organization: "Cajon Medical Group PC",
     Address: {
-        Street: "12555 Central Avenue",
-        Suite: "Suite A",
-        City: "Chino",
-        State: "CA",
-        Zip: "91710"
+      Street: "12555 Central Avenue",
+      Suite: "Suite A",
+      City: "Chino",
+      State: "CA",
+      Zip: "91710",
     },
     Phone: "(909) 735-2446",
     Fax: "(909) 206-1553",
-    img:"/images/providersphoto/sampledoc1.jpg"
-}
+    img: "/images/providersphoto/sampledoc1.jpg",
+  },
+  {
+    id: 19,
+    First_Name: "Steven",
+    Last_Name: "Barag",
+    Degree: "D.O.",
+    Gender: "M",
+    Languages: ["English", "Spanish"],
+    Specialty: "Family Medicine",
+    Organization: "Aureus Medical Group, Inc.",
+    Address: {
+      Street: "7974 Haven Avenue",
+      Suite: "Suite 250",
+      City: "Rancho Cucamonga",
+      State: "CA",
+      Zip: "91730",
+    },
+    Phone: "(909) 941-0855",
+    Fax: "(909) 987-0011",
+    img: "/images/providersphoto/sampledoc1.jpg",
+  },
+  {
+    id: 20,
+    First_Name: "Zuhra",
+    Last_Name: "Musherraf",
+    Degree: "M.D.",
+    Gender: "F",
+    Languages: ["English", "Spanish"],
+    Specialty: "Family Medicine",
+    Organization:
+      "Desert Valley Medical Group, Inc., dba Chino Valley Primary Care",
+    Address: {
+      Street: "5450 Jefferson Avenue",
+      Suite: "Suite 3",
+      City: "Chino",
+      State: "CA",
+      Zip: "91710",
+    },
+    Phone: "(909) 464-8723",
+    Fax: "(909) 464-8737",
+    img: "/images/providersphoto/sampledoc1.jpg",
+  },
+  {
+    id: 21,
+    First_Name: "Brittany",
+    Last_Name: "Wertz",
+    Degree: "D.O.",
+    Gender: "F",
+    Languages: ["English", "Spanish"],
+    Specialty: "Family Medicine",
+    Organization: "Dr. B. Wertz, Inc.",
+    Address: {
+      Street: "678 S. Indian Hill Blvd.",
+      Suite: "Suite 200",
+      City: "Claremont",
+      State: "CA",
+      Zip: "91711",
+    },
+    Phone: "(909) 399-0101",
+    Fax: "(909) 399-3928",
+    img: "/images/providersphoto/sampledoc1.jpg",
+  },
+  {
+    id: 22,
+    First_Name: "Mauricio",
+    Last_Name: "Bonilla",
+    Degree: "M.D.",
+    Gender: "M",
+    Languages: ["English", "Spanish"],
+    Specialty: "Family Medicine",
+    Organization: "Friends of Family Health Center",
+    Address: {
+      Street: "1129 W. 4th Street",
+      Suite: "",
+      City: "Ontario",
+      State: "CA",
+      Zip: "91762",
+    },
+    Phone: "(909) 363-9300, Opt. 4",
+    Fax: "(909) 903-3741",
+    img: "/images/providersphoto/sampledoc1.jpg",
+  },
+  {
+    id: 23,
 
+    First_Name: "Rochelle",
+    Last_Name: "Lacaze",
+    Degree: "M.D.",
+    Gender: "F",
+    Languages: ["English", "Spanish"],
+    Specialty: "Family Medicine",
+    Organization: "Friends of Family Health Center",
+    Address: {
+      Street: "1129 W. 4th Street",
+      Suite: "",
+      City: "Ontario",
+      State: "CA",
+      Zip: "91762",
+    },
+    Phone: "(909) 363-9300, Opt. 4",
+    Fax: "(909) 903-3741",
+    img: "/images/providersphoto/sampledoc1.jpg",
+  },
+  {
+    id: 24,
+
+    First_Name: "Mehrnaz",
+    Last_Name: "Salehidobakhshari",
+    Degree: "M.D.",
+    Gender: "F",
+    Languages: ["English", "Farsi"],
+    Specialty: "Internal Medicine",
+    Organization: "Friends of Family Health Center",
+    Address: {
+      Street: "1129 W. 4th Street",
+      Suite: "",
+      City: "Ontario",
+      State: "CA",
+      Zip: "91762",
+    },
+    Phone: "(909) 363-9300, Opt. 4",
+    Fax: "(909) 903-3741",
+    img: "/images/providersphoto/sampledoc1.jpg",
+  },
+  {
+    id: 25,
+
+    First_Name: "Mark",
+    Last_Name: "Shiu",
+    Degree: "D.O.",
+    Gender: "M",
+    Languages: ["English", "Cantonese"],
+    Specialty: "Family Medicine",
+    Organization: "Medicor Medical Group, Inc.",
+    Address: {
+      Street: "7974 Haven Avenue",
+      Suite: "Suite 250",
+      City: "Rancho Cucamonga",
+      State: "CA",
+      Zip: "91730",
+    },
+    Phone: "(800) 734-1733",
+    Fax: "(800) 734-1733",
+    img: "/images/providersphoto/sampledoc1.jpg",
+  },
+  {
+    id: 26,
+
+    First_Name: "Rashmi",
+    Last_Name: "Godugo",
+    Degree: "M.D.",
+    Gender: "F",
+    Languages: ["English", "Hindi", "Punjabi"],
+    Specialty: "Family Medicine",
+    Organization: "Our Family Medical Group",
+    Address: {
+      Street: "1131 W. Sixth Street",
+      Suite: "Suite 150",
+      City: "Ontario",
+      State: "CA",
+      Zip: "91762",
+    },
+    Phone: "(909) 482-4462",
+    Fax: "(909) 482-4485",
+    img: "/images/providersphoto/sampledoc1.jpg",
+  },
+  {
+    id: 27,
+
+    First_Name: "Mina",
+    Last_Name: "Soliman",
+    Degree: "M.D.",
+    Gender: "M",
+    Languages: ["English", "Arabic"],
+    Specialty: "Family Medicine",
+    Organization: "Whole Family Care, Inc.",
+    Address: {
+      Street: "637 N. 13th Avenue",
+      Suite: "",
+      City: "Upland",
+      State: "CA",
+      Zip: "91786",
+    },
+    Phone: "(909) 892-7434",
+    Fax: "(909) 892-3454",
+    img: "/images/providersphoto/sampledoc1.jpg",
+  },
 ];

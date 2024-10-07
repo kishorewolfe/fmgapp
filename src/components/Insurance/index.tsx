@@ -7,6 +7,7 @@ type Props = {}
 const InsurancePage = (props: Props) => {
   return (
     <>
+    
         <section className=' mt-[10rem] '>
        <div className="container">
         <SectionTitle
