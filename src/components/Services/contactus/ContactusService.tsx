@@ -1,8 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
 type Props = {};
-
+export const metadata: Metadata = {
+  title: "My Family Medical Group",
+  description: "My Family Medical Group",
+  // other metadata
+};
 const ContactusService = (props: Props) => {
   return (
     <div
@@ -37,7 +42,7 @@ const ContactusService = (props: Props) => {
             />
             <br />
             <p className="title-font mb-5 font-medium leading-relaxed text-gray-600">
-              My Family Medical Group 5475 Walnut Ave. Chino, CA 91710
+              5475 Walnut Ave. Chino, CA 91710
             </p>
           </div>
         </div>
@@ -58,6 +63,8 @@ const ContactusService = (props: Props) => {
                   <p className="my-3 font-bold text-black dark:text-white sm:text-sm lg:text-xl">
                     Saturday - Sunday Closed
                   </p>
+                  <br />
+                  <br /> <br />
                   <br />
                   <br />
                 </div>
@@ -81,7 +88,11 @@ const ContactusService = (props: Props) => {
                   </p>
                   <p className="my-3 font-bold text-black dark:text-white sm:text-sm lg:text-xl ">
                     Patient Billing: 909-287-7520
+                  </p> 
+                  <p className="my-3 font-bold text-black dark:text-white sm:text-sm lg:text-xl ">
+                   After Hours: 909-398-0575
                   </p>
+                  <br />
                 </div>
               </div>
               <div></div>

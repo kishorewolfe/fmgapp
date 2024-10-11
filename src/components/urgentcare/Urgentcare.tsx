@@ -1,8 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import UrgentcareData from "./UrgentcareData";
+import { Metadata } from "next";
 type Props = {};
-
+export const metadata: Metadata = {
+  title: "My Family Medical Group",
+  description: "My Family Medical Group",
+  // other metadata
+};
 const Urgentcare = (props: Props) => {
   return (
     <div style={{ marginTop: "100px" }} className="pb-5">
@@ -17,11 +22,11 @@ const Urgentcare = (props: Props) => {
             appointment. We are also contracted with the following Urgent Cares
             for your convenience
           </p>
-          <ul className="mt-10 grid grid-cols-1 gap-2  text-slate-700 md:grid-cols-3">
+          <ul className="mt-10 grid grid-cols-1 gap-3 mb-5  text-slate-700 md:grid-cols-3">
             {UrgentcareData.map((care, i) => {
               return (
                 <li
-                  className="rounded-xl  bg-slate-50 px-6 py-8  shadow dark:bg-slate-800"
+                  className="rounded-xl  bg-slate-50 px-6 py-8  mb-2 shadow dark:bg-slate-800"
                   key={i}
                 >
                   <div className="flex  ">
@@ -35,8 +40,9 @@ const Urgentcare = (props: Props) => {
                   </div>
                   <div className="flex ">
                     {" "}
-                    <p className="text-secondary-500 mt-1.5 text-sm leading-6  dark:text-white lg:text-xl">
+                    <p className="text-secondary-500 mt-1.5 text-sm leading-6  dark:text-white lg:text-lg">
                       {care.address} <br />
+                      {care.address_line2} <br />
                       {care.phone}
                       <br />
                       {care.fax}
@@ -49,29 +55,29 @@ const Urgentcare = (props: Props) => {
                   </p>
 
                   <div>
-                    <p className="text-secondary-500 mt-1.5 text-sm leading-6 dark:text-white lg:text-xl">
+                    <p className="text-secondary-500 mt-1.5 text-sm leading-6 dark:text-white lg:text-lg">
                       {care.hours1}
                     </p>
                   </div>
                   <div className="items-left align-left flex">
-                    <p className="text-secondary-500 mt-1.5 text-sm leading-6 dark:text-white lg:text-xl">
+                    <p className="text-secondary-500 mt-1.5 text-sm leading-6 dark:text-white lg:text-lg">
                       {care.hours2}
                     </p>
                   </div>
 
                   <div className="items-left align-left flex ">
-                    <p className="text-secondary-500 mt-1.5 text-sm leading-6 dark:text-white lg:text-xl">
+                    <p className="text-secondary-500 mt-1.5 text-sm leading-6 dark:text-white lg:text-lg">
                       {care.hours3}
                     </p>
                   </div>
 
                   {care.HolidayHours && <>
                   
-                  <p className="mb-2  mt-2  font-bold text-lime-600 dark:text-cyan-600 lg:text-xl  ">
+                  <p className="mb-2  mt-2  font-bold text-lime-600 dark:text-cyan-600 lg:text-lg  ">
                     Holiday Hours:
                   </p>
                   <div className="items-left align-left flex ">
-                    <p className="text-secondary-500 mt-1.5 text-sm leading-6 dark:text-white lg:text-xl">
+                    <p className="text-secondary-500 mt-1.5 text-sm leading-6 dark:text-white lg:text-lg">
                       {care.HolidayHours}
                       <br/>
                       {care.All_Other_Holidays}

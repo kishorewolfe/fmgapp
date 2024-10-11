@@ -2,8 +2,8 @@ const UrgentcareData: any[] = [
   {
     id: 1,
     clinic: "TotalCare Walk-in Clinic",
-    address: "13768 Roswell Avenue, Suite 118 Chino, CA 91710",
-
+    address: "13768 Roswell Avenue, Suite 118,",
+    address_line2:"Chino, CA 91710" ,
     phone: "Phone: (909)-591-8200",
     fax: "Fax (866) 701-9305",
     hours1: "Monday - Friday: 8:00 am – 8:00pm",
@@ -45,8 +45,8 @@ const UrgentcareData: any[] = [
   {
     id: 2,
     clinic: "TotalCare Walk-in Clinic",
-    address: "13334 Limonite Avenue ,Suite 130 Eastvale, CA 92280",
-
+    address: "13334 Limonite Avenue ,Suite 130,",
+    address_line2:"Eastvale, CA 92280" ,
     phone: "Phone: (951) 407-1460",
     fax: "Fax (866) 701-9305",
     iconSvg: (
@@ -132,8 +132,8 @@ const UrgentcareData: any[] = [
   {
     id: 4,
     clinic: "Chino Hills Crossroads",
-    address: "3110 Chino Avenue, Suite 150-B Chino Hills, CA 91790",
-
+    address: `3110 Chino Avenue, Suite 150-B, `,
+    address_line2:"Chino Hills, CA 91790" ,
     phone: "Phone: (909) 630-7868",
     fax: "Fax: (909) 469-2109",
     iconSvg: (
@@ -178,7 +178,8 @@ const UrgentcareData: any[] = [
   {
     id: 5,
     clinic: "Claremont Urgent Care",
-    address: "1601 Monte Vista Avenue, Suite 190 Claremont, CA 91711",
+    address: "1601 Monte Vista Avenue, Suite 190,",
+    address_line2:"Claremont, CA 91711" ,
 
     phone: "Phone (909) 865-9977",
     fax: "Fax (909) 469-2119 ",
@@ -224,7 +225,9 @@ const UrgentcareData: any[] = [
   {
     id: 6,
     clinic: "La Verne Urgent Care",
-    address: "2333 Foothill Blvd., Suite C La Verne, CA 91750",
+    address: "2333 Foothill Blvd., Suite C,",
+    address_line2:"La Verne, CA 91750" ,
+    
     phone: "Phone (951) 460-2300",
     fax: "Fax (866) 701-9305",
     iconSvg: (

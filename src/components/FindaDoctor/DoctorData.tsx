@@ -255,7 +255,7 @@ export const doctorData = [
       State: "CA",
       Zip: "91710",
     },
-    Phone: "(909) 464-8722",
+    Phone: " (909)464-8723",
     Fax: "(909) 464-8737",
     img: "/images/providersphoto/Hamed_Shalikar_MD.jpg",
   },
@@ -277,7 +277,7 @@ export const doctorData = [
     },
     Phone: "(909) 982-8944",
     Fax: "(909) 985-0932",
-    img: "/images/providersphoto/sampledoc1.jpg",
+    img: "/images/providersphoto/Singh.jpg",
   },
   {
     id: 17,
@@ -297,7 +297,7 @@ export const doctorData = [
     },
     Phone: "(909) 735-2446",
     Fax: "(909) 206-1553",
-    img: "/images/providersphoto/sampledoc1.jpg",
+    img: "/images/providersphoto/mehul_sonawala.jpg",
   },
   {
     id: 18,
@@ -337,7 +337,7 @@ export const doctorData = [
     },
     Phone: "(909) 941-0855",
     Fax: "(909) 987-0011",
-    img: "/images/providersphoto/sampledoc1.jpg",
+    img: "/images/providersphoto/Steven_Barag.jpg",
   },
   {
     id: 20,
@@ -378,7 +378,7 @@ export const doctorData = [
     },
     Phone: "(909) 399-0101",
     Fax: "(909) 399-3928",
-    img: "/images/providersphoto/sampledoc1.jpg",
+    img: "/images/providersphoto/brittany_wertz.png",
   },
   {
     id: 22,
@@ -398,7 +398,7 @@ export const doctorData = [
     },
     Phone: "(909) 363-9300, Opt. 4",
     Fax: "(909) 903-3741",
-    img: "/images/providersphoto/sampledoc1.jpg",
+    img: "/images/providersphoto/mauricio_bonilla.jpg",
   },
   {
     id: 23,
@@ -419,7 +419,7 @@ export const doctorData = [
     },
     Phone: "(909) 363-9300, Opt. 4",
     Fax: "(909) 903-3741",
-    img: "/images/providersphoto/sampledoc1.jpg",
+    img: "/images/providersphoto/rochelle_lacaze.jpg",
   },
   {
     id: 24,
@@ -440,7 +440,7 @@ export const doctorData = [
     },
     Phone: "(909) 363-9300, Opt. 4",
     Fax: "(909) 903-3741",
-    img: "/images/providersphoto/sampledoc1.jpg",
+    img: "/images/providersphoto/mehrnaz.jpg",
   },
   {
     id: 25,
@@ -461,7 +461,7 @@ export const doctorData = [
     },
     Phone: "(800) 734-1733",
     Fax: "(800) 734-1733",
-    img: "/images/providersphoto/sampledoc1.jpg",
+    img: "/images/providersphoto/mark_shiu.jpg",
   },
   {
     id: 26,
@@ -482,7 +482,7 @@ export const doctorData = [
     },
     Phone: "(909) 482-4462",
     Fax: "(909) 482-4485",
-    img: "/images/providersphoto/sampledoc1.jpg",
+    img: "/images/providersphoto/Dr_Godugo.jpg",
   },
   {
     id: 27,
@@ -503,6 +503,6 @@ export const doctorData = [
     },
     Phone: "(909) 892-7434",
     Fax: "(909) 892-3454",
-    img: "/images/providersphoto/sampledoc1.jpg",
+    img: "/images/providersphoto/Mina.jpg",
   },
 ];

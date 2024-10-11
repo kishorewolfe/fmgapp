@@ -3,7 +3,13 @@ import LanguagesSpoken from "./LanguagesSpoken";
 import { doctorData } from "./DoctorData";
 import Image from "next/image";
 import "./EachDoctorProfile.css";
+import { Metadata } from "next";
 type Props = {};
+export const metadata: Metadata = {
+  title: "My Family Medical Group",
+  description: "My Family Medical Group",
+  // other metadata
+};
 
 const EachDoctorProfile = (props) => {
   let { doctor } = props;
@@ -30,10 +36,13 @@ const EachDoctorProfile = (props) => {
   if(doctor[0].id ===1){
     address2 = "10837 Laurel Street, Suite 104, Rancho Cucamonga, CA, 91730"
   }
+  if(doctor[0].id ===13){
+    address2 = "5475 Walnut Avenue Chino, CA 91710 "
+  }
   return (
-    <div className="lg:mt-[120px] sm:mt-[120px]" style={{ marginTop: "140px" }}>
+    <div className="lg:mt-[120px] xs:mt-[20px]" style={{ marginTop: "140px" }}>
       <div className="bg-gray-100 dark:bg-slate-900 dark:text-white">
-        <div className=" md:ml-[12.5rem]  flex items-start justify-start gap-2" >
+        <div className=" md:ml-[18rem]  sm:ml-[10rem]  flex items-start justify-start gap-2" >
           <a
             href="/find_doctor"
             className="mt-8  inline-flex items-center rounded-md border border-lime-600 px-3 py-1.5 text-lime-600 hover:bg-slate-50"
