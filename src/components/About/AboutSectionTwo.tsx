@@ -35,16 +35,16 @@ const AboutSectionTwo = () => {
             <div className="max-w-[470px]">
               <div className="mb-9">
 
-              <h1 className="relative mb-6 text-3xl font-bold text-lime-600 dark:text-white xl:text-hero">
-              Specialist Providers</h1>
+              <p className="relative mb-6 text-3xl font-bold text-lime-600 dark:text-white xl:text-hero">
+              Specialist Providers</p>
                 <p className=" font-medium   leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
                 We have an extensive network of Specialists ready to meet all your healthcare needs.
                 </p>
               </div>
               <div className="mb-9">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                <p className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                   Premier support
-                </h3>
+                </p>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
                 We work with other medical experts if necessary and coordinate your care to specialist providers.
                 </p>

@@ -16,9 +16,9 @@ const Video = () => {
             >
               <div className=" relative aspect-[77/40] items-center justify-center  shadow-lg  ">
                 <div className="rounded-lg bg-white p-4 text-center shadow  dark:border-gray-700 dark:bg-gray-800 xs:mt-1 sm:p-8 md:mt-40">
-                  <h2 className=" mb-1 text-3xl font-bold !leading-tight text-lime-600 dark:text-white sm:text-4xl md:text-[45px]">
+                  <p className=" mb-1 text-3xl font-bold !leading-tight text-lime-600 dark:text-white sm:text-4xl md:text-[45px]">
                     My Family Medical Group is a large multi-specialty group
-                  </h2>
+                  </p>
                   <p className="mb-1 mt-10 text-base text-gray-500  dark:text-gray-400 sm:text-lg">
                     My Family Medical Group is a large multi-specialty group
                     practice with an emphasis on primary care. We aim to provide

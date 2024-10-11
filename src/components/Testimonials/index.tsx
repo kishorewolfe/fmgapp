@@ -43,7 +43,7 @@ const Testimonials = () => {
         />
       </div>
 
-      <div className="mx-auto max-w-md  flex justify-items-center items-center text-center  ">
+      <div className="mx-auto max-w-md  flex justify-center items-center text-center  ">
         <div className="group relative ">
           <div className="absolute  -inset-1 rounded-lg bg-gradient-to-r from-cyan-600 to-lime-600 opacity-25 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
           <div className="items-top   relative flex justify-start space-x-6 rounded-lg bg-white px-7 py-6 leading-none ring-1 ring-gray-900/5 dark:bg-dark">
@@ -52,7 +52,7 @@ const Testimonials = () => {
               className=" items-center  block justify-center  text-3xl transition duration-200 group-hover:text-cyan-600"
               target="_blank"
             >
-              <h1>Secure Patient Portal → </h1>
+              <p className="text-3xl">Secure Patient Portal → </p>
             </a>
           </div>
         </div>

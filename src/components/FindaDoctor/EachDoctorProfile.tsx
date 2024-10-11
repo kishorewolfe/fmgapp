@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 
 const EachDoctorProfile = (props) => {
   let { doctor } = props;
-  console.log(doctor);
   let docName =
     doctor[0]?.First_Name +
     " " +

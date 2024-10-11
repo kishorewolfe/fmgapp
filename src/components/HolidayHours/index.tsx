@@ -11,7 +11,6 @@ type Props = {}
 
 const HolidayHours = ({feature}: any) => {
   const { name, blockDate,blockMonth,date,day } = feature;
-  console.log("feature",feature)
   return (
     <div >  
       <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl m-3 dark:bg-gray-dark dark:text-white" >

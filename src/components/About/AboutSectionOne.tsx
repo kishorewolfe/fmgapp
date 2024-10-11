@@ -25,8 +25,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
           
-               <h1 className="relative mb-6 text-3xl font-bold text-lime-600 dark:text-white xl:text-hero">
-               Why Us!</h1>
+               <p className="relative mb-6 text-3xl font-bold text-lime-600 dark:text-white xl:text-hero">
+               Why Us!</p>
 
               <div
                 className="mb-12 max-w-[570px] lg:mb-0"
@@ -44,11 +44,11 @@ const AboutSectionOne = () => {
                   </p>
                 </div>
                 <div className="w-3/4">
-                  <h3 className="
+                  <p className="
                  text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed
                   ">
                   Complete Healthcare In One Convenient Location!
-                  </h3>
+                  </p>
                   {/* <p>Ut ultricies lacus non fermentum ultrices.</p> */}
                 </div>
               </div>
@@ -59,9 +59,9 @@ const AboutSectionOne = () => {
                   </p>
                 </div>
                 <div className="w-3/4">
-                  <h3 className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  We Will Help YOU Manage Your Healthcare By Encouraging You To Play An Active Part In Your Own Healthcare.
-                  </h3>
+                  <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                  We Will Help You Manage Your Healthcare By Encouraging You To Play An Active Part In Your Own Healthcare.
+                  </p>
                   {/* <p>consectetur adipiscing elit fermentum ultricies.</p> */}
                 </div>
               </div>
@@ -74,10 +74,10 @@ const AboutSectionOne = () => {
                 </div>
 
                 <div className="w-3/4">
-                  <h3 className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                  <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
                   We Provide You With Educational Materials Regarding Your Health.
 
-                  </h3>
+                  </p>
                   {/* <p>consectetur adipiscing elit fermentum ultricies.</p> */}
                 </div>
               </div>
@@ -89,9 +89,9 @@ const AboutSectionOne = () => {
                   </p>
                 </div>
                 <div className="w-3/4">
-                  <h3 className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                  <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
                   We Work With Other Medical Experts If Necessary And Coordinate Your Care To Specialist Providers.
-                  </h3>
+                  </p>
                   {/* <p>consectetur adipiscing elit fermentum ultricies.</p> */}
                 </div>
               </div>

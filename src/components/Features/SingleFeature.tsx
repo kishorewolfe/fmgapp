@@ -9,10 +9,10 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
 
         <span className="hidden dark:block "> {iconDark}</span>
 
-        <h2 className="title-font font-medium text-gray-900 dark:text-white sm:text-sm md:text-sm lg:text-xl">
+        <p className="title-font font-medium text-gray-900 dark:text-white sm:text-sm md:text-sm lg:text-xl">
           {" "}
           {title}
-        </h2>
+        </p>
       </div>
     </div>
   );

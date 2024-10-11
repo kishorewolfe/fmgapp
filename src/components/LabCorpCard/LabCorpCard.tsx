@@ -9,9 +9,9 @@ const LabCorpCard = (props: Props) => {
       <section className="container mx-auto px-4 py-12 md:py-24">
         <div className="flex flex-col items-center justify-between md:flex-row">
           <div className="mb-8 w-full md:mb-0 md:w-1/2">
-            <h1 className="mb-4 text-4xl font-bold text-gray-800 dark:text-white md:text-5xl">
+            <p className="mb-4 text-4xl font-bold text-gray-800 dark:text-white md:text-5xl">
               Find a Lab Near You
-            </h1>
+            </p>
             <p className="mb-6 text-xl text-gray-600 dark:text-white">
               Locate a patient center lab in your area, check its hours, and
               schedule an appointment.

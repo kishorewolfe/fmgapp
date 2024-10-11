@@ -8,19 +8,15 @@ import "../styles/index.css";
 
 const inter = Outfit({ subsets: ["latin"] });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+import Head from 'next/head';
+
+export default function RootLayout({ children }) {
   return (
     <html suppressHydrationWarning lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-
+      <Head>
+        {/* Add the favicon link here */}
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>
           <Header />

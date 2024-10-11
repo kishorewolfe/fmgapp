@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
 
 export interface DoctorState {
     doctorInfo: any[] 
@@ -14,7 +13,6 @@ export const providerSlice = createSlice({
   initialState,
   reducers: {
     addDoctorInfo: (state, action) => {
-      console.log(action)
       state.doctorInfo.push(action?.payload)    
     },
   },

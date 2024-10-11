@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.myfamilymg.com/
+
+# Sitemaps
+Sitemap: https://www.myfamilymg.com/sitemap.xml
