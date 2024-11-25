@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://www.mywebsite.com/ecw</loc><lastmod>2024-10-11T18:47:28.059Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.mywebsite.com/find_doctor</loc><lastmod>2024-10-11T18:47:28.060Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.mywebsite.com/forms</loc><lastmod>2024-10-11T18:47:28.060Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.mywebsite.com/npp</loc><lastmod>2024-10-11T18:47:28.060Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.mywebsite.com/healthedu</loc><lastmod>2024-10-11T18:47:28.060Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.mywebsite.com/insuranceplans</loc><lastmod>2024-10-11T18:47:28.060Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.mywebsite.com/hipaafaq</loc><lastmod>2024-10-11T18:47:28.060Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.mywebsite.com/patient-services</loc><lastmod>2024-10-11T18:47:28.060Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.mywebsite.com/holidayhours</loc><lastmod>2024-10-11T18:47:28.060Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.mywebsite.com/nurseadvice</loc><lastmod>2024-10-11T18:47:28.060Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.mywebsite.com/umcriteria</loc><lastmod>2024-10-11T18:47:28.061Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.mywebsite.com/urgentcare</loc><lastmod>2024-10-11T18:47:28.061Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.mywebsite.com/fmgprivacypolicy</loc><lastmod>2024-10-11T18:47:28.061Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.mywebsite.com</loc><lastmod>2024-10-11T18:47:28.061Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.mywebsite.com/insurance</loc><lastmod>2024-10-11T18:47:28.061Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.mywebsite.com/contactus</loc><lastmod>2024-10-11T18:47:28.061Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.myfamilymg.com/forms</loc><lastmod>2024-11-25T19:21:43.324Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.myfamilymg.com/nurseadvice</loc><lastmod>2024-11-25T19:21:43.324Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.myfamilymg.com/holidayhours</loc><lastmod>2024-11-25T19:21:43.324Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.myfamilymg.com/patient-services</loc><lastmod>2024-11-25T19:21:43.324Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.myfamilymg.com</loc><lastmod>2024-11-25T19:21:43.324Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.myfamilymg.com/npp</loc><lastmod>2024-11-25T19:21:43.324Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.myfamilymg.com/umcriteria</loc><lastmod>2024-11-25T19:21:43.324Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.myfamilymg.com/urgentcare</loc><lastmod>2024-11-25T19:21:43.324Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.myfamilymg.com/find_doctor</loc><lastmod>2024-11-25T19:21:43.324Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.myfamilymg.com/insuranceplans</loc><lastmod>2024-11-25T19:21:43.324Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.myfamilymg.com/fmgprivacypolicy</loc><lastmod>2024-11-25T19:21:43.324Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.myfamilymg.com/healthedu</loc><lastmod>2024-11-25T19:21:43.324Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.myfamilymg.com/ecw</loc><lastmod>2024-11-25T19:21:43.324Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.myfamilymg.com/contactus</loc><lastmod>2024-11-25T19:21:43.324Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.myfamilymg.com/insurance</loc><lastmod>2024-11-25T19:21:43.324Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.myfamilymg.com/hipaafaq</loc><lastmod>2024-11-25T19:21:43.325Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

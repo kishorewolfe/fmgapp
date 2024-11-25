@@ -1,12 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import { doctorData } from "./DoctorData";
 import Profiles from "./Profiles";
-
+import { doctorData } from "./DoctorData";
 type Props = {};
+
 
 const SearchDoctor = (props: Props) => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [docTypeFilter, setDocTypeFilter] = useState(""); // State for docType filter
   const [filteredData, setFilteredData] = useState(doctorData);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
@@ -14,17 +15,29 @@ const SearchDoctor = (props: Props) => {
   const handleSearch = (event) => {
     const term = event.target.value.toLowerCase();
     setSearchTerm(term);
+    applyFilters(term, docTypeFilter);
+  };
 
-    const filtered = doctorData.filter(
-      (item) =>
-        item.First_Name.toLowerCase().includes(term) ||
-        item.Last_Name.toLowerCase().includes(term) ||
-   item?.Specialty.toLocaleString().toLocaleLowerCase().includes(term) ||
-        item.Organization.toLowerCase().includes(term)
-    );
+  const handleDocTypeChange = (event) => {
+    const selectedDocType = event.target.value;
+    setDocTypeFilter(selectedDocType);
+    applyFilters(searchTerm, selectedDocType);
+  };
+
+  const applyFilters = (term, docType) => {
+    //"Geriatric Medicine"],
+    const filtered = doctorData.filter((item) => {
+      const matchesSearchTerm =
+        item?.First_Name.toLowerCase().includes(term) ||
+        item?.Last_Name.toLowerCase().includes(term) ||
+        item?.Specialty.toLocaleString().toLocaleLowerCase().includes(term) ||
+        item?.Organization?.toLowerCase().includes(term);
+      const matchesDocType = docType ? item.docType === docType : true;
+      return matchesSearchTerm && matchesDocType;
+    });
 
     setFilteredData(filtered);
-    setCurrentPage(1); // Reset to first page on new search
+    setCurrentPage(1); // Reset to first page on new filter
   };
 
   // Calculate paginated data
@@ -43,7 +56,8 @@ const SearchDoctor = (props: Props) => {
 
   return (
     <div className="mx-auto flex flex-col items-center">
-      <div className="flex w-11/12 md:w-8/12 xl:w-6/12" style={{ marginBottom: "20px" }}>
+      {/* Search Input */}
+      <div className="flex w-11/12 md:w-8/12 xl:w-6/12 mb-4">
         <div className="flex w-full rounded-md">
           <input
             type="text"
@@ -65,10 +79,23 @@ const SearchDoctor = (props: Props) => {
           </button>
         </div>
       </div>
-      
+
+      {/* DocType Dropdown */}
+      <div className="flex w-11/12 md:w-8/12 xl:w-6/12 mb-4">
+        <select
+          value={docTypeFilter}
+          onChange={handleDocTypeChange}
+          className="w-full rounded-md border border-2 border-gray-300 p-3 placeholder-current dark:border-none dark:bg-gray-500 dark:text-gray-300"
+        >
+          <option value="">All Types</option>
+          <option value="PCP">PCP</option>
+          <option value="Specialists">Specialists</option>
+        </select>
+      </div>
+
       {/* Pass paginated data to Profiles */}
       <Profiles doctorData={paginatedData} />
-      
+
       {/* Pagination controls */}
       <div className="flex justify-center gap-4 mt-4">
         <button
