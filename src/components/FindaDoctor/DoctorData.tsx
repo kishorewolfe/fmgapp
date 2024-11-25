@@ -145,7 +145,7 @@ export const doctorData = [
     Phone: "(909) 482-4462",
     Fax: "(909) 482-4485",
     img: "/images/providersphoto/Hedy_Loa_MD.jpg",
-    docType: "PCP"
+    docType: "Both"
   },
   {
     id: 10,
