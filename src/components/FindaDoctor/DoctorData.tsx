@@ -525,7 +525,7 @@ export const doctorData = [
       State: "CA",
       Zip: "91786",
     },
-    Phone: "(909) 892-7434",
+    Phone: " 909-892-3434",
     Fax: "(909) 892-3454",
     img: "/images/providersphoto/Mina.jpg",
     docType: "PCP"
