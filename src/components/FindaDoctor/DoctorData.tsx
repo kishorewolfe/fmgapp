@@ -22,90 +22,10 @@ export const doctorData = [
      docType: "PCP"
   },
 
-  {
-    id: 4,
-    First_Name: "Sachin",
-    Last_Name: "Chatta",
-    Degree: "M.D.",
-    Gender: "M",
-    Languages: ["English"],
-    Specialty: "Internal Medicine",
-    Organization: "Cajon Medical Group PC",
-    Address: {
-      Street: "5475 Walnut Avenue",
-      Suite: "Suite D",
-      City: "Chino",
-      State: "CA",
-      Zip: "91710",
-    },
-    Phone: "(909) 735-2446",
-    Fax: "(909) 206-1553",
-    img: "/images/providersphoto/sampledoc1.jpg",
-    docType: "PCP"
-  },
-  {
-    id: 5,
-    First_Name: "Balu",
-    Last_Name: "Gadhe",
-    Degree: "M.D.",
-    Gender: "M",
-    Languages: ["English"],
-    Specialty: "Internal Medicine",
-    Organization: "Cajon Medical Group PC",
-    Address: {
-      Street: "5475 Walnut Avenue",
-      Suite: "Suite D",
-      City: "Chino",
-      State: "CA",
-      Zip: "91710",
-    },
-    Phone: "(909) 735-2446",
-    Fax: "(909) 206-1553",
-    img: "/images/providersphoto/Balu_Gadhe_MD.jpg",
-    docType: "PCP"
-  },
-  {
-    id: 6,
-    First_Name: "Maria",
-    Last_Name: "Garcia De Benitez",
-    Degree: "M.D.",
-    Gender: "F",
-    Languages: ["English"],
-    Specialty: "Internal Medicine",
-    Organization: "Cajon Medical Group PC",
-    Address: {
-      Street: "5475 Walnut Avenue",
-      Suite: "Suite D",
-      City: "Chino",
-      State: "CA",
-      Zip: "91710",
-    },
-    Phone: "(909) 735-2446",
-    Fax: "(909) 206-1553",
-    img: "/images/providersphoto/sampledoc1.jpg",
-    docType: "PCP"
-  },
-  {
-    id: 7,
-    First_Name: "Laurentiu",
-    Last_Name: "Istrate",
-    Degree: "M.D.",
-    Gender: "M",
-    Languages: ["English"],
-    Specialty: "Family Medicine",
-    Organization: "Cajon Medical Group PC",
-    Address: {
-      Street: "5475 Walnut Avenue",
-      Suite: "Suite D",
-      City: "Chino",
-      State: "CA",
-      Zip: "91710",
-    },
-    Phone: "(909) 735-2446",
-    Fax: "(909) 206-1553",
-    img: "/images/providersphoto/sampledoc1.jpg",
-    docType: "PCP"
-  },
+  
+
+
+
   {
     id: 8,
     First_Name: "Jose",
@@ -314,27 +234,7 @@ export const doctorData = [
     img: "/images/providersphoto/mehul_sonawala.jpg",
     docType: "PCP"
   },
-  {
-    id: 18,
-    First_Name: "Thillaiampalam",
-    Last_Name: "Sri Jaerajah",
-    Degree: "M.D.",
-    Gender: "M",
-    Languages: ["English"],
-    Specialty: "Internal Medicine",
-    Organization: "Cajon Medical Group PC",
-    Address: {
-      Street: "5475 Walnut Avenue",
-      Suite: "Suite D",
-      City: "Chino",
-      State: "CA",
-      Zip: "91710",
-    },
-    Phone: "(909) 735-2446",
-    Fax: "(909) 206-1553",
-    img: "/images/providersphoto/sampledoc1.jpg",
-    docType: "PCP"
-  },
+
   {
     id: 19,
     First_Name: "Steven",

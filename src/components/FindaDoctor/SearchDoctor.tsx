@@ -12,26 +12,29 @@ const SearchDoctor = (props: Props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
 
-  const handleSearch = (event) => {
-    const term = event.target.value.toLowerCase();
-    setSearchTerm(term);
-    applyFilters(term, docTypeFilter);
-  };
 
   const handleDocTypeChange = (event) => {
     const selectedDocType = event.target.value;
     setDocTypeFilter(selectedDocType);
     applyFilters(searchTerm, selectedDocType);
   };
-
-  const applyFilters = (term, docType) => {
+  const handleSearch = (event) => {
+    let nameValue = event.target.value; // Keep the input as-is
+    setSearchTerm(nameValue); // Pass the input directly
+    applyFilters(nameValue, docTypeFilter); // Use the original value
+  };
+  
+  const applyFilters = (searchvalue, docType) => {
     //"Geriatric Medicine"],
     const filtered = doctorData.filter((item) => {
+      let term = searchvalue.toLowerCase();
       const matchesSearchTerm =
-        item?.First_Name.toLowerCase().includes(term) ||
-        item?.Last_Name.toLowerCase().includes(term) ||
-        item?.Specialty.toLocaleString().toLocaleLowerCase().includes(term) ||
-        item?.Organization?.toLowerCase().includes(term);
+      item?.First_Name.toLowerCase().includes(term) ||
+      item?.Last_Name.toLowerCase().includes(term) ||
+      item?.Specialty.toLocaleString().toLocaleLowerCase().includes(term) ||
+      item?.Organization?.toLowerCase().includes(term) ||
+      `${item?.First_Name} ${item?.Last_Name}`.toLowerCase().includes(term) || // With space
+      `${item?.First_Name}${item?.Last_Name}`.toLowerCase().includes(term);
       const matchesDocType = docType ? item.docType === docType : true;
       return matchesSearchTerm && matchesDocType;
     });
