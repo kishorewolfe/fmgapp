@@ -90,9 +90,7 @@ const SearchDoctor = (props: Props) => {
           onChange={handleDocTypeChange}
           className="w-full rounded-md border border-2 border-gray-300 p-3 placeholder-current dark:border-none dark:bg-gray-500 dark:text-gray-300"
         >
-          <option value="">Default</option>
           <option value="PCP">PCP</option>
-          <option value="Both">Both</option>
           <option value="Specialists">Specialists</option>
         </select>
       </div>

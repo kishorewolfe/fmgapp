@@ -1112,6 +1112,7 @@ export const doctorData = [
         },
         Phone: "(909) 949-7500",
         Fax: "(909) 946-1133",
+        img: "/images/providersphoto/sampledoc1.jpg",
          docType: "Specialists",
 
         Languages: ["Spanish"]
@@ -1842,7 +1843,7 @@ export const doctorData = [
                 Phone: "909/622-3065",
                 Fax: "909/784-3399",
                 img: "/images/providersphoto/sampledoc1.jpg",
-                 docType: "Specialists"
+                docType: "Specialists"
               },
             
               {
