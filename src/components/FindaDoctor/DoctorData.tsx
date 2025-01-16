@@ -235,27 +235,7 @@ export const doctorData = [
     docType: "PCP"
   },
 
-  {
-    id: 19,
-    First_Name: "Steven",
-    Last_Name: "Barag",
-    Degree: "D.O.",
-    Gender: "M",
-    Languages: ["English", "Spanish"],
-    Specialty: "Family Medicine",
-    Organization: "Aureus Medical Group, Inc.",
-    Address: {
-      Street: "7974 Haven Avenue",
-      Suite: "Suite 250",
-      City: "Rancho Cucamonga",
-      State: "CA",
-      Zip: "91730",
-    },
-    Phone: "(909) 941-0855",
-    Fax: "(909) 987-0011",
-    img: "/images/providersphoto/Steven_Barag.jpg",
-    docType: "PCP"
-  },
+
   {
     id: 20,
     First_Name: "Zuhra",
@@ -364,31 +344,9 @@ export const doctorData = [
     img: "/images/providersphoto/mehrnaz.jpg",
     docType: "PCP"
   },
-  {
-    id: 25,
 
-    First_Name: "Mark",
-    Last_Name: "Shiu",
-    Degree: "D.O.",
-    Gender: "M",
-    Languages: ["English", "Cantonese"],
-    Specialty: "Family Medicine",
-    Organization: "Medicor Medical Group, Inc.",
-    Address: {
-      Street: "7974 Haven Avenue",
-      Suite: "Suite 250",
-      City: "Rancho Cucamonga",
-      State: "CA",
-      Zip: "91730",
-    },
-    Phone: "(800) 734-1733",
-    Fax: "(800) 734-1733",
-    img: "/images/providersphoto/mark_shiu.jpg",
-    docType: "PCP"
-  },
   {
     id: 26,
-
     First_Name: "Rashmi",
     Last_Name: "Godugo",
     Degree: "M.D.",
@@ -405,7 +363,7 @@ export const doctorData = [
     },
     Phone: "(909) 482-4462",
     Fax: "(909) 482-4485",
-    img: "/images/providersphoto/Dr_Godugo.jpg",
+    img: "/images/providersphoto/Rashmi.jpg",
     docType: "PCP"
   },
   {
