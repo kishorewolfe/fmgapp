@@ -36,6 +36,12 @@ const NurseData: any[] = [
     image: "/images/nurse/united.png",
     phNumber: "(877) 365-7949",
   },
+  {
+    id: 8,
+    name: "SCAN Nurse Advice Line",
+    image: "/images/nurse/scan.png",
+    phNumber: "1-855-431-5537 (TTY: 711)",
+  },
 
 ];
 

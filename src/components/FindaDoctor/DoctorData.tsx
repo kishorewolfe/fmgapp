@@ -348,7 +348,7 @@ export const doctorData = [
   {
     id: 26,
     First_Name: "Rashmi",
-    Last_Name: "Godugo",
+    Last_Name: "Godugu",
     Degree: "M.D.",
     Gender: "F",
     Languages: ["English", "Hindi", "Punjabi"],
