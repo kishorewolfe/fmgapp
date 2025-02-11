@@ -1966,42 +1966,7 @@ export const doctorData = [
                   img: "/images/providersphoto/sampledoc1.jpg",
                    docType: "Specialists"
                 },
-                {
-                  id: 110,
-                  Last_Name: "Nagaraja",
-                  First_Name: "Mysore",
-                  Degree: "M.D.",
-                  Specialty: "Gastroenterology",
-                  Organization: "CHAPARRAL MEDICAL GROUP, INC.",
-                  Address: {
-                    Street: "790 E. Bonita Avenue, 2nd Floor",
-                    City: "Pomona",
-                    State: "CA",
-                    Zip: 91767
-                  },
-                  Phone: "909/469-0033",
-                  Fax: "909/620-9146",
-                  img: "/images/providersphoto/sampledoc1.jpg",
-                   docType: "Specialists"
-                },
-                {
-                  id: 111,
-                  Last_Name: "Nagaraja",
-                  First_Name: "Mysore",
-                  Degree: "M.D.",
-                  Specialty: "Gastroenterology",
-                  Organization: "CHAPARRAL MEDICAL GROUP, INC.",
-                  Address: {
-                    Street: "811 E. 11th Street, Suite 208",
-                    City: "Upland",
-                    State: "CA",
-                    Zip: 91786
-                  },
-                  Phone: "909/982-2279",
-                  Fax: "909/946-3070",
-                  img: "/images/providersphoto/sampledoc1.jpg",
-                   docType: "Specialists"
-                },
+              
                   {
                     id: 112,
                     Last_Name: "Reddy",
@@ -2040,44 +2005,8 @@ export const doctorData = [
                     img: "/images/providersphoto/sampledoc1.jpg",
                      docType: "Specialists"
                   },
-                  {
-                    id: 114,
-                    Last_Name: "Sheu",
-                    First_Name: "Yeong",
-                    Degree: "M.D.",
-                    Specialty: "Gastroenterology",
-                    Organization: "CHAPARRAL MEDICAL GROUP, INC.",
-                    Address: {
-                      Street: "790 E. Bonita Avenue",
-                      Suite: "2nd Floor",
-                      City: "Pomona",
-                      State: "CA",
-                      Zip: "91767"
-                    },
-                    Phone: "909/469-0033",
-                    Fax: "909/620-9146",
-                    img: "/images/providersphoto/sampledoc1.jpg",
-                     docType: "Specialists"
-                  },
-                  {
-                    id: 115,
-                    Last_Name: "Sheu",
-                    First_Name: "Yeong",
-                    Degree: "M.D.",
-                    Specialty: "Gastroenterology",
-                    Organization: "CHAPARRAL MEDICAL GROUP, INC.",
-                    Address: {
-                      Street: "811 E. 11th Street",
-                      Suite: "Suite 208",
-                      City: "Upland",
-                      State: "CA",
-                      Zip: "91786"
-                    },
-                    Phone: "909/982-2279",
-                    Fax: "909/946-3070",
-                    img: "/images/providersphoto/sampledoc1.jpg",
-                     docType: "Specialists"
-                  },
+                 
+                 
                   {
                     id: 116,
                     Last_Name: "Yalamanchili",
@@ -2290,44 +2219,8 @@ export const doctorData = [
                         img: "/images/providersphoto/sampledoc1.jpg",
                          docType: "Specialists"
                       },
-                      {
-                        id: 127,
-                        Last_Name: "Sheu",
-                        First_Name: "Yeong",
-                        Degree: "M.D.",
-                        Specialty: "Gastroenterology",
-                        Organization: "CHAPARRAL MEDICAL GROUP, INC.",
-                        Address: {
-                          Street: "790 E. Bonita Avenue",
-                          Suite: "2nd Floor",
-                          City: "Pomona",
-                          State: "CA",
-                          Zip: "91767"
-                        },
-                        Phone: "909/469-0033",
-                        Fax: "909/620-9146",
-                        img: "/images/providersphoto/sampledoc1.jpg",
-                         docType: "Specialists"
-                      },
-                      {
-                        id: 128,
-                        Last_Name: "Sheu",
-                        First_Name: "Yeong",
-                        Degree: "M.D.",
-                        Specialty: "Gastroenterology",
-                        Organization: "CHAPARRAL MEDICAL GROUP, INC.",
-                        Address: {
-                          Street: "811 E. 11th Street",
-                          Suite: "Suite 208",
-                          City: "Upland",
-                          State: "CA",
-                          Zip: "91786"
-                        },
-                        Phone: "909/982-2279",
-                        Fax: "909/946-3070",
-                        img: "/images/providersphoto/sampledoc1.jpg",
-                         docType: "Specialists"
-                      },
+                     
+                    
                       {
                         id: 129,
                         Last_Name: "Yalamanchili",
