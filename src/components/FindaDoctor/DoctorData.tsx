@@ -258,27 +258,7 @@ export const doctorData = [
     img: "/images/providersphoto/sampledoc1.jpg",
     docType: "PCP"
   },
-  {
-    id: 21,
-    First_Name: "Brittany",
-    Last_Name: "Wertz",
-    Degree: "D.O.",
-    Gender: "F",
-    Languages: ["English", "Spanish"],
-    Specialty: "Family Medicine",
-    Organization: "Dr. B. Wertz, Inc.",
-    Address: {
-      Street: "678 S. Indian Hill Blvd.",
-      Suite: "Suite 200",
-      City: "Claremont",
-      State: "CA",
-      Zip: "91711",
-    },
-    Phone: "(909) 399-0101",
-    Fax: "(909) 399-3928",
-    img: "/images/providersphoto/brittany_wertz.png",
-    docType: "PCP"
-  },
+ 
   {
     id: 22,
     First_Name: "Mauricio",
