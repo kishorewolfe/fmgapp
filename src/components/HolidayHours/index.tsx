@@ -13,7 +13,7 @@ const HolidayHours = ({feature}: any) => {
   const { name, blockDate,blockMonth,date,day } = feature;
   return (
     <div >  
-      <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl m-3 dark:bg-gray-dark dark:text-white" >
+      <div className="p-2 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl m-3 dark:bg-gray-dark dark:text-white" >
     <div className=" flex items-center">
         <div className="holidaybtn">
         <p className="text-4xl font-bold text-white">{blockDate}</p>

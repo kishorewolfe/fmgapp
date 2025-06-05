@@ -48,177 +48,163 @@ const ContactusService = (props: Props) => {
         </div>
       </section>
 
-      <div className="container mt-10 ">
-        <section className=" grid grid-cols-1 gap-x-8 gap-y-4 p-2 sm:my-10 lg:grid-cols-2">
-          <div className="flex flex-col justify-center">
-            <div className="mt-3 flex h-full flex-col justify-between rounded-lg bg-gray-50 bg-gradient-to-tr from-lime-500 to-cyan-600 pb-8 shadow xl:p-1">
-              <div className="rounded-md bg-white p-7 dark:bg-slate-800 ">
-                <h4 className=" text-2xl font-bold leading-tight text-cyan-600 dark:text-lime-600">
-                  Hours of Operation:
-                </h4>
-                <div className="my-6">
-                  <p className="my-3 font-bold text-black dark:text-white sm:text-sm lg:text-xl">
-                    Monday - Friday 8AM to 5PM
-                  </p>
-                  <p className="my-3 font-bold text-black dark:text-white sm:text-sm lg:text-xl">
-                    Saturday - Sunday Closed
-                  </p>
-                  <br />
-                  <br /> <br />
-                  <br />
-                  <br />
-                </div>
-              </div>
-              <div></div>
-            </div>
+     <div className="container mx-auto px-4 mt-10 space-y-10">
+  {/* Hours of Operation & Phone Lines */}
+  <section className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+    {/* Hours of Operation */}
+    <div className="flex flex-col justify-center">
+      <div className="rounded-lg bg-gradient-to-tr from-lime-500 to-cyan-600 shadow p-1">
+        <div className="rounded-md bg-white p-6 dark:bg-slate-800">
+          <h4 className="text-2xl font-bold text-cyan-600 dark:text-lime-600">
+            Hours of Operation:
+          </h4>
+          <div className="mt-4 space-y-4">
+            <p className="font-bold text-black dark:text-white text-lg">
+              Monday - Friday: 8:30 AM to 5 PM
+            </p>
+            <p className="font-bold text-black dark:text-white text-lg">
+              Saturday - Sunday: Closed
+            </p>
+            <p className="font-bold text-black dark:text-white text-lg">
+              Closed for lunch: 12:30 PM to 1:30 PM
+            </p>
           </div>
-          <div className="flex flex-col justify-center">
-            <div className="mt-3 flex h-full flex-col justify-between rounded-lg bg-gray-50 bg-gradient-to-tr from-lime-500 to-cyan-600 pb-8 shadow xl:p-1 ">
-              <div className="rounded-md bg-white p-7 dark:bg-slate-800 ">
-                <h4 className=" text-2xl font-bold leading-tight text-cyan-600 dark:text-lime-600">
-                  Phone Lines
-                </h4>
-
-                <div className="my-8">
-                  <p className="my-3 font-bold text-black dark:text-white sm:text-sm lg:text-xl ">
-                    Main Line: 909-591-6446
-                  </p>
-                  <p className="my-3 font-bold text-black dark:text-white sm:text-sm lg:text-xl ">
-                    Appointments: 909-287-7555
-                  </p>
-                  <p className="my-3 font-bold text-black dark:text-white sm:text-sm lg:text-xl ">
-                    Patient Billing: 909-287-7520
-                  </p> 
-                  <p className="my-3 font-bold text-black dark:text-white sm:text-sm lg:text-xl ">
-                   After Hours: 909-398-0575
-                  </p>
-                  <br />
-                </div>
-              </div>
-              <div></div>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <div className="container mt-10 ">
-            <div className=" mx-auto  my-10 flex flex-col items-center justify-center gap-x-10 gap-y-10 py-10 dark:bg-gray-800 lg:flex-row lg:px-2 lg:py-14">
-              <div className="hero-image relative isolate z-10 w-full rounded-3xl md:px-5 md:pt-2 lg:w-1/2 lg:px-0 lg:pt-0">
-                <Image
-                  className="w-full rounded-3xl"
-                  src="/images/contactus/nurseadvice.jpg"
-                  alt="Urgent Care"
-                  width={400}
-                  height={100}
-                />
-              </div>
-              <div className="flex flex-col lg:w-[650px] lg:px-5 ">
-                <header className="container mt-10 h-full items-center px-1 lg:mt-0 lg:flex">
-                  <div className="w-full">
-                    <h1 className="text-4xl font-bold lg:text-6xl">
-                      <span className="text-lime-600">Nurse advice</span>{" "}
-                    </h1>
-                    <div className="my-4 h-2 w-20 bg-green-700"></div>
-                    <p className="mb-10 text-xl">
-                      The Nurse Advice Line provides health care support to the
-                      beneficiaries 24/7
-                    </p>
-                    <div className="mx-auto flex  max-w-xl items-center justify-items-center text-center  ">
-                      <div className="group relative ">
-                        <div className="absolute  -inset-1 rounded-lg bg-gradient-to-r from-cyan-600 to-lime-600 opacity-25 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-                        <div className="items-top   relative flex justify-start space-x-6 rounded-lg bg-white px-7 py-6 leading-none ring-1 ring-gray-900/5 dark:bg-dark">
-                          <Link
-                            href="/nurseadvice"
-                            className=" block  items-center justify-center  text-3xl transition duration-200 group-hover:text-cyan-600"
-                          >
-                            <h1>Nurse Advice Lines → </h1>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </header>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div className="container mt-10 ">
-            <div className=" mx-auto  my-10 flex flex-col items-center justify-center gap-x-10 gap-y-10 py-10 dark:bg-gray-800 lg:flex-row lg:px-2 lg:py-14">
-              <div className="flex flex-col lg:w-[650px] lg:px-5 ">
-                <header className="container mt-10 h-full items-center px-1 lg:mt-0 lg:flex">
-                  <div className="w-full">
-                    <h1 className="text-4xl font-bold lg:text-6xl">
-                      <span className="text-lime-600">Emails</span>{" "}
-                    </h1>
-                    <div className="my-4 h-2 w-20 bg-green-700"></div>
-                    <p className="mb-10 text-xl">
-                      Administration, Suggestions or Concerns:
-                      admin@myfamilymg.com
-                    </p>
-                    <p className="mb-10 text-xl">
-                      Billing Inquiries: billing@myfamilymg.com
-                    </p>
-                    <p className="mb-10 text-xl">
-                      Career Opportunities: careers@myfamilymg.com
-                    </p>
-                  </div>
-                </header>
-              </div>
-              <div className="hero-image relative isolate z-10 w-full rounded-3xl md:px-5 md:pt-2 lg:w-1/2 lg:px-0 lg:pt-0">
-                <Image
-                  className="w-full rounded-3xl"
-                  src="/images/contactus/hospsupport.jpg"
-                  alt="Emails"
-                  width={400}
-                  height={100}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div className="container mt-10 ">
-            <div className=" mx-auto  my-10 flex flex-col items-center justify-center gap-x-10 gap-y-10 py-10 dark:bg-gray-800 lg:flex-row lg:px-2 lg:py-14">
-              <div className="hero-image relative isolate z-10 w-full rounded-3xl md:px-5 md:pt-2 lg:w-1/2 lg:px-0 lg:pt-0">
-                <Image
-                  className="w-full rounded-3xl"
-                  src="/images/contactus/compliance.jpg"
-                  alt="Urgent Care"
-                  width={400}
-                  height={100}
-                />
-              </div>
-              <div className="flex flex-col lg:w-[650px] lg:px-5 ">
-                <header className="container mt-10 h-full items-center px-1 lg:mt-0 lg:flex">
-                  <div className="w-full">
-                    <h1 className="text-4xl font-bold lg:text-6xl">
-                      <span className="text-lime-600">Compliance </span>{" "}
-                    </h1>
-                    <div className="my-4 h-2 w-20 bg-green-700"></div>
-                   
-                    <div className="mx-auto flex  max-w-xl   ">
-                      <div className="group relative ">
-                        <div className="items-top   relative flex justify-start space-x-6 rounded-lg bg-white px-7 py-6 leading-none ring-1 ring-gray-900/5 dark:bg-dark">
-                        <div className=" text-xl">
-                     <p className="my-3 font-semibold text-black dark:text-white sm:text-sm lg:text-xl">Email: compliance@myfamilymg.com </p> <br/>
-                     <p className="my-2 font-semibold text-black dark:text-white sm:text-sm lg:text-xl">Phone number: (909)591-6446 x 137 </p> 
-                      
-                    </div> 
-                    <br/>
-                    <p className="mb-10 text-xl">
-                   
-                    </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </header>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
+    </div>
+
+    {/* Phone Lines */}
+    <div className="flex flex-col justify-center">
+      <div className="rounded-lg bg-gradient-to-tr from-lime-500 to-cyan-600 shadow p-1">
+        <div className="rounded-md bg-white p-6 dark:bg-slate-800">
+          <h4 className="text-2xl font-bold text-cyan-600 dark:text-lime-600">
+            Phone Lines
+          </h4>
+          <div className="mt-4 space-y-4">
+            <p className="font-bold text-black dark:text-white text-lg">
+              Main Line: 909-591-6446
+            </p>
+            <p className="font-bold text-black dark:text-white text-lg">
+              After Hours: 909-398-0575
+            </p>
+            <br/> <br/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Nurse Advice */}
+  <section className="flex flex-col items-center justify-center gap-10 lg:flex-row">
+    <div className="w-full lg:w-1/2">
+      <Image
+        className="w-full rounded-3xl"
+        src="/images/contactus/nurseadvice.jpg"
+        alt="Urgent Care"
+        width={400}
+        height={100}
+      />
+    </div>
+    <div className="flex flex-col lg:w-[650px]">
+      <h1 className="text-4xl font-bold lg:text-6xl text-lime-600">
+        Nurse advice
+      </h1>
+      <div className="my-4 h-2 w-20 bg-green-700"></div>
+      <p className="mb-6 text-xl">
+        The Nurse Advice Line provides health care support to the beneficiaries 24/7
+      </p>
+      <Link href="/nurseadvice">
+        <div className="relative group">
+          <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-600 to-lime-600 opacity-25 blur transition group-hover:opacity-100"></div>
+          <div className="relative z-10 flex items-center justify-center px-7 py-6 bg-white ring-1 ring-gray-900/5 dark:bg-dark rounded-lg">
+            <h1 className="text-3xl group-hover:text-cyan-600 transition">Nurse Advice Lines →</h1>
+          </div>
+        </div>
+      </Link>
+    </div>
+  </section>
+
+  {/* Emails */}
+  <section className="flex flex-col  gap-10 lg:flex-row">
+    <div className="flex flex-col lg:w-[650px]">
+      <h1 className="text-4xl font-bold lg:text-6xl text-lime-600">Emails</h1>
+      <div className="my-4 h-2 w-20 bg-green-700"></div>
+      <div className="space-y-4 text-xl">
+        <p>Administration, Suggestions or Concerns:</p> 
+         <div className="flex items-center gap-3 rounded-md  py-1">
+<svg width="28px" height="28px" viewBox="0 -2.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"  fill="#65A30D" stroke="#65A30D"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>email [#65A30D]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -922.000000)" fill="#65A30D"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M294,774.474 L284,765.649 L284,777 L304,777 L304,765.649 L294,774.474 Z M294.001,771.812 L284,762.981 L284,762 L304,762 L304,762.981 L294.001,771.812 Z" id="email-[#65A30D]"> </path> </g> </g> </g> </g></svg>
+
+<p className=" dark:text-white text-black text-lg">
+    admin@myfamilymg.com</p>
+    </div>
+       
+        <p>Billing Inquiries:</p>
+
+           <div className="flex items-center gap-3 rounded-md  py-1">
+<svg width="28px" height="28px" viewBox="0 -2.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"  fill="#65A30D" stroke="#65A30D"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>email [#65A30D]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -922.000000)" fill="#65A30D"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M294,774.474 L284,765.649 L284,777 L304,777 L304,765.649 L294,774.474 Z M294.001,771.812 L284,762.981 L284,762 L304,762 L304,762.981 L294.001,771.812 Z" id="email-[#65A30D]"> </path> </g> </g> </g> </g></svg>
+
+<p className=" dark:text-white text-black text-lg">
+    billing@myfamilymg.com</p>
+    </div>
+        
+              <p>Career Opportunities: </p>
+
+              
+           <div className="flex items-center gap-3 rounded-md  py-1">
+<svg width="28px" height="28px" viewBox="0 -2.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"  fill="#65A30D" stroke="#65A30D"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>email [#65A30D]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -922.000000)" fill="#65A30D"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M294,774.474 L284,765.649 L284,777 L304,777 L304,765.649 L294,774.474 Z M294.001,771.812 L284,762.981 L284,762 L304,762 L304,762.981 L294.001,771.812 Z" id="email-[#65A30D]"> </path> </g> </g> </g> </g></svg>
+
+<p className=" dark:text-white text-black text-lg">
+    careers@myfamilymg.com</p>
+    </div>
+              
+              
+      </div>
+    </div>
+    <div className="w-full lg:w-1/2">
+      <Image
+        className="w-full rounded-3xl"
+        src="/images/contactus/hospsupport.jpg"
+        alt="Emails"
+        width={400}
+        height={100}
+      />
+    </div>
+  </section>
+
+  {/* Compliance */}
+  <section className="flex flex-col pb-12 justify-center gap-10 lg:flex-row">
+    <div className="w-full lg:w-1/2">
+      <Image
+        className="w-full rounded-3xl"
+        src="/images/contactus/compliance.jpg"
+        alt="Compliance"
+        width={400}
+        height={100}
+      />
+    </div>
+    <div className="flex flex-col lg:w-[650px]">
+      <h1 className="text-4xl font-bold lg:text-6xl text-lime-600">Compliance</h1>
+      <div className="my-4 h-2 w-20 bg-green-700"></div>
+      <div className="  ring-gray-900/5 space-y-4">
+       <div className="flex items-center gap-3 rounded-md  py-4">
+<svg width="28px" height="28px" viewBox="0 -2.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"  fill="#65A30D" stroke="#65A30D"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>email [#65A30D]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -922.000000)" fill="#65A30D"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M294,774.474 L284,765.649 L284,777 L304,777 L304,765.649 L294,774.474 Z M294.001,771.812 L284,762.981 L284,762 L304,762 L304,762.981 L294.001,771.812 Z" id="email-[#65A30D]"> </path> </g> </g> </g> </g></svg><p className=" dark:text-white text-black text-lg">
+    
+   compliance@myfamilymg.com
+  </p>
+</div>
+<div className="flex items-center gap-3 rounded-md  py-1">
+  <svg width="28px" height="28px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M1 5V1H7V5L4.5 7.5L8.5 11.5L11 9H15V15H11C5.47715 15 1 10.5228 1 5Z" fill="#65A30D"></path> </g></svg>
+<p className=" text-black dark:text-white text-lg">
+          (909) 591-6446 ext. 284
+        </p>
+</div>
+
+        
+      </div>
+    </div>
+  </section>
+</div>
+
     </div>
   );
 };

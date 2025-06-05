@@ -9,34 +9,33 @@ export const metadata: Metadata = {
   // other metadata
 };
 const page = (props: Props) => {
-  return (
-    <div>
-      <section
-        className="cover bg-blue-teal-gradient relative flex min-h-screen items-center overflow-hidden bg-cyan-600 px-4 py-48 sm:px-8 lg:px-16
-      xl:px-40 2xl:px-64"
-      >
-        <div className="headerimg absolute left-0 top-0 z-0 h-full w-full ">
-          <Image
-            src="/images/services/healthforms.jpg"
-            alt=""
-            width={1080}
-            height={1920}
-            objectFit="contain"
-            className=" w-full object-fill opacity-20"
-          />
-        </div>
+  return (<>
+   <div className="relative mx-auto mt-36 max-w-7xl">
+  {/* Image Container */}
+  <div className="relative h-[400px] w-full overflow-hidden rounded-2xl border shadow-md">
+    {/* Image */}
+    <Image
+      className="h-full w-full object-cover"
+      src="/images/services/healthforms.jpg"
+      alt="Forms Download"
+   
+      fill
+    />
 
-        <div className="h-100 relative z-10 lg:mt-16 lg:w-3/4 xl:w-2/4">
-          <div>
-            <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl xl:text-6xl">
-              Form Downloads{" "}
-            </h1>
-          </div>
-        </div>
-      </section>
+    {/* Blue Overlay */}
+    <div className="absolute inset-0 bg-cyan-700 opacity-50"></div>
 
-      <CardForms />
+    {/* Text Overlay */}
+    <div className="absolute inset-0 flex items-center justify-center">
+      <h2 className="text-white text-7xl font-bold">Forms Download</h2>
     </div>
+  </div>
+
+  
+</div>
+<CardForms />
+</>
+
   );
 };
 

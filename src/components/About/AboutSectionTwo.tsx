@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const AboutSectionTwo = () => {
   return (
-    <section className="">
+    <section className="mt-16 mb-16">
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-1/2">
@@ -16,16 +16,16 @@ const AboutSectionTwo = () => {
               <Image
                 src="/images/about/healthcare2.jpg"
                 alt="about-image"
-                width={500}
-                height={60}
-                className="drop-shadow-three dark:hidden dark:drop-shadow-none"
+                width={400}
+                height={40}
+                className="rounded-md drop-shadow-three dark:hidden dark:drop-shadow-none"
               />
               <Image
                 src="/images/about/healthcare2.jpg"
                 alt="about-image"
-                width={500}
-                height={60}
-                className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
+                width={400}
+                height={400}
+                className="rounded-md hidden drop-shadow-three dark:block dark:drop-shadow-none"
               />
             </div>
           
@@ -37,7 +37,7 @@ const AboutSectionTwo = () => {
 
               <p className="relative mb-6 text-3xl font-bold text-lime-600 dark:text-white xl:text-hero">
               Specialist Providers</p>
-                <p className=" font-medium   leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                <p className=" font-large   leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
                 We have an extensive network of Specialists ready to meet all your healthcare needs.
                 </p>
               </div>
@@ -45,7 +45,7 @@ const AboutSectionTwo = () => {
                 <p className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                   Premier support
                 </p>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                <p className="text-base font-large leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
                 We work with other medical experts if necessary and coordinate your care to specialist providers.
                 </p>
               </div>

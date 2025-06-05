@@ -1,0 +1,13 @@
+import { SVGProps } from "react";
+
+export function FaxIcon(props: SVGProps<SVGSVGElement>) {
+    return (
+<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"  width="1em" height="1em" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css">  </style> <g> <path className="st0" d="M74.556,112.851H55.141C24.69,112.851,0,137.54,0,167.992V443.27c0,30.452,24.69,55.141,55.141,55.141h19.415 c30.452,0,55.14-24.689,55.14-55.141V167.992C129.696,137.54,105.008,112.851,74.556,112.851z"></path> <path className="st0" d="M473.397,187.415V13.589H192.392v173.826c-22.79,11.056-38.603,34.198-38.603,61.212v178.422 c0,37.707,30.569,68.278,68.277,68.278h221.658c37.708,0,68.277-30.57,68.277-68.278V248.627 C512,221.613,496.177,198.471,473.397,187.415z M220.184,41.381h225.421v182.186H220.184V41.381z M217.098,330.266v-50.952h231.601 v50.952H217.098z M421.848,446.066c-16.629,0-30.108-13.48-30.108-30.108c0-16.629,13.479-30.108,30.108-30.108 c16.628,0,30.108,13.479,30.108,30.108C451.956,432.586,438.476,446.066,421.848,446.066z"></path> <rect x="250.464" y="89.401" className="st0" width="162.12" height="16.212"></rect> <rect x="250.464" y="140.353" className="st0" width="101.904" height="16.212"></rect> </g> </g></svg>  )
+
+}
+
+export function FaxIconNormal(props: SVGProps<SVGSVGElement>) {
+    return (
+<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"  width="1em" height="1em" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css">  </style> <g> <path className="st0" d="M74.556,112.851H55.141C24.69,112.851,0,137.54,0,167.992V443.27c0,30.452,24.69,55.141,55.141,55.141h19.415 c30.452,0,55.14-24.689,55.14-55.141V167.992C129.696,137.54,105.008,112.851,74.556,112.851z"></path> <path className="st0" d="M473.397,187.415V13.589H192.392v173.826c-22.79,11.056-38.603,34.198-38.603,61.212v178.422 c0,37.707,30.569,68.278,68.277,68.278h221.658c37.708,0,68.277-30.57,68.277-68.278V248.627 C512,221.613,496.177,198.471,473.397,187.415z M220.184,41.381h225.421v182.186H220.184V41.381z M217.098,330.266v-50.952h231.601 v50.952H217.098z M421.848,446.066c-16.629,0-30.108-13.48-30.108-30.108c0-16.629,13.479-30.108,30.108-30.108 c16.628,0,30.108,13.479,30.108,30.108C451.956,432.586,438.476,446.066,421.848,446.066z"></path> <rect x="250.464" y="89.401" className="st0" width="162.12" height="16.212"></rect> <rect x="250.464" y="140.353" className="st0" width="101.904" height="16.212"></rect> </g> </g></svg>  )
+
+}

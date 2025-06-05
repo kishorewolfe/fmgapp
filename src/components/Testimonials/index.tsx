@@ -34,7 +34,7 @@ const testimonialData: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28">
+    <section className="relative z-10 bg-gray-light py-16 dark:bg-gray-900 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
           title="Check lab results, make payments online and many more features..."
@@ -46,7 +46,7 @@ const Testimonials = () => {
       <div className="mx-auto max-w-md  flex justify-center items-center text-center  ">
         <div className="group relative ">
           <div className="absolute  -inset-1 rounded-lg bg-gradient-to-r from-cyan-600 to-lime-600 opacity-25 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-          <div className="items-top   relative flex justify-start space-x-6 rounded-lg bg-white px-7 py-6 leading-none ring-1 ring-gray-900/5 dark:bg-dark">
+          <div className="items-top   relative flex justify-start space-x-6 rounded-lg bg-white px-7 py-6 leading-none ring-1 ring-gray-900/5 dark:bg-gray-900">
             <a
               href="https://mycw84.ecwcloud.com/portal11229/jsp/100mp/login_otp.jsp"
               className=" items-center  block justify-center  text-3xl transition duration-200 group-hover:text-cyan-600"

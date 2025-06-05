@@ -1,9 +1,10 @@
 import { Feature } from "@/types/feature";
+import Link from "next/link";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { icon, title, iconDark } = feature;
+  const { icon, title, iconDark,datalink } = feature;
   return (
-    <div className="w-full p-4 sm:w-1/2 md:w-1/3">
+    <Link className="w-full p-4 sm:w-1/2 md:w-1/3" href={datalink}>
       <div className="transform rounded-lg border-2 border-gray-600 px-4 py-6 transition duration-500 hover:scale-110 ">
         <span className="block dark:hidden"> {icon}</span>
 
@@ -14,7 +15,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
           {title}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 

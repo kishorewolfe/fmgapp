@@ -68,7 +68,7 @@ const Header = () => {
       title: null,
       path: "/",
       component: (
-        <div>
+        <a href="/">
           <Image
             src="/images/logo/FMG.png"
             alt="logo"
@@ -76,7 +76,7 @@ const Header = () => {
             height={33}
             className="mb-5 w-full xs:hidden lg:block"
           />
-        </div>
+        </a>
       ),
     },
     {
@@ -173,7 +173,7 @@ const Header = () => {
                       <li key={index} className="group relative ">
                         {menuItem.path ? (
                           menuItem?.id === 3 ? (
-                            <div className="logoimg">
+                            <Link className="logoimg" href={"/"}>
                               <Image
                                 src="/images/logo/FMG.png"
                                 alt="logo"
@@ -181,7 +181,7 @@ const Header = () => {
                                 height={60}
                                 
                               />
-                            </div>
+                            </Link>
                           ) : (
                             <Link
                               href={menuItem.path}

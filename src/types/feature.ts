@@ -3,4 +3,5 @@ export type Feature = {
   icon: JSX.Element;
   iconDark: JSX.Element
   title: string;
+  datalink:string;
 };

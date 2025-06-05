@@ -21,8 +21,8 @@ export default function Home() {
       <Hero />
       <Video />
       <AboutSectionOne />
-      <AboutSectionTwo />
-      <LabCorpCard/>
+      {/* <AboutSectionTwo /> */}
+      
       <Features />
       <Testimonials />
     

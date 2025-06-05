@@ -30,8 +30,8 @@ const UmcaresHero = (props: Props) => {
                 </svg>
                 <p className="md:text-md sm:text:sm mt-5 justify-normal lg:text-lg">
                   {" "}
-                  Upon request Utilization Management Policies & Procedures and
-                  Utilization Management Criteria used to authorize,
+                 Utilization Management (UM) Policies & Procedures, as well as the UM Criteria
+used to authorize,
                 </p>
               </li>
               <li className="flex items-center dark:text-white">
@@ -51,9 +51,8 @@ const UmcaresHero = (props: Props) => {
                 </svg>
                 <p className="md:text-md sm:text:sm mt-5 lg:text-lg">
                   {" "}
-                  Modify or deny healthcare services will be disclosed to
-                  providers, members or persons designated by members and the
-                  public.
+                 Modify, or deny healthcare services, will be made available upon request to providers,
+members, their designated representatives, and the general public.
                 </p>
               </li>
               <li className="flex items-center dark:text-white">
@@ -72,8 +71,8 @@ const UmcaresHero = (props: Props) => {
                   ></path>
                 </svg>
                 <p className="md:text-md sm:text:sm mt-5 lg:text-lg">
-                  The staff at My Family Medical Group accepts collect calls
-                  regarding UM issues during normal business hours
+                 The staff at My Family Medical Group accepts collect calls related to UM issues
+during normal business hours.
                 </p>
               </li>
             </ul>

@@ -4,8 +4,8 @@ type Props = {};
 
 const CardForms = (props: Props) => {
   return (
-    <div className=" sm:mt-12 dark:bg-slate-900 ">
-      <div className="lg:px-30  mx-auto w-screen bg-slate-50 p-6 dark:bg-slate-900 sm:px-8">
+    <div className=" sm:mt-12 dark:bg-gray-900 ">
+      <div className="lg:px-30  mx-auto  bg-slate-50 p-6 dark:bg-gray-900 sm:px-8">
         <div className=" mt-10 text-3xl  container text-center">
        
         <h3>
@@ -15,7 +15,7 @@ const CardForms = (props: Props) => {
         <div className="mx-auto my-16 grid w-fit grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
           {cardFormsData.map((card,i) => {
             return (
-              <div key={i}> <div className="dark:bg-shadesOfBlue hover:ring-shadesOfBlue group relative m-4 w-64 transform rounded-lg bg-white shadow-md duration-500 hover:scale-105 hover:shadow-xl hover:ring dark:hover:ring-white" style={{height: "20rem"}}>
+              <div key={i}> <div className="dark:bg-shadesOfBlue hover:ring-shadesOfBlue group relative m-4 w-64 transform rounded-lg bg-white dark:bg-gray-800 shadow-md duration-500 hover:scale-105 hover:shadow-xl hover:ring dark:hover:ring-white" style={{height: "20rem"}}>
               <div className="bg-shadesOfBlue dark:group-hover:bg-shadesOfBlue absolute -inset-y-14 left-0 right-0 mx-auto flex h-28 w-28 transform items-center justify-center rounded-full border-4 border-cyan-600 duration-300 group-hover:bg-white group-hover:shadow-md dark:border-slate-800">
                 <span className="group-hover:text-shadesOfBlue transform text-3xl text-white duration-300 dark:text-slate-800 dark:group-hover:text-white md:text-5xl">
                   <svg
@@ -77,7 +77,7 @@ const CardForms = (props: Props) => {
               </div>
               <div className="absolute inset-0 mx-auto flex flex-col items-center justify-center p-4">
                 <div>
-                  <h2 className="text-shadesOfBlue my-1 my-8 font-bold capitalize dark:text-slate-800">
+                  <h2 className="text-shadesOfBlue my-1 my-8 font-bold capitalize dark:text-white">
                     {card.question}
                   </h2>
                 </div>
@@ -85,7 +85,7 @@ const CardForms = (props: Props) => {
                   <p className="text-center text-base dark:text-white"></p>
                 </div>
                 <a
-                  className="border-shadesOfBlue text-shadesOfBlue group-hover:bg-shadesOfBlue bottom-0 mt-4 flex transform rounded-md border-2 p-2 px-6 font-semibold capitalize opacity-85 delay-75 ease-in-out hover:opacity-100 group-hover:text-cyan-600 dark:border-slate-800 dark:text-slate-800 dark:group-hover:bg-slate-800"
+                  className="border-shadesOfBlue  text-shadesOfBlue group-hover:bg-shadesOfBlue bottom-0 mt-4 flex transform rounded-md border-2 p-2 px-6 font-semibold capitalize opacity-85 delay-75 ease-in-out hover:opacity-100 group-hover:text-lime-600 dark:border-lime-600 dark:text-white dark:group-hover:bg-slate-800"
                   href={card.link}
                   type={card.type}
                 >

@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
 
-    <ThemeProvider attribute="class" enableSystem={false} defaultTheme="light">
+    <ThemeProvider attribute="class" enableSystem={false} defaultTheme="dark">
        <Provider store={store}> {children}</Provider>
     </ThemeProvider>
   );
