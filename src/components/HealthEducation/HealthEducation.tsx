@@ -13,7 +13,7 @@ const HealthEducationPage = (props: Props) => {
     <p className="text-lg mb-8 px-4 md:px-0">Health Education & Preventative Care (A list of the Health Screenings that are recommended by age)</p>
     <div className="flex justify-center items-center space-x-4">
         <Link href="/" className="bg-lime-600 hover:bg-gray-600 text-white px-4 py-2 rounded-md">Back To Home</Link>
-        <a href="tel:+909-591-6446"  className="bg-cyan-600 hover:bg-gray-600 text-white px-4 py-2 rounded-md">Contact Us</a>
+        <a href="tel:9095916446"  className="bg-cyan-600 hover:bg-gray-600 text-white px-4 py-2 rounded-md">Contact Us</a>
     </div>
 </div>
 </div>

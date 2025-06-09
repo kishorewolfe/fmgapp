@@ -24,7 +24,8 @@ const Video = () => {
 
           <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
             <a
-              href="tel:+909-591-6446"
+              href="tel:9095916446"
+
               className="flex items-center justify-center gap-2 rounded-lg bg-lime-600 px-6 py-3 text-white transition hover:bg-cyan-600"
             >
               <svg
