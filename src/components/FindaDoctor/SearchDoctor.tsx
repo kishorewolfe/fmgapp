@@ -1,6 +1,5 @@
 "use client";
 import Profiles from "./Profiles";
-import { doctorData } from "./DoctorData";
 import data from "./DoctorFCPData.json"
 import React, { useEffect, useState, CSSProperties, useCallback } from "react";
 import PuffLoader from "react-spinners/PuffLoader";
