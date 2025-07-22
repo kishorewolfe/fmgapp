@@ -14,7 +14,6 @@ const Profiles = ({ doctorData }) => {
     <div>
       {doctorData.map((doctor) => {
         let docName =doctor?.FirstName + " " + doctor?.LastName + " " + doctor?.Degree1;
-        console.log(doctor)
         return (
           <div
             key={doctor?.Id}
