@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import LanguagesSpoken from "./LanguagesSpoken";
 import Image from "next/image";
 import "./EachDoctorProfile.css";
@@ -6,7 +6,8 @@ import { Metadata } from "next";
 import { AddressCard, AddressCardNormal } from "./AddressIcon";
 import { PhoneIcon, PhoneIconNormal } from "./PhoneIcon";
 import { FaxIcon, FaxIconNormal } from "./FaxIcon";
-type Props = {};
+import { useRouter } from "next/navigation";
+
 export const metadata: Metadata = {
   title: "My Family Medical Group",
   description: "My Family Medical Group",
@@ -14,435 +15,463 @@ export const metadata: Metadata = {
 
 const EachDoctorProfile = (props) => {
   let { doctor } = props;
-  let docName =
-    doctor[0]?.FirstName + " " + doctor[0]?.LastName + " " + doctor[0]?.Degree1;
-  let address: any;
-  let cityLine;
-  let address1: any = "";
-  let cityLine1;
-  let cityLine2;
 
-  let phone_number = doctor[0]?.Phone;
-  let fax_number = doctor[0]?.Fax;
-  let phone_number1 = doctor[0]?.Phone1;
-  let fax_number1 = doctor[0]?.Fax1;
-  let phone_number2 = doctor[0]?.Phone2;
-  let fax_number2 = doctor[0]?.Fax2;
-  let addressTwo = doctor[0]?.StreetAddress1;
-  let address2: any = "";
+  // safe top-level doc extraction (hooks must be declared before any returns)
+  const doc = Array.isArray(doctor) && doctor.length > 0 ? doctor[0] : undefined;
 
+  const docName = [
+    doc?.FirstName || "",
+    doc?.LastName || "",
+    doc?.Degree1 || "",
+  ]
+    .join(" ")
+    .trim();
 
-  if (doctor[0]?.StreetAddress !== ""   && doctor[0]?.City !== ""&& doctor[0]?.State !== "") {
-    if(doctor[0]?.Suite!==""){
-    address = `${doctor[0]?.StreetAddress}, ${doctor[0]?.Suite},`;
-    cityLine = `${doctor[0]?.City}, ${doctor[0]?.State} ${doctor[0]?.Zip}.`;
+  // document title (safe for SSR) — hook is always called
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const prevTitle = document.title;
+    if (docName) {
+      document.title = `${docName} - My Family Medical Group`;
     }
-    else{
-    address = `${doctor[0]?.StreetAddress},`;
-    cityLine = `${doctor[0]?.City}, ${doctor[0]?.State} ${doctor[0]?.Zip}.`;
 
+    return () => {
+      document.title = prevTitle;
+    };
+  }, [docName]);
+
+  // Now it's safe to early-return UI fallbacks
+  if (!doc) {
+    return (
+      <div className="mt-12 p-6">
+        <div className="rounded-lg p-6 bg-white dark:bg-slate-800 shadow-md">
+          <p className="text-gray-700 dark:text-gray-300">Doctor information is not available.</p>
+        </div>
+      </div>
+    );
+  }
+
+  // --- rest of your logic (address, maps, languages, helpers) ---
+  // Address construction with safe fallbacks
+  let address = "";
+  let cityLine = "";
+  let address1 = "";
+  let cityLine1 = "";
+  let address2 = "";
+  let cityLine2 = "";
+
+  if (doc?.StreetAddress && doc?.City && doc?.State) {
+    address = doc?.Suite ? `${doc.StreetAddress}, ${doc.Suite}` : `${doc.StreetAddress}`;
+    cityLine = `${doc.City}, ${doc.State} ${doc.Zip || ""}`.trim();
+  }
+
+  if (doc?.StreetAddress1 && doc?.City1 && doc?.State1) {
+    address1 = `${doc.StreetAddress1}${doc?.Suite1 ? ", " + doc.Suite1 : ""}`;
+    cityLine1 = `${doc.City1}, ${doc.State1} ${doc.Zip1 || ""}`.trim();
+  }
+
+  if (doc?.StreetAddress2 && doc?.City2 && doc?.State2) {
+    address2 = `${doc.StreetAddress2}${doc?.Suite2 ? ", " + doc.Suite2 : ""}`;
+    cityLine2 = `${doc.City2}, ${doc.State2} ${doc.Zip2 || ""}`.trim();
+  }
+
+  const phNum = `tel:${doc?.Phone || ""}`;
+
+  // languages — trim, filter empty, add English, dedupe
+  const rawLangs = [
+    doc?.Language1 ?? "",
+    doc?.Language2 ?? "",
+    doc?.Language3 ?? "",
+  ].map((l) => (typeof l === "string" ? l.trim() : ""));
+
+  const LangSet = new Set<string>();
+  LangSet.add("English"); // always include English
+  rawLangs.forEach((l) => {
+    if (l && l.toLowerCase() !== "english") {
+      LangSet.add(l);
     }
-  }
-  if (doctor[0]?.StreetAddress1 !== "" && doctor[0]?.City1 !== ""&& doctor[0]?.State1 !== "") {
-      address1 = `${doctor[0]?.StreetAddress1}, ${doctor[0]?.Suite1}`;
-      cityLine1 = `${doctor[0]?.City1}, ${doctor[0]?.State1} ${doctor[0]?.Zip1}.`;
-    
-  }
+  });
+  const Langs = Array.from(LangSet);
 
-  if (doctor[0]?.StreetAddress2 !== "" && doctor[0]?.City2 !== ""&& doctor[0]?.State2 !== "") {
-    address2 = `${doctor[0]?.StreetAddress2}, ${doctor[0]?.Suite2}`;
-    cityLine2 = `${doctor[0]?.City2}, ${doctor[0]?.State2} ${doctor[0]?.Zip2}.`;
-  }
+  // maps urls & embed (only include when non-empty)
+  const addrPrimaryForMaps = `${address || ""} ${cityLine || ""}`.trim();
+  const mapsUrlPrimary = addrPrimaryForMaps
+    ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addrPrimaryForMaps)}`
+    : "";
+  const mapsEmbedUrl = addrPrimaryForMaps
+    ? `https://www.google.com/maps?q=${encodeURIComponent(addrPrimaryForMaps)}&output=embed`
+    : "";
 
-  let phNum = "tel:" + doctor[0]?.Phone;
-const Langs = [];
+  const addr1ForMaps = `${address1 || ""} ${cityLine1 || ""}`.trim();
+  const mapsUrl1 = addr1ForMaps
+    ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addr1ForMaps)}`
+    : "";
 
-const language1 = doctor[0]?.Language1?.trim();
-const language2 = doctor[0]?.Language2?.trim();
-const language3 = doctor[0]?.Language3?.trim();
+  const addr2ForMaps = `${address2 || ""} ${cityLine2 || ""}`.trim();
+  const mapsUrl2 = addr2ForMaps
+    ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addr2ForMaps)}`
+    : "";
 
+  // Share profile (guard navigator & clipboard)
+  const shareProfile = async () => {
+    if (typeof window === "undefined") return;
+    const shareText = `${docName}\n${doc?.Practice_Name || ""}\n${addrPrimaryForMaps || ""}\n${window.location.href}`;
+    if (typeof navigator !== "undefined" && (navigator as any).share) {
+      try {
+        await (navigator as any).share({ title: docName, text: shareText, url: window.location.href });
+        return;
+      } catch {
+        // fall through to clipboard copy
+      }
+    }
+    if (typeof navigator !== "undefined" && navigator.clipboard && navigator.clipboard.writeText) {
+      try {
+        await navigator.clipboard.writeText(shareText);
+        alert("Profile copied to clipboard");
+        return;
+      } catch {
+        // continue to fallback
+      }
+    }
+    alert("Unable to share profile");
+  };
 
+  // small helpers
+  const renderPhone = (num: string | undefined) => (num ? num : "—");
+  const renderFax = (num: string | undefined) => (num ? num : "—");
 
-if (language1 ) {
-  Langs.push("English");
-  if(doctor[0]?.Language1!=="English"){
-    Langs.push(language1);
-  }
- 
-}
+  const copyToClipboard = async (text: string) => {
+    if (typeof navigator === "undefined" || !navigator.clipboard || !navigator.clipboard.writeText) {
+      if (typeof window !== "undefined") alert("Copy not supported");
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(text);
+      if (typeof window !== "undefined") alert("Address copied to clipboard");
+    } catch {
+      if (typeof window !== "undefined") alert("Copy failed");
+    }
+  };
 
-if (language2) {
-  Langs.push(language2);
-}
-
-if (language3) {
-  Langs.push(language3);
-}
-
-if(!language1 && !language2 && !language3){
-  Langs.push("NOT AVAILABLE")
-
-}
- const fullAddress = `${address1}, ${cityLine1}`;
-    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`;
+  // small UI element: show 'Verified' pill if specialty exists
 
   return (
-    <div className="xs:mt-[20px] lg:mt-[120px]" style={{ marginTop: "140px" }}>
-      <div className="bg-gray-100 dark:bg-slate-900 dark:text-white">
-        <div className=" flex  items-start  justify-start gap-2 sm:ml-[10rem] md:ml-[18rem]">
-          <a
-            href="/find_doctor"
-            className="mt-8  inline-flex items-center rounded-md border border-lime-600 px-3 py-1.5 text-lime-600 hover:bg-slate-50"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="h-6 w-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M7 16l-4-4m0 0l4-4m-4 4h18"
-              ></path>
-            </svg>
-            <span className="ml-1 text-lg font-bold">Back</span>
-          </a>{" "}
-        </div>
-<div className="container mx-auto py-8">
-  <div className="flex flex-col sm:flex-row gap-4 px-4">
-    <div className="w-full sm:w-1/3 dark:bg-slate-800 dark:text-white p-4 shadow-md bg-white">
-              <div className="rounded-lg  p-6  ">
-                <div className="flex flex-col items-center">
-                  <Image
-                    src={doctor[0]?.image_url}
-                    className="mb-4 h-64 w-64 shrink-0 rounded-full bg-gray-300 object-contain"
-                    alt="Doctor"
-                    width={150}
-                    height={250}
-                  ></Image>
-                  <h1 className="text-md font-bold">{docName}</h1>
-                  <p className="text-lime-600">
-                    {doctor[0]?.ContractedSpecialty}
+    <div className="xs:mt-[20px] lg:mt-[120px] mt-36">
+      <div className="bg-gray-50 dark:bg-slate-900 dark:text-white min-h-screen pb-16 transition-colors duration-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Breadcrumb linking exactly to requested URL */}
+          <div className="flex items-center justify-start gap-3 py-4">
+            <nav aria-label="Breadcrumb" className="flex items-center text-sm text-gray-600 dark:text-gray-300">
+              <a href="http://localhost:3000/find_doctor?search=&docType=&specialty=" className="opacity-90 hover:underline">
+                Find Doctor
+              </a>
+              <svg className="w-4 h-4 mx-2 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6" />
+              </svg>
+              <span className="font-medium truncate max-w-xs">{docName}</span>
+            </nav>
+          </div>
+
+          {/* Main responsive layout; items-stretch to make columns same height */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-3 items-stretch">
+            {/* Left column - profile card + map */}
+            <div className="md:col-span-4 lg:col-span-3 flex">
+              <div className="rounded-lg overflow-hidden bg-white dark:bg-slate-800 shadow-md hover:shadow-lg transition-shadow duration-200 flex flex-col w-full">
+                <div className="p-6 flex flex-col items-center">
+                  <div className="relative rounded-full overflow-hidden bg-gray-100 dark:bg-slate-700 w-40 h-40 sm:w-44 sm:h-44 lg:w-56 lg:h-56">
+                    <Image
+                      src={doc?.image_url || "/images/placeholder/Doc_M_Placeholder.jpg"}
+                      alt={`${doc?.FirstName || ""} ${doc?.LastName || ""}`}
+                      fill
+                      sizes="(max-width: 640px) 150px, (max-width: 1024px) 200px, 224px"
+                      style={{ objectFit: "cover" }}
+                      className="rounded-full"
+                    />
+                  </div>
+
+                  {/* IMPORTANT: make specialty visually prominent */}
+                  <p className="mt-3 text-center text-cyan-700 font-semibold text-lg sm:text-xl md:text-xl lg:text-xl leading-tight">
+                    {doc?.ContractedSpecialty || "—"}
                   </p>
-                  <div className="mt-6 flex flex-wrap justify-center gap-4">
+
+                  {/* Call + Directions equal width */}
+                  <div className="mt-5 w-full flex gap-3">
                     <a
                       href={phNum}
-                      className="rounded bg-cyan-600 px-4 py-2 text-white hover:bg-lime-600 "
+                      className="flex-1 rounded bg-cyan-600 px-4 py-2 text-center text-white hover:bg-cyan-700 transition-colors"
+                      aria-label={`Call ${docName}`}
                     >
-                      Contact
+                      Call
+                    </a>
+                    <a
+                      href={mapsUrlPrimary || "#"}
+                      target={mapsUrlPrimary ? "_blank" : undefined}
+                      rel={mapsUrlPrimary ? "noopener noreferrer" : undefined}
+                      className={`flex-1 rounded border border-gray-200 px-4 py-2 text-center ${mapsUrlPrimary ? "hover:bg-gray-100 dark:hover:bg-slate-700" : "opacity-50 cursor-not-allowed"}`}
+                      aria-label={`Directions to ${docName}`}
+                    >
+                      Directions
                     </a>
                   </div>
-                </div>
-                <hr className="my-6 border-t border-gray-300" />
-                <div className="flex flex-col">
-                  <span className="md:text-md mb-2 font-bold uppercase tracking-wider text-gray-500 sm:text-sm lg:text-lg lg:text-lg">
-                    Degree
-                  </span>
-                  <h6>{doctor[0]?.Degree1}</h6>
+
+                  <hr className="my-6 border-t border-gray-200 dark:border-slate-700 w-full" />
+
+                  <div className="w-full">
+                    <div className="mb-4">
+                      <div className="text-xs font-bold uppercase text-gray-500">Degree</div>
+                      <div className="mt-1 font-semibold">{doc?.Degree1 || "—"}</div>
+                    </div>
+
+                    <div>
+                      <div className="text-xs font-bold uppercase text-gray-500">Languages</div>
+                      <div className="mt-2">
+                        <LanguagesSpoken languages={Langs} />
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <hr className="my-6 border-t border-gray-300" />
-                <div className="flex flex-col">
-                  <span className="mb-2 font-bold uppercase tracking-wider text-gray-500">
-                    Languages
-                  </span>
-                  <LanguagesSpoken languages={Langs} />
+                {/* Map container with soft edges & padding */}
+                <div className="p-3">
+                  <div className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-sm h-48 sm:h-56 md:h-64 lg:h-72">
+                    {addrPrimaryForMaps ? (
+                      <iframe
+                        title={`${docName} location`}
+                        src={mapsEmbedUrl}
+                        style={{ width: "100%", height: "100%", border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                      />
+                    ) : (
+                      <div className="flex items-center justify-center h-full text-gray-500 dark:text-gray-400">Address not available</div>
+                    )}
+                  </div>
+
+                  {/* map helpers */}
+                  <div className="mt-3 flex gap-2">
+                    <button
+                      onClick={() => copyToClipboard(addrPrimaryForMaps)}
+                      className="flex-1 rounded border px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors"
+                      disabled={!addrPrimaryForMaps}
+                    >
+                      Copy address
+                    </button>
+                    <button
+                      onClick={() => shareProfile()}
+                      className="rounded border px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors"
+                    >
+                      Share
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-                <div className="w-full sm:w-2/3 shadow-md dark:bg-slate-800 bg-white dark:text-white p-4 m:text-sm md:text-lg lg:text-lg">
-              <div className="rounded-lg  p-6  ">
-                <div className="pb-10 my-auto flex w-full flex-col justify-center gap-2 py-6 sm:text-sm md:text-lg lg:text-lg">
-                  <div className="flex w-full justify-center gap-2 xs:flex-col sm:flex-row ">
-                    <div className="w-full">
-                      <dl className="  text-gray-900  dark:text-white">
-                        <div className="md:text-md flex flex-col pb-3 sm:text-sm lg:text-lg">
-                          <dt className="mb-1 text-gray-500 dark:text-gray-300 md:text-lg lg:text-lg">
-                            FIRST NAME
-                          </dt>
-                          <dd className="text-lg font-semibold">
-                            {doctor[0]?.FirstName}
-                          </dd>
-                        </div>
-                        <div className="flex flex-col py-3">
-                          <dt className="mb-1 text-gray-500 dark:text-gray-300 sm:text-sm md:text-lg lg:text-lg">
-                            LAST NAME
-                          </dt>
-                          <dd className="text-lg font-semibold">
-                            {doctor[0]?.LastName}
-                          </dd>
-                        </div>
-                      </dl>
-                    </div>
-                    <div className="w-full  dark:bg-slate-800 dark:text-white sm:text-sm md:text-lg lg:text-lg">
-                      <dl className=" text-gray-900  dark:text-white sm:text-sm md:text-lg lg:text-lg">
-                        <div className="flex flex-col pb-3 sm:text-sm md:text-lg lg:text-lg">
-                          <dt className="mb-1 text-gray-500 dark:text-gray-300 sm:text-sm md:text-lg lg:text-lg">
-                            SPECIALITY
-                          </dt>
-                          <dd className="text-lg font-semibold">
-                            {doctor[0]?.ContractedSpecialty}
-                          </dd>
-                        </div>
-                        <div className="flex flex-col py-3">
-                          <dt className="mb-1 text-gray-500 dark:text-gray-300 sm:text-sm md:text-lg lg:text-lg">
-                            ORGANIZATION
-                          </dt>
-                          <dd className="text-lg font-semibold">
-                            {doctor[0]?.Practice_Name}
-                          </dd>
-                        </div>
-                      </dl>
-                    </div>
-                    
+
+            {/* Right column - details (stretch to same height) */}
+            <div className="md:col-span-8 lg:col-span-9 flex">
+              <div className="rounded-lg p-6 bg-white dark:bg-slate-800 shadow-md transition-shadow duration-200 flex-1 flex flex-col">
+                {/* Top rows */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <dl className="text-gray-900 dark:text-white">
+                      <div className="mb-4">
+                        <dt className="text-xs text-gray-500 uppercase">First name</dt>
+                        <dd className="text-lg font-semibold">{doc?.FirstName || "—"}</dd>
+                      </div>
+                      <div className="mb-4">
+                        <dt className="text-xs text-gray-500 uppercase">Last name</dt>
+                        <dd className="text-lg font-semibold">{doc?.LastName || "—"}</dd>
+                      </div>
+                    </dl>
                   </div>
-                   <div className="flex w-full justify-center gap-2 xs:flex-col sm:flex-row ">
-                    <div className="w-full">
-                      <dl className="  text-gray-900  dark:text-white">
-                        <div className="md:text-md flex flex-col pb-3 sm:text-sm lg:text-lg">
-                          <dt className="mb-1 text-gray-500 dark:text-gray-300 md:text-lg lg:text-lg">
-                            CITY
-                          </dt>
-                          <dd className="text-lg font-semibold">
-                            {doctor[0]?.City}
-                          </dd>
-                        </div>
-                        <div className="flex flex-col py-3">
-                          <dt className="mb-1 text-gray-500 dark:text-gray-300 sm:text-sm md:text-lg lg:text-lg">
-                            STATE
-                          </dt>
-                          <dd className="text-lg font-semibold">
-                            {doctor[0]?.State}
-                          </dd>
-                        </div>
-                      </dl>
-                    </div>
-                    <div className="w-full  dark:bg-slate-800 dark:text-white sm:text-sm md:text-lg lg:text-lg">
-                      <dl className=" text-gray-900  dark:text-white sm:text-sm md:text-lg lg:text-lg">
-                        <div className="flex flex-col pb-3 sm:text-sm md:text-lg lg:text-lg">
-                          <dt className="mb-1 text-gray-500 dark:text-gray-300 sm:text-sm md:text-lg lg:text-lg">
-                            ZIP CODE
-                          </dt>
-                          <dd className="text-lg font-semibold">
-                            {doctor[0]?.Zip}
-                          </dd>
-                        </div>
-                        <div className="flex flex-col py-3">
-                          <dt className="mb-1 text-gray-500 dark:text-gray-300 sm:text-sm md:text-lg lg:text-lg">
-                            COUNTRY
-                          </dt>
-                          <dd className="text-lg font-semibold">
-                           United States
-                          </dd>
-                        </div>
-                      </dl>
-                    </div>
-                    
+
+                  <div>
+                    <dl className="text-gray-900 dark:text-white">
+                      <div className="mb-4">
+                        <dt className="text-xs text-gray-500 uppercase">Specialty(ies)</dt>
+                        <dd className="text-lg font-semibold">{doc?.ContractedSpecialty || "—"}</dd>
+                      </div>
+                      <div className="mb-4">
+                        <dt className="text-xs text-gray-500 uppercase">Organization</dt>
+                        <dd className="text-lg font-semibold">{doc?.Practice_Name || "—"}</dd>
+                      </div>
+                    </dl>
                   </div>
-                  
-                  
+                </div>
 
+                {/* Location and contact rows */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
+                  <div>
+                    <dl className="text-gray-900 dark:text-white">
+                      <div className="mb-4">
+                        <dt className="text-xs text-gray-500 uppercase">City</dt>
+                        <dd className="text-lg font-semibold">{doc?.City || "—"}</dd>
+                      </div>
+                      <div className="mb-4">
+                        <dt className="text-xs text-gray-500 uppercase">State</dt>
+                        <dd className="text-lg font-semibold">{doc?.State || "—"}</dd>
+                      </div>
+                    </dl>
+                  </div>
 
+                  <div>
+                    <dl className="text-gray-900 dark:text-white">
+                      <div className="mb-4">
+                        <dt className="text-xs text-gray-500 uppercase">Zip code</dt>
+                        <dd className="text-lg font-semibold">{doc?.Zip || "—"}</dd>
+                      </div>
+                      <div className="mb-4">
+                        <dt className="text-xs text-gray-500 uppercase">Country</dt>
+                        <dd className="text-lg font-semibold">United States</dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
 
-                  <span className="mb-1 text-lime-600 dark:text-lime-600 sm:text-sm md:text-lg lg:text-lg">
-                    ADDRESS
-                  </span>
-                  <div className="w-full rounded-md border border-white p-2 dark:bg-slate-800 dark:text-white sm:text-sm md:text-lg lg:text-lg">
-                    <div className="flex flex-col">
-                      <div className="address1 flex items-start gap-4 rounded-md p-4 shadow-md">
-                        <div className="md:text-md space-y-2 text-black dark:text-white">
-                          {/* Address + CityLine section aligned with icon */}
-                          <div className="flex items-start gap-2">
-                           
-                             <>
-                              <span className=" hidden dark:block">
-                                 <AddressCard className="mt-1" />
-                              </span>
+                {/* Addresses block - primary + always-open secondary addresses */}
+                <div className="mt-6 flex-1 overflow-auto">
+                  <div className="mb-2 text-lime-600 dark:text-lime-600 font-semibold">ADDRESS</div>
 
-                              <span className=" block dark:hidden">
-                                <AddressCardNormal className="mt-1" />
-                              </span>
-                            </>
-<a
-  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${address}, ${cityLine}`)}`}
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{ textDecoration: 'none', color: 'inherit' }}
->
-  <div style={{ cursor: 'pointer' }}>
-    <p>{address}</p>
-    <p>{cityLine}</p>
-  </div>
-</a>                      </div>
+                  {/* Primary address */}
+                  <div className="mt-3 rounded-md border border-gray-100 dark:border-slate-700 p-4">
+                    <div className="flex items-start gap-4">
+                      <div className="mt-1">
+                        <span className="hidden dark:block"><AddressCard /></span>
+                        <span className="block dark:hidden"><AddressCardNormal /></span>
+                      </div>
 
-                          {/* Phone section */}
+                      <div className="flex-1">
+                        <a href={mapsUrlPrimary || "#"} target={mapsUrlPrimary ? "_blank" : undefined} rel={mapsUrlPrimary ? "noopener noreferrer" : undefined} className="block hover:underline">
+                          <p className="font-medium">{address || "—"}</p>
+                          <p className="text-sm text-gray-600 dark:text-gray-300">{cityLine || "—"}</p>
+                        </a>
+
+                        <div className="mt-3 space-y-2">
                           <div className="flex items-center gap-2">
-                            <>
-                              <span className=" hidden dark:block">
-                                <PhoneIcon className="h-4 w-4" />
-                              </span>
-
-                              <span className=" block dark:hidden">
-                                <PhoneIconNormal className="h-4 w-4 " />
-                              </span>
-                            </>
-
-                            <span>{phone_number}</span>
+                            <span className="hidden dark:block"><PhoneIcon /></span>
+                            <span className="block dark:hidden"><PhoneIconNormal /></span>
+                            <span className="text-sm">{renderPhone(doc?.Phone)}</span>
                           </div>
 
-                          {/* Fax section */}
                           <div className="flex items-center gap-2">
-                            <>
-                                  <span className=" hidden dark:block">
-                                    <FaxIcon className="h-4 w-4 text-gray-500" />
-                                  </span>
+                            <span className="hidden dark:block"><FaxIcon /></span>
+                            <span className="block dark:hidden"><FaxIconNormal /></span>
+                            <span className="text-sm">{renderFax(doc?.Fax)}</span>
+                          </div>
 
-                                  <span className="block dark:hidden">
-                                    <FaxIconNormal className="h-4 w-4 " />{" "}
-                                  </span>
-                                </>
-                            <span>{fax_number}</span>
+                          <div className="mt-3 flex gap-2">
+                            <button
+                              onClick={() => copyToClipboard(`${address} ${cityLine}`)}
+                              className="rounded border px-3 py-1 text-sm hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors"
+                              disabled={!address && !cityLine}
+                            >
+                              Copy address
+                            </button>
+                            <button onClick={() => shareProfile()} className="rounded border px-3 py-1 text-sm hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">Share</button>
+                            <a href={mapsUrlPrimary || "#"} target={mapsUrlPrimary ? "_blank" : undefined} rel={mapsUrlPrimary ? "noopener noreferrer" : undefined} className="ml-auto text-sm text-cyan-600 hover:underline">
+                              Open in Maps
+                            </a>
                           </div>
                         </div>
                       </div>
-
-                      {address1 !== "" && (
-                        <>
-                          <hr />
-                          <div className="address1 flex items-start gap-4 rounded-md p-4 shadow-md">
-                            <div className="md:text-md space-y-2 text-black dark:text-white">
-                              {/* Address + CityLine section aligned with icon */}
-                              <div className="flex items-start gap-2">
-                                <>
-                              <span className=" hidden dark:block">
-                                 <AddressCard className="mt-1" />
-                              </span>
-
-                              <span className=" block dark:hidden">
-                                <AddressCardNormal className="mt-1" />
-                              </span>
-                            </>
-<a
-  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${address1}, ${cityLine1}`)}`}
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{ textDecoration: 'none', color: 'inherit' }}
->
-  <div style={{ cursor: 'pointer' }}>
-    <p>{address1}</p>
-    <p>{cityLine1}</p>
-  </div>
-</a>                      </div>
-
-                              {/* Phone section */}
-                              <div className="flex items-center gap-2">
-                                <>
-                                  <span className=" hidden dark:block">
-                                    <PhoneIcon className="h-4 w-4" />
-                                  </span>
-
-                                  <span className=" block dark:hidden">
-                                    <PhoneIconNormal className="h-4 w-4 " />
-                                  </span>
-                                </>
-
-                                <span>{phone_number1}</span>
-                              </div>
-
-                              {/* Fax section */}
-                              <div className="flex items-center gap-2">
-                                <>
-                                  <span className=" hidden dark:block">
-                                    <FaxIcon className="h-4 w-4 text-gray-500" />
-                                  </span>
-
-                                  <span className="block dark:hidden">
-                                    <FaxIconNormal className="h-4 w-4 " />{" "}
-                                  </span>
-                                </>
-                                <span>{fax_number1}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </>
-                      )}
-
-                      {address2 !== "" && (
-                        <>
-                          <hr />
-                          <div className="address1 flex items-start gap-4 rounded-md p-4 shadow-md">
-                            <div className="md:text-md space-y-2 text-black dark:text-white">
-                              {/* Address + CityLine section aligned with icon */}
-                              <div className="flex items-start gap-2">
-                                 <>
-                              <span className=" hidden dark:block">
-                                 <AddressCard className="mt-1" />
-                              </span>
-
-                              <span className=" block dark:hidden">
-                                <AddressCardNormal className="mt-1" />
-                              </span>
-                            </>
-                               <a
-  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${address2}, ${cityLine2}`)}`}
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{ textDecoration: 'none', color: 'inherit' }}
->
-  <div style={{ cursor: 'pointer' }}>
-    <p>{address2}</p>
-    <p>{cityLine2}</p>
-  </div>
-</a>   
-                              </div>
-
-                              {/* Phone section */}
-                              <div className="flex items-center gap-2">
-                                <>
-                                  <span className=" hidden dark:block">
-                                    <PhoneIcon className="h-4 w-4" />
-                                  </span>
-
-                                  <span className=" block dark:hidden">
-                                    <PhoneIconNormal className="h-4 w-4 " />
-                                  </span>
-                                </>
-
-                                <span>{phone_number2}</span>
-                              </div>
-
-                              {/* Fax section */}
-                              <div className="flex items-center gap-2">
-                                <>
-                                  <span className=" hidden dark:block">
-                                    <FaxIcon className="h-4 w-4 text-gray-500" />
-                                  </span>
-
-                                  <span className="block dark:hidden">
-                                    <FaxIconNormal className="h-4 w-4 " />{" "}
-                                  </span>
-                                </>
-                                <span>{fax_number2}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </>
-                      )}
                     </div>
+                  </div>
+
+                  {/* Secondary address 1 - always visible */}
+                  {address1 && (
+                    <div className="mt-4 rounded-md border border-gray-100 dark:border-slate-700 p-4">
+                      <div className="flex items-start gap-4">
+                        <div className="mt-1">
+                          <span className="hidden dark:block"><AddressCard /></span>
+                          <span className="block dark:hidden"><AddressCardNormal /></span>
+                        </div>
+
+                        <div className="flex-1">
+                          <div className="font-medium">{address1}</div>
+                          <div className="text-sm text-gray-600 dark:text-gray-300">{cityLine1}</div>
+
+                          <div className="mt-3 space-y-2">
+                            <div className="flex items-center gap-2">
+                              <span className="hidden dark:block"><PhoneIcon /></span>
+                              <span className="block dark:hidden"><PhoneIconNormal /></span>
+                              <span className="text-sm">{renderPhone(doc?.Phone1)}</span>
+                            </div>
+
+                            <div className="flex items-center gap-2">
+                              <span className="hidden dark:block"><FaxIcon /></span>
+                              <span className="block dark:hidden"><FaxIconNormal /></span>
+                              <span className="text-sm">{renderFax(doc?.Fax1)}</span>
+                            </div>
+
+                            <div className="mt-3 flex gap-2">
+                              <button onClick={() => copyToClipboard(`${address1} ${cityLine1}`)} className="rounded border px-3 py-1 text-sm hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">Copy</button>
+                              <a href={mapsUrl1 || "#"} target={mapsUrl1 ? "_blank" : undefined} rel={mapsUrl1 ? "noopener noreferrer" : undefined} className="ml-auto text-sm text-cyan-600 hover:underline">Open in Maps</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Secondary address 2 - always visible */}
+                  {address2 && (
+                    <div className="mt-4 rounded-md border border-gray-100 dark:border-slate-700 p-4">
+                      <div className="flex items-start gap-4">
+                        <div className="mt-1">
+                          <span className="hidden dark:block"><AddressCard /></span>
+                          <span className="block dark:hidden"><AddressCardNormal /></span>
+                        </div>
+
+                        <div className="flex-1">
+                          <div className="font-medium">{address2}</div>
+                          <div className="text-sm text-gray-600 dark:text-gray-300">{cityLine2}</div>
+
+                          <div className="mt-3 space-y-2">
+                            <div className="flex items-center gap-2">
+                              <span className="hidden dark:block"><PhoneIcon /></span>
+                              <span className="block dark:hidden"><PhoneIconNormal /></span>
+                              <span className="text-sm">{renderPhone(doc?.Phone2)}</span>
+                            </div>
+
+                            <div className="flex items-center gap-2">
+                              <span className="hidden dark:block"><FaxIcon /></span>
+                              <span className="block dark:hidden"><FaxIconNormal /></span>
+                              <span className="text-sm">{renderFax(doc?.Fax2)}</span>
+                            </div>
+
+                            <div className="mt-3 flex gap-2">
+                              <button onClick={() => copyToClipboard(`${address2} ${cityLine2}`)} className="rounded border px-3 py-1 text-sm hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">Copy</button>
+                              <a href={mapsUrl2 || "#"} target={mapsUrl2 ? "_blank" : undefined} rel={mapsUrl2 ? "noopener noreferrer" : undefined} className="ml-auto text-sm text-cyan-600 hover:underline">Open in Maps</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Bottom area intentionally minimal */}
+                <div className="mt-6 text-sm text-gray-700 dark:text-gray-300">
+                  <div>
+                    <strong>Have any questions?</strong>
+                    <p>
+                      Feel free to{' '}
+                      <a href="/contactus" className="text-blue-600 hover:underline dark:text-blue-400">
+                        contact us
+                      </a>
+                      .
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
   );
 };
 
 export default EachDoctorProfile;
-
-

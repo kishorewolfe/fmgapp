@@ -13,9 +13,9 @@ const UMcaresList = (props: Props) => {
             <svg
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="3"
               className="mr-4 h-6 w-6 flex-shrink-0 text-lime-500"
               viewBox="0 0 24 24"
             >

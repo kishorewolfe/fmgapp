@@ -1,17 +1,32 @@
 "use client";
 import Profiles from "./Profiles";
-import data from "./DoctorFCPData.json"
-import React, { useEffect, useState, CSSProperties, useCallback } from "react";
+import data from "./DoctorFCPData.json"; // adjust path if needed
+import React, { useEffect, useState, useCallback } from "react";
 import PuffLoader from "react-spinners/PuffLoader";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 import debounce from "lodash.debounce";
 
+const normalizeSpecialtyString = (s = "") =>
+  (s || "").split(/\/|,|;|\||\band\b/i).map((p) => p.trim()).filter(Boolean);
 
-const override: CSSProperties = {
-  display: "block",
-  margin: "0 auto",
-  borderColor: "cyan",
-  marginTop:"20px"
+const getSpecialtiesForDoc = (doc) => {
+  if (Array.isArray(doc.ContractedSpecialties) && doc.ContractedSpecialties.length) {
+    return doc.ContractedSpecialties.map((s) => (s || "").trim()).filter(Boolean);
+  }
+  if (typeof doc.ContractedSpecialty === "string" && doc.ContractedSpecialty.trim()) {
+    return normalizeSpecialtyString(doc.ContractedSpecialty);
+  }
+  return [];
+};
+
+const getDocTypesForDoc = (doc) => {
+  if (Array.isArray(doc.docTypes) && doc.docTypes.length) {
+    return doc.docTypes.map((d) => (d || "").trim()).filter(Boolean);
+  }
+  if (typeof doc.docType === "string" && doc.docType.trim()) {
+    return doc.docType.split(/,|\/|;/).map((d) => d.trim()).filter(Boolean);
+  }
+  return [];
 };
 
 const SearchDoctor = () => {
@@ -21,31 +36,51 @@ const SearchDoctor = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [docTypeFilter, setDocTypeFilter] = useState("");
   const [specialtyFilter, setSpecialtyFilter] = useState("");
+  // new: 'all' | 'upcoming' radio filter
+  const [upcomingFilter, setUpcomingFilter] = useState<"all" | "upcoming">("all");
+
   const [filteredData, setFilteredData] = useState(data?.data ?? []);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchDone, setSearchDone] = useState(false);
 
   const itemsPerPage = 5;
 
+  // Build unique specialties and doc types from existing JSON strings (no JSON changes)
   const uniqueSpecialties = Array.from(
-    new Set(data?.data.map((doc) => doc.ContractedSpecialty))
+    new Set((data?.data || []).flatMap((doc) => getSpecialtiesForDoc(doc)))
   ).sort();
 
-  const applyFilters = (searchValue, docType, specialty) => {
-    const term = searchValue.toLowerCase();
-    const filtered = data?.data.filter((item) => {
+  const uniqueDocTypes = Array.from(
+    new Set((data?.data || []).flatMap((doc) => getDocTypesForDoc(doc)))
+  ).sort();
+
+  const applyFilters = (searchValue, docType, specialty, upcoming) => {
+    const term = (searchValue || "").toLowerCase().trim();
+
+    const filtered = (data?.data || []).filter((item) => {
+      const itemDocTypes = getDocTypesForDoc(item);
+      const itemSpecialties = getSpecialtiesForDoc(item);
+
       const matchesSearchTerm =
-        item?.FirstName?.toLowerCase().includes(term) ||
-        item?.LastName?.toLowerCase().includes(term) ||
-        item?.ContractedSpecialty?.toLowerCase().includes(term) ||
-        item?.Practice_Name?.toLowerCase().includes(term) ||
-        `${item?.FirstName} ${item?.LastName}`.toLowerCase().includes(term) ||
-        `${item?.FirstName}${item?.LastName}`.toLowerCase().includes(term);
+        !term ||
+        (item?.FirstName && item.FirstName.toLowerCase().includes(term)) ||
+        (item?.LastName && item.LastName.toLowerCase().includes(term)) ||
+        (item?.Practice_Name && item.Practice_Name.toLowerCase().includes(term)) ||
+        (`${item?.FirstName || ""} ${item?.LastName || ""}`).toLowerCase().includes(term) ||
+        itemSpecialties.some((s) => s.toLowerCase().includes(term));
 
-      const matchesDocType = docType ? item.docType === docType : true;
-      const matchesSpecialty = specialty ? item.ContractedSpecialty === specialty : true;
+      const matchesDocType = docType
+        ? itemDocTypes.some((dt) => dt.toLowerCase() === docType.toLowerCase())
+        : true;
 
-      return matchesSearchTerm && matchesDocType && matchesSpecialty;
+      const matchesSpecialty = specialty
+        ? itemSpecialties.some((s) => s.toLowerCase() === specialty.toLowerCase())
+        : true;
+
+      const matchesUpcoming =
+        upcoming === "upcoming" ? Boolean(item?.upcomingJoin) : true;
+
+      return matchesSearchTerm && matchesDocType && matchesSpecialty && matchesUpcoming;
     });
 
     setFilteredData(filtered);
@@ -54,12 +89,19 @@ const SearchDoctor = () => {
 
   // Debounced version of applyFilters to avoid excessive filtering on typing
   const debouncedApplyFilters = useCallback(
-    debounce((term, docType, specialty) => {
-      applyFilters(term, docType, specialty);
+    debounce((term, docType, specialty, upcoming) => {
+      applyFilters(term, docType, specialty, upcoming);
       setLoading(false);
-      setSearchDone(term.trim().length > 0 || docType !== "" || specialty !== "");
+      setSearchDone(
+        term.trim().length > 0 || docType !== "" || specialty !== "" || upcoming === "upcoming"
+      );
+      // update URL query
       router.push(
-        `/find_doctor?search=${encodeURIComponent(term)}&docType=${docType}&specialty=${encodeURIComponent(specialty)}`
+        `/find_doctor?search=${encodeURIComponent(term)}&docType=${encodeURIComponent(
+          docType
+        )}&specialty=${encodeURIComponent(specialty)}&upcoming=${encodeURIComponent(
+          upcoming
+        )}`
       );
     }, 500),
     []
@@ -71,26 +113,34 @@ const SearchDoctor = () => {
     setSearchTerm(val);
     setLoading(true);
 
-    debouncedApplyFilters(val, docTypeFilter, specialtyFilter);
+    debouncedApplyFilters(val, docTypeFilter, specialtyFilter, upcomingFilter);
   };
 
-  // When filters change, trigger search immediately
+  // When filters change, trigger search (debounced function handles navigation)
   useEffect(() => {
     setLoading(true);
-    debouncedApplyFilters(searchTerm, docTypeFilter, specialtyFilter);
-  }, [docTypeFilter, specialtyFilter]);
+    debouncedApplyFilters(searchTerm, docTypeFilter, specialtyFilter, upcomingFilter);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [docTypeFilter, specialtyFilter, upcomingFilter]);
 
   // On button click, run search immediately (cancel debounce first)
   const handleSearchClick = () => {
     debouncedApplyFilters.cancel();
     setLoading(true);
-    applyFilters(searchTerm, docTypeFilter, specialtyFilter);
+    applyFilters(searchTerm, docTypeFilter, specialtyFilter, upcomingFilter);
     setLoading(false);
     setSearchDone(
-      searchTerm.trim().length > 0 || docTypeFilter !== "" || specialtyFilter !== ""
+      searchTerm.trim().length > 0 ||
+        docTypeFilter !== "" ||
+        specialtyFilter !== "" ||
+        upcomingFilter === "upcoming"
     );
     router.push(
-      `/find_doctor?search=${encodeURIComponent(searchTerm)}&docType=${docTypeFilter}&specialty=${encodeURIComponent(specialtyFilter)}`
+      `/find_doctor?search=${encodeURIComponent(
+        searchTerm
+      )}&docType=${encodeURIComponent(docTypeFilter)}&specialty=${encodeURIComponent(
+        specialtyFilter
+      )}&upcoming=${encodeURIComponent(upcomingFilter)}`
     );
   };
 
@@ -100,6 +150,7 @@ const SearchDoctor = () => {
     setSearchTerm("");
     setDocTypeFilter("");
     setSpecialtyFilter("");
+    setUpcomingFilter("all"); // reset the new radio filter too
     setSearchDone(false);
     setFilteredData(data?.data ?? []);
     setCurrentPage(1);
@@ -110,7 +161,7 @@ const SearchDoctor = () => {
   // Pagination
   const startIndex = (currentPage - 1) * itemsPerPage;
   const paginatedData = filteredData.slice(startIndex, startIndex + itemsPerPage);
-  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+  const totalPages = Math.max(1, Math.ceil(filteredData.length / itemsPerPage));
 
   const handleNextPage = () => {
     if (currentPage < totalPages) setCurrentPage((prev) => prev + 1);
@@ -130,15 +181,18 @@ const SearchDoctor = () => {
         placeholder="Search name, specialty, or organization"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
         <select
           value={docTypeFilter}
           onChange={(e) => setDocTypeFilter(e.target.value)}
           className="w-full rounded-md border border-gray-300 p-3 dark:bg-gray-500 dark:text-gray-300"
         >
           <option value="">All Doc Types</option>
-          <option value="PCP">PCP</option>
-          <option value="Specialist">Specialists</option>
+          {uniqueDocTypes.map((dt) => (
+            <option key={dt} value={dt}>
+              {dt}
+            </option>
+          ))}
         </select>
 
         <select
@@ -154,6 +208,32 @@ const SearchDoctor = () => {
           ))}
         </select>
 
+        {/* Upcoming radio filter */}
+        <div className="flex items-center gap-4">
+          <label className="flex items-center gap-2 text-sm">
+            <input
+              type="radio"
+              name="upcomingFilter"
+              value="all"
+              checked={upcomingFilter === "all"}
+              onChange={() => setUpcomingFilter("all")}
+              className="h-4 w-4"
+            />
+            <span>All</span>
+          </label>
+          <label className="flex items-center gap-2 text-sm">
+            <input
+              type="radio"
+              name="upcomingFilter"
+              value="upcoming"
+              checked={upcomingFilter === "upcoming"}
+              onChange={() => setUpcomingFilter("upcoming")}
+              className="h-4 w-4"
+            />
+            <span>Upcoming only</span>
+          </label>
+        </div>
+
         <div className="flex justify-end">
           <button
             onClick={handleSearchClick}
@@ -164,17 +244,16 @@ const SearchDoctor = () => {
         </div>
       </div>
 
-      {loading ? (<div className="flex items-center justify-center ">
-  <PuffLoader
-    color={color}
-    loading={loading}
-    size={100}
-    aria-label="Loading Spinner"
-    data-testid="loader"
-  />
-</div>
-
-      
+      {loading ? (
+        <div className="flex items-center justify-center ">
+          <PuffLoader
+            color={color}
+            loading={loading}
+            size={100}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        </div>
       ) : (
         <>
           {searchDone && (
@@ -182,7 +261,7 @@ const SearchDoctor = () => {
               <span className="text-slate-800 dark:text-slate-100 text-sm md:text-base font-medium">
                 You have searched for:{" "}
                 <strong className="text-cyan-600">
-                  {searchTerm || docTypeFilter || specialtyFilter}
+                  {searchTerm || docTypeFilter || specialtyFilter || (upcomingFilter === "upcoming" ? "Upcoming only" : "")}
                 </strong>
               </span>
 
@@ -221,6 +300,5 @@ const SearchDoctor = () => {
     </div>
   );
 };
-
 
 export default SearchDoctor;
