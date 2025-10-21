@@ -163,7 +163,7 @@ const EachDoctorProfile = (props) => {
           {/* Breadcrumb linking exactly to requested URL */}
           <div className="flex items-center justify-start gap-3 py-4">
             <nav aria-label="Breadcrumb" className="flex items-center text-sm text-gray-600 dark:text-gray-300">
-              <a href="http://localhost:3000/find_doctor?search=&docType=&specialty=" className="opacity-90 hover:underline">
+              <a href="/find_doctor?search=&docType=&specialty=" className="opacity-90 hover:underline">
                 Find Doctor
               </a>
               <svg className="w-4 h-4 mx-2 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor">
