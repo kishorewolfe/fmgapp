@@ -81,8 +81,8 @@ const Header = () => {
     },
     {
       id: 4,
-      title: "Forms",
-      path: "/forms",
+      title: "Resources",
+      path: "/resources",
       newTab: false,
     },
     {

@@ -2,6 +2,7 @@ import CardForms from "@/components/Forms/CardForms";
 import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
+import HealthEdu from "@/components/HealthEdu/HealthEdu";
 type Props = {};
 export const metadata: Metadata = {
   title: "My Family Medical Group",
@@ -17,7 +18,7 @@ const page = (props: Props) => {
     <Image
       className="h-full w-full object-cover"
       src="/images/services/healthforms.jpg"
-      alt="Forms Download"
+      alt="Resources"
    
       fill
     />
@@ -27,12 +28,15 @@ const page = (props: Props) => {
 
     {/* Text Overlay */}
     <div className="absolute inset-0 flex items-center justify-center">
-      <h2 className="text-white text-7xl font-bold">Forms Download</h2>
+      <h2 className="text-white text-7xl font-bold">Resources</h2>
     </div>
   </div>
 
   
 </div>
+
+<HealthEdu />
+<br/>
 <CardForms />
 </>
 
