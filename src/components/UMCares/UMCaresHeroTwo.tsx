@@ -10,15 +10,15 @@ const UMCaresHeroTwo = (props: Props) => {
         <div className="hero-image relative isolate z-10 mt-4 w-full rounded-3xl md:px-5 md:pt-2 lg:w-1/2 lg:px-0 lg:pt-0">
           <Image
             className="ml-8 mt-2 rounded-3xl"
-            src="/images/umcares/apollo.png"
+            src="/images/umcares/MCG.jpeg"
             alt="UM Criteria "
-            height={300}
-            width={300}
+            height={240}
+            width={240}
           />
         </div>
         <div className="flex flex-col gap-y-5 lg:w-[650px] lg:px-5">
           <h1 className=" text-4xl font-semibold leading-[1.2] text-lime-600 dark:text-white md:mx-auto md:max-w-xl md:text-center md:text-5xl lg:mx-0 lg:max-w-full lg:text-left xl:text-[50px]">
-          Apollo Managed Care
+         MCG
           </h1>
           <div className="text-sm dark:text-gray-300 md:mx-auto md:max-w-xl md:text-center lg:mx-0 lg:max-w-full lg:text-left">
             <ul>
@@ -39,16 +39,16 @@ const UMCaresHeroTwo = (props: Props) => {
                 </svg>
                 <p className="md:text-md sm:text:sm mt-5 justify-normal lg:text-lg">
                   {" "}
-                  Apollo Medical Review Criteria Guidelines for Managing Care The affordable solution for evidence-based clinical decision suppor
+                  MCG is a nationally recognized clinical decision support tool used to guide evidence-based medical necessity determinations
                 </p>
               </li>
             </ul>
           </div>
 
           <div className="flex flex-col gap-x-5 gap-y-2.5 lg:flex-row">
-            <Link href={"https://mfmg.apollomanagedcare.com/"} className="lg:ml-8 sm:ml-1 flex w-full items-center justify-center rounded-lg border border-lime-600 bg-lime-600/10 px-6 py-2.5 font-semibold text-cyan-600 transition duration-200 hover:shadow-lg hover:drop-shadow dark:border-gray-500/50 dark:bg-transparent dark:text-white lg:w-fit">
+            <Link href={"https://www.mcg.com/"} className="lg:ml-8 sm:ml-1 flex w-full items-center justify-center rounded-lg border border-lime-600 bg-lime-600/10 px-6 py-2.5 font-semibold text-cyan-600 transition duration-200 hover:shadow-lg hover:drop-shadow dark:border-gray-500/50 dark:bg-transparent dark:text-white lg:w-fit">
               <span>
-                Link here to Visit to Apollo Managed Care
+                Link here to Visit to MCG
               </span>
             </Link>
           </div>
