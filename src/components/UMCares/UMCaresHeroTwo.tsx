@@ -47,9 +47,11 @@ const UMCaresHeroTwo = (props: Props) => {
 
           <div className="flex flex-col gap-x-5 gap-y-2.5 lg:flex-row">
             <Link href={"https://www.mcg.com/"} className="lg:ml-8 sm:ml-1 flex w-full items-center justify-center rounded-lg border border-lime-600 bg-lime-600/10 px-6 py-2.5 font-semibold text-cyan-600 transition duration-200 hover:shadow-lg hover:drop-shadow dark:border-gray-500/50 dark:bg-transparent dark:text-white lg:w-fit">
+              
               <span>
-                Click here to view MCG's clinical criteria
+                Click here to view MCG clinical criteria
               </span>
+              
             </Link>
           </div>
         </div>
