@@ -6,7 +6,7 @@ const UMClinicalCriteriaPdf = () => {
       <div className="rounded-3xl border border-lime-200 bg-lime-50 p-8 shadow-sm">
         
         <h2 className="text-3xl font-semibold text-lime-600 md:text-4xl">
-          UM2017 Clinical Criteria for UM Decisions
+           Clinical Criteria for UM Decisions
         </h2>
 
         <p className="mt-4 text-lg text-gray-700">
