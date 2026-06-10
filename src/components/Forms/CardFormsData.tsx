@@ -49,6 +49,26 @@ const cardFormsData: any[] = [
     type: "pdf",
     fname: "Packet",
   },
+  {
+    id: 7,
+    question: "IHA Bulletin",
+    description:
+      "With a couple of exceptions, protected health information (PHI) includes all individually identifiable health information that is transmitted or maintained in any form or medium. This includes demographic information that ties the identity of the individual to his or her health record. Examples are names, addresses, geographic codes smaller than state, all dates (except year) elements related to the person, telephone numbers, fax numbers, license numbers, social security numbers, etc. The information is protected if it can possibly identify the person.One notable exception involves disclosures of patient information that are required by law. For example, we are required by law to report communicable diseases to the appropriate authorities.",
+    image: "/images/blog/blog-01.jpg",
+    link: "/files/IHA_Bulletin.pdf",
+    type: "pdf",
+    fname: "IHA_Bulletin",
+  },
+    {
+    id: 8,
+    question: "MFMG Request Form",
+    description:
+      "With a couple of exceptions, protected health information (PHI) includes all individually identifiable health information that is transmitted or maintained in any form or medium. This includes demographic information that ties the identity of the individual to his or her health record. Examples are names, addresses, geographic codes smaller than state, all dates (except year) elements related to the person, telephone numbers, fax numbers, license numbers, social security numbers, etc. The information is protected if it can possibly identify the person.One notable exception involves disclosures of patient information that are required by law. For example, we are required by law to report communicable diseases to the appropriate authorities.",
+    image: "/images/blog/blog-01.jpg",
+    link: "/files/MFMG_Request_Form.pdf",
+    type: "pdf",
+    fname: "MFMG_Request_Form",
+  },
 ];
 
 export default cardFormsData;
