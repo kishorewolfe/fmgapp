@@ -13,7 +13,7 @@ const VideoPlayer = (props: Props) => {
     href="tel:9095916446"
     className="bg-transparent text-[15px] hover:text-white uppercase lg:tracking-[0.5rem] transition-[0.25s] duration-[background-color] mx-4 my-0 lg:px-10 p-4 border-solid border-2 sm:tracking-[0.3rem] bg-white text-black hover:bg-black"
   >
-    Local: (909) 591-6446
+  (909) 591-6446
   </a>
 
 
