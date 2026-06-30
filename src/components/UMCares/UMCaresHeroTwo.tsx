@@ -1,62 +1,157 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-type Props = {};
 
-const UMCaresHeroTwo = (props: Props) => {
+const UMCaresHeroTwo = () => {
   return (
-    <>
-      <div className=" mb-2 mx-auto mt-8 flex max-w-6xl flex-col items-center justify-center gap-x-10 gap-y-10 px-7 py-10 dark:bg-gray-800 lg:flex-row lg:px-10 lg:py-14">
-        <div className="hero-image relative isolate z-10 mt-4 w-full rounded-3xl md:px-5 md:pt-2 lg:w-1/2 lg:px-0 lg:pt-0">
-          <Image
-            className="ml-8 mt-2 rounded-3xl"
-            src="/images/umcares/MCG.jpeg"
-            alt="UM Criteria "
-            height={240}
-            width={240}
-          />
-        </div>
-        <div className="flex flex-col gap-y-5 lg:w-[650px] lg:px-5">
-          <h1 className=" text-4xl font-semibold leading-[1.2] text-lime-600 dark:text-white md:mx-auto md:max-w-xl md:text-center md:text-5xl lg:mx-0 lg:max-w-full lg:text-left xl:text-[50px]">
-         MCG
-          </h1>
-          <div className="text-sm dark:text-gray-300 md:mx-auto md:max-w-xl md:text-center lg:mx-0 lg:max-w-full lg:text-left">
-            <ul>
-              <li className="flex items-center dark:text-white">
-                <svg
-                  className="mr-2 h-10 w-10 text-lime-600 "
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  ></path>
-                </svg>
-                <p className="md:text-md sm:text:sm mt-5 justify-normal lg:text-lg">
-                  {" "}
-                  MCG is a nationally recognized clinical decision support tool used to guide evidence-based medical necessity determinations
-                </p>
-              </li>
-            </ul>
+    <section className="mx-auto my-10 max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl dark:border-gray-700 dark:bg-gray-900">
+        {/* Top Section */}
+        <div className="grid gap-10 p-6 sm:p-8 lg:grid-cols-[260px_1fr] lg:gap-12 lg:p-12">
+          {/* Image */}
+          <div className="flex items-start justify-center">
+            <Image
+              src="/images/umcares/MCG.jpeg"
+              alt="MCG Clinical Guidelines"
+              width={240}
+              height={240}
+              priority
+              className="rounded-2xl shadow-lg"
+            />
           </div>
 
-          <div className="flex flex-col gap-x-5 gap-y-2.5 lg:flex-row">
-            <Link href={"http://akido.access.mcg.com/index"} className="lg:ml-8 sm:ml-1 flex w-full items-center justify-center rounded-lg border border-lime-600 bg-lime-600/10 px-6 py-2.5 font-semibold text-cyan-600 transition duration-200 hover:shadow-lg hover:drop-shadow dark:border-gray-500/50 dark:bg-transparent dark:text-white lg:w-fit">
-              
-              <span>
-               View clinical guidelines used for medical necessity reviews
-              </span>
-              
-            </Link>
+          {/* Content */}
+          <div>
+            <h1 className="mb-6 text-center text-4xl font-bold text-lime-600 dark:text-white lg:text-left lg:text-5xl">
+              MCG
+            </h1>
+
+            <div className="space-y-5 text-justify text-[16px] leading-8 text-gray-700 dark:text-gray-300">
+              <p>
+                <strong>MFMG uses MCG</strong> to aid in clinical decision
+                making regarding utilization management.
+              </p>
+
+              <p>
+                MCG is a nationally recognized clinical decision support tool
+                used to guide evidence-based medical necessity determinations.
+              </p>
+
+              <p>
+                MFMG uses MCG Guidelines to help review medical necessity for
+                health service requests. MCG Guidelines are the protected
+                intellectual property of MCG. MFMG is not able to distribute
+                them without the permission of MCG. MCG has provided a tool that
+                allows MFMG members and prospective members to view relevant MCG
+                Guidelines. However, you will not be able to print them.
+              </p>
+
+              <p className="font-semibold text-lime-600 dark:text-lime-400">
+                Follow the instructions below for access to MCG Guidelines.
+              </p>
+            </div>
+
+            <div className="mt-8">
+              <Link
+                href="https://akido.access.mcg.com/index"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full items-center justify-center rounded-xl bg-lime-600 px-6 py-4 text-center text-base font-semibold text-white transition duration-200 hover:bg-lime-700 hover:shadow-lg sm:w-auto"
+              >
+                View Clinical Guidelines Used for Medical Necessity Reviews
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-gray-200 dark:border-gray-700" />
+
+        {/* Access Instructions */}
+        <div className="p-6 sm:p-8 lg:p-12">
+          <h2 className="mb-8 text-center text-3xl font-bold text-lime-600 dark:text-white lg:text-left">
+            Access Instructions
+          </h2>
+
+          <div className="space-y-6">
+            <div className="flex items-start gap-4">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-lime-600 font-bold text-white">
+                1
+              </div>
+
+              <p className="text-justify leading-7 text-gray-700 dark:text-gray-300">
+                Click the button above to access the MCG Guidelines. Read the
+                disclaimer and accept the Terms and Conditions.
+              </p>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-lime-600 font-bold text-white">
+                2
+              </div>
+
+              <p className="leading-7 text-gray-700 dark:text-gray-300">
+                Complete the User Information Form.
+              </p>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-lime-600 font-bold text-white">
+                3
+              </div>
+
+              <p className="leading-7 text-gray-700 dark:text-gray-300">
+                Complete the verification process (CAPTCHA) to continue.
+              </p>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-lime-600 font-bold text-white">
+                4
+              </div>
+
+              <p className="leading-7 text-gray-700 dark:text-gray-300">
+                Click on the arrow icon to expand a guideline product.
+              </p>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-lime-600 font-bold text-white">
+                5
+              </div>
+
+              <p className="leading-7 text-gray-700 dark:text-gray-300">
+                Click on the guidelines you wish to view.
+              </p>
+            </div>
+          </div>
+
+          {/* Note */}
+          <div className="mt-10 rounded-xl border border-blue-200 bg-blue-50 p-5 dark:border-blue-800 dark:bg-blue-900/20">
+            <div className="flex items-start gap-3">
+              <svg
+                className="mt-1 h-6 w-6 flex-shrink-0 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"
+                />
+              </svg>
+
+              <p className="text-[15px] leading-7 text-blue-900 dark:text-blue-200">
+                <strong>Note:</strong> Guideline sessions automatically time out
+                after <strong>5 minutes</strong> of inactivity.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
