@@ -2,26 +2,130 @@ import Link from "next/link";
 
 const documents = [
   {
-    category: "PLACEHOLDER",
-    file: "/documents/tobeadded.pdf",
+    category: "Cardiac Surgery",
+    file: "/documents/Akido_Labs_MAP_TAC_Cardiac_Surgery_2026.pdf",
   },
   {
-    category: "PLACEHOLDER",
-    file: "/documents/tobeadded.pdf",
+    category: "Cardiovascular",
+    file: "/documents/Akido_Labs_MAP_TAC_Cardiovascular_2026.pdf",
   },
   {
-    category: "PLACEHOLDER",
-    file: "/documents/tobeadded.pdf",
+    category: "Dermatology",
+    file: "/documents/Akido_Labs_MAP_TAC_Dermatology_2026.pdf",
   },
   {
-    category: "PLACEHOLDER",
-    file: "/documents/tobeadded.pdf",
+    category: "Diagnostic Testing",
+    file: "/documents/Akido_Labs_MAP_TAC_Diagnostic_Testing_2026.pdf",
   },
   {
-    category: "PLACEHOLDER",
-    file: "/documents/tobeadded.pdf",
+    category: "Durable Medical Equipment",
+    file: "/documents/Akido_Labs_MAP_TAC_Durable_Medical_Equipment_2026.pdf",
   },
-];
+  {
+    category: "ENT",
+    file: "/documents/Akido_Labs_MAP_TAC_ENT_2026.pdf",
+  },
+  {
+    category: "Gastroenterology",
+    file: "/documents/Akido_Labs_MAP_TAC_Gastroenterology_2026.pdf",
+  },
+  {
+    category: "General Surgery",
+    file: "/documents/Akido_Labs_MAP_TAC_General_Surgery_2026.pdf",
+  },
+  {
+    category: "Gynecology",
+    file: "/documents/Akido_Labs_MAP_TAC_Gynecology_2026.pdf",
+  },
+  {
+    category: "Hematology",
+    file: "/documents/Akido_Labs_MAP_TAC_Hematology_2026.pdf",
+  },
+  {
+    category: "Interventional Radiology",
+    file: "/documents/Akido_Labs_MAP_TAC_Interventional_Radiology_2026.pdf",
+  },
+  {
+    category: "Nephrology",
+    file: "/documents/Akido_Labs_MAP_TAC_Nephrology_2026.pdf",
+  },
+  {
+    category: "Neurology",
+    file: "/documents/Akido_Labs_MAP_TAC_Neurology_2026.pdf",
+  },
+  {
+    category: "Neurosurgery",
+    file: "/documents/Akido_Labs_MAP_TAC_Neurosurgery_2026.pdf",
+  },
+  {
+    category: "Oncology",
+    file: "/documents/Akido_Labs_MAP_TAC_Oncology_2026.pdf",
+  },
+  {
+    category: "Ophthalmology",
+    file: "/documents/Akido_Labs_MAP_TAC_Ophthalmology_2026.pdf",
+  },
+  {
+    category: "Oral & Maxillofacial Surgery",
+    file: "/documents/Akido_Labs_MAP_TAC_Oral_Maxillofacial_Surgery_2026.pdf",
+  },
+  {
+    category: "Orthopedics",
+    file: "/documents/Akido_Labs_MAP_TAC_Orthopedics_2026.pdf",
+  },
+  {
+    category: "Pain Management",
+    file: "/documents/Akido_Labs_MAP_TAC_Pain_Management_2026.pdf",
+  },
+  {
+    category: "Perinatology",
+    file: "/documents/Akido_Labs_MAP_TAC_Perinatology_2026.pdf",
+  },
+  {
+    category: "Plastic Surgery",
+    file: "/documents/Akido_Labs_MAP_TAC_Plastic_Surgery_2026.pdf",
+  },
+  {
+    category: "Podiatry",
+    file: "/documents/Akido_Labs_MAP_TAC_Podiatry_2026.pdf",
+  },
+  {
+    category: "Pulmonology (Addendum - Polysomnography)",
+    file: "/documents/Akido_Labs_MAP_TAC_Pulmonology_Addendum_Polysomnography_2026.pdf",
+  },
+  {
+    category: "Radiation Oncology",
+    file: "/documents/Akido_Labs_MAP_TAC_Radiation_Oncology_2026.pdf",
+  },
+  {
+    category: "Radiology",
+    file: "/documents/Akido_Labs_MAP_TAC_Radiology_2026.pdf",
+  },
+  {
+    category: "Rehabilitation",
+    file: "/documents/Akido_Labs_MAP_TAC_Rehabilitation_2026.pdf",
+  },
+  {
+    category: "Retinal Specialist",
+    file: "/documents/Akido_Labs_MAP_TAC_Retinal_Specialist_2026.pdf",
+  },
+  {
+    category: "Thoracic Surgery",
+    file: "/documents/Akido_Labs_MAP_TAC_Thoracic_Surgery_2026.pdf",
+  },
+  {
+    category: "Ultrasound",
+    file: "/documents/Akido_Labs_MAP_TAC_Ultrasound_2026.pdf",
+  },
+  {
+    category: "Urology",
+    file: "/documents/Akido_Labs_MAP_TAC_Urology_2026.pdf",
+  },
+  {
+    category: "Vascular Surgery",
+    file: "/documents/Akido_Labs_MAP_TAC_Vascular_Surgery_2026.pdf",
+  },
+].sort((a, b) => a.category.localeCompare(b.category));
 
 const sortedDocuments = [...documents].sort((a, b) =>
   a.category.localeCompare(b.category)
