@@ -12,7 +12,8 @@ const UMCaresUIPages = (props: Props) => {
         <UmcaresHero/>
         <UMcaresList/>
         <UMClinicalCriteriaPdf/>
-        <UMCaresHeroTwo/>
+         <UMCaresHeroTwo/>
+        {/* <UMCaresHeroTwo/> */}
     </div>
   )
 }

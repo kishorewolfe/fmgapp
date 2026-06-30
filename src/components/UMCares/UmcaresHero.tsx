@@ -1,9 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import UMcaresList from "./UMcaresList";
-type Props = {};
 
-const UmcaresHero = (props: Props) => {
+const UmcaresHero = ( ) => {
   return (
     <>
       <div className=" mx-auto mt-24 flex max-w-6xl flex-col items-center justify-center gap-x-10 gap-y-10 px-7 py-10 dark:bg-gray-800 lg:flex-row lg:px-10 lg:py-14">
@@ -30,8 +28,8 @@ const UmcaresHero = (props: Props) => {
                 </svg>
                 <p className="md:text-md sm:text:sm mt-5 justify-normal lg:text-lg">
                   {" "}
-                 Utilization Management (UM) Policies & Procedures, as well as the UM Criteria
-used to authorize,
+                  Utilization Management (UM) Policies & Procedures, as well as
+                  the UM Criteria used to authorize,
                 </p>
               </li>
               <li className="flex items-center dark:text-white">
@@ -51,8 +49,9 @@ used to authorize,
                 </svg>
                 <p className="md:text-md sm:text:sm mt-5 lg:text-lg">
                   {" "}
-                 Modify, or deny healthcare services, will be made available upon request to providers,
-members, their designated representatives, and the general public.
+                  Modify, or deny healthcare services, will be made available
+                  upon request to providers, members, their designated
+                  representatives, and the general public.
                 </p>
               </li>
               <li className="flex items-center dark:text-white">
@@ -71,8 +70,8 @@ members, their designated representatives, and the general public.
                   ></path>
                 </svg>
                 <p className="md:text-md sm:text:sm mt-5 lg:text-lg">
-                 The staff at My Family Medical Group accepts collect calls related to UM issues
-during normal business hours.
+                  The staff at My Family Medical Group accepts collect calls
+                  related to UM issues during normal business hours.
                 </p>
               </li>
             </ul>
