@@ -1,4 +1,13 @@
 import Link from "next/link";
+import { Metadata } from 'next';
+
+
+export const metadata: Metadata = {
+  title: "Medical Necessity Supplementation Criteria",
+  description: "Medical Necessity Supplementation Criteria",
+  // other metadata
+};
+
 
 const documents = [
   {
